@@ -2,6 +2,9 @@
 
 > Decoding the Economics of Tesla
 
+# FOSS
+Hosted on **Netlify** with their awesome **Netlify CMS**
+
 ## To get started
 
 ```sh
@@ -24,7 +27,7 @@ profile if you want to.
 
 ## Install
 If you have cloned this repo or want to reinstall, make sure there&#39;s no
-`node_modules` or `Gemfile.lock` folder/file and then run `npm install` and
+`node_modules` or `Gemfile.lock` folder/file and then run `yarn` and
 `bundle install`.
 
 #### Update
