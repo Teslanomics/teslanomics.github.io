@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+
+    {% include meta.html %}
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+
+		<!-- favicons -->
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+		<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+		<link rel="manifest" href="/manifest.json">
+		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="theme-color" content="#333">
+
+  </head>
+
+  <body class="custom-background">
+    <div class="wrapper-masthead">
+      <div class="container">
+        <header class="masthead clearfix">
+					<a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
+
+          <nav>
+            <a href="{{ site.baseurl }}/">Episodes</a>
+            <a href="{{ site.baseurl }}/about">About</a>
+						<a href="{{ site.baseurl }}/contact">Contact</a>
+          </nav>
+        </header>
+      </div>
+    </div>
+
+		<div id="main" role="main" class="container">
+			{{ content }}
+		</div>
+
+    <div class="wrapper-footer">
+      <div class="container">
+        <footer class="footer">
+          {% include footer.html %}
+        </footer>
+      </div>
+    </div>
+
+    {% include analytics.html %}
+		{% include optin.html %}
+  </body>
+</html>

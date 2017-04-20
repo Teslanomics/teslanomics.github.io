@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<article class="post">
+  <h1>{{ page.title }}</h1>
+  {% if page.youtube %}
+      {% include youtube.html id=page.youtube %}
+  {% endif %}
+
+  <div class="entry">
+    {{ content }}
+  </div>
+
+	{% include disqus.html %}
+</article>
