@@ -39,7 +39,7 @@
       <published>{{ post.date | date_to_xmlschema }}</published>
       <updated>{{ post.last_modified_at | default: post.date | date_to_xmlschema }}</updated>
       <id>{{ post.id | absolute_url | xml_escape }}</id>
-      <description>{{ post.excerpt | strip | strip_newlines | strip_html | xml_escape }}</description>
+      <content type="html" xml:base="{{ post.url | absolute_url | xml_escape }}">{{ post.content | strip | xml_escape }}</content>
 
       {% assign post_author = post.author | default: post.authors[0] | default: site.author %}
       {% assign post_author = site.data.authors[post_author] | default: post_author %}
@@ -65,8 +65,10 @@
         <category term="{{ tag | xml_escape }}" />
       {% endfor %}
 
-      {% if post.excerpt and post.excerpt != empty %}
-        <summary type="html">{{ post.excerpt | strip_html | normalize_whitespace | xml_escape }}</summary>
+      {% if post.excerpt and post.excerpt != empty and site.mailchimp %}
+      <description>{{ post.excerpt | strip | strip_newlines | strip_html | normalize_whitespace | xml_escape }}</description>
+      {% elsif site.mailchimp != true %}
+      <summary type="html">{{ post.excerpt | strip_html | normalize_whitespace | xml_escape }}</summary>
       {% endif %}
 
       {% assign post_image = post.image.path | default: post.image %}

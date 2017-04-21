@@ -42,6 +42,9 @@ paginate: 10
 paginate_path: 'page:num'
 excerpt_separator: ''
 
+# Use Mailchimp
+mailchimp: true
+
 # Excerpt Settings
 excerpt_separator: "<!--excerpt-->"
 
