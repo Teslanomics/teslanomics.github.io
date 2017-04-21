@@ -1,31 +1,21 @@
 body {
+  @include container;
   background: $darkGray;
-  font: 16px/1.5 $helvetica;
   color: $lightGray;
+  font: 16px/1.5 $helvetica;
 }
 
-body.custom-background {
-    background-image: url('../images/Teslanomics-Background-Grayscale-SF.jpg');
-    background-position: left top;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+.custom-background {
+  background-image: url('../images/Teslanomics-Background-Grayscale-SF.jpg');
+  background-size: cover;
 }
 
 .entry {
   overflow: hidden;
 }
 
-.susy {
-  @include container;
-}
-
 .container {
   width: span(12 of 12);
-}
-
-.full {
-  @include bleed-x(100%);
 }
 
 .first-vid {
@@ -128,10 +118,6 @@ img {
 }
 
 // Specify the color of the selection
-::-moz-selection {
-  color: $black;
-  background: $lightGray;
-}
 ::selection {
   color: $black;
   background: $lightGray;
@@ -373,6 +359,7 @@ nav {
 }
 
 .wrapper-footer {
+  @include span(12 of 12);
   margin-top: 50px;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
