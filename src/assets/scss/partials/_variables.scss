@@ -1,0 +1,52 @@
+
+//
+// VARIABLES
+//
+
+// Colors
+// $blue: #4183C4;
+$orange: #FFAC00;
+$blue: $orange;
+
+
+// Grays
+$black: #000;
+$darkerGray: #222;
+$darkGray: #333;
+$gray: #888;
+$lightGray: #eee;
+$white: #fff;
+
+// Font stacks
+$helvetica: Helvetica, Arial, sans-serif;
+$helveticaNeue: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$georgia: Georgia, serif;
+
+// Mobile breakpoints
+@mixin mobile {
+  @media screen and (max-width: 640px) {
+    @content;
+  }
+}
+
+// Changing Susy default global settings
+$susy: (
+  columns: 12,
+  gutters: 1 / 4,
+  math: fluid,
+  output: flex,
+  gutter-position: inside,
+  // Tells Susy to use border-box
+  global-box-sizing: border-box,
+  use-custom: (rem: true
+    )
+  );
+
+// Makes border-box properties 
+@include border-box-sizing;
+
+@mixin center ($elementColumns) {
+  $margin: (susy-get(columns) - $elementColumns) / 2;
+  margin-left: span($margin wide of susy-get(columns));
+}
+
