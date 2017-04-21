@@ -34,7 +34,7 @@ tags:
 youtube: O5EDLlfRvh8
 ---
 Tesla and Uber are battling it out to become the leader in self-driving cars. Uber sees this as a way to cut costs and remove the need to own a car while Tesla sees this as a way to make the roads safer and offset the cost of owning a high-tech vehicle. Who is giong to win? Let&#8217;s see what the data says&#8230;
-
+<!--excerpt-->
 // Follow Me Online
 
 facebook: https://fb.com/ben.sullins.data
