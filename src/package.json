@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "sanitize.css": "^5.0.0",
+    "susy": "^2.2.12"
+  }
+}

@@ -16,12 +16,21 @@ body.custom-background {
   overflow: hidden;
 }
 
+.susy {
+  @include container;
+}
+
 .container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 10px;
-  width: 100%;
-  overflow: hidden;
+  width: span(12 of 12);
+}
+
+.full {
+  @include bleed-x(100%);
+}
+
+.first-vid {
+  @include center(8);
+  width: span(8 of 12);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -148,14 +157,11 @@ img {
 // .masthead
 //
 
-.wrapper-masthead {
-  // margin-bottom: 50px;
-}
-
 .masthead {
   padding: 20px 0;
   border-bottom: 1px solid $lightGray;
-
+  @include center(8);
+  width: span(8 of 12);
   @include mobile {
     text-align: center;
   }
@@ -261,25 +267,56 @@ nav {
 
 
 .post-image {
-  width:100%;
-  // max-height: 150px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  overflow: hidden;
+  position: relative;
+  transition: filter 0.5s cubic-bezier(.43,.41,.22,.91);;
+  &::before {
+    content: "";
+    display: block;
+    padding-top: 56.25%; // 16:9 aspect ratio
+  }
+  @media(min-width: 40rem) {
+    &::before {
+      padding-top: 66.6%; // 3:2 aspect ratio
+    }
+  }
 }
 
 .post-index {
-  width: 31%;
-  float:left;
-  margin: 10px 1%;
-  min-height: 260px;
-  position: relative;
-  overflow: auto;
-  display:block;
-
-  @media (max-width: 767px) {
-   width: 100%;
-   }
-
+  display: flex;
+  padding: 1rem;
+  @media(min-width: 40rem) {
+    width: 50%;
+  }
+  @media(min-width: 56rem) {
+    width: 33.3333%;
+  }
 }
 
+.post-card {
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  &:hover {
+    .post-image {
+      filter: contrast(100%);
+    }
+  }
+}
+
+.post-card-content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: 1rem;
+}
 
 .post-title-index {
   width: 100%;
@@ -288,21 +325,11 @@ nav {
 
 
 .posts {
-  width: 100%;
-  float:left;
-  // column layout
-  // -moz-column-count: 4;
-  // -webkit-column-count: 4;
-  // column-count: 4;
-
-  @include mobile {
-    float: none;
-    display: block;
-    margin: 0 auto;
-    width: 100%;
-  }
-
-
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .posts > .post {

@@ -61,7 +61,8 @@ gulp.task('styles', () =>
   gulp.src('src/assets/scss/style.scss')
     .pipe(when(!argv.prod, sourcemaps.init()))
     .pipe(sass({
-      precision: 10
+      precision: 10,
+      includePaths: ['node_modules/susy/sass']
     }).on('error', sass.logError))
     .pipe(postcss([
       autoprefixer({browsers: 'last 1 version'})

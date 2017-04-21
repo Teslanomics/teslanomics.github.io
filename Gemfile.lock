@@ -19,6 +19,9 @@ GEM
       pathutil (~> 0.9)
       rouge (~> 1.7)
       safe_yaml (~> 1.0)
+    jekyll-cloudinary (1.6.0)
+      jekyll (>= 3.0, < 4.0)
+      rmagick (>= 2.0, < 3.0)
     jekyll-compose (0.5.0)
       jekyll (>= 3.0.0)
     jekyll-gist (1.4.0)
@@ -51,6 +54,7 @@ GEM
     rb-inotify (0.9.8)
       ffi (>= 0.5.0)
     redcarpet (3.4.0)
+    rmagick (2.16.0)
     rouge (1.11.1)
     safe_yaml (1.0.4)
     sass (3.4.23)
@@ -63,6 +67,7 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll
+  jekyll-cloudinary
   jekyll-compose
   jekyll-gist
   jekyll-paginate-v2

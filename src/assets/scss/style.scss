@@ -1,6 +1,7 @@
 //The main SCSS file for everything, yep
 
-@import 'partials/reset';
+@import 'sanitize.css';
+@import 'susy';
 @import 'partials/variables';
 @import 'partials/temp';
 //@import 'patrials/main';

@@ -45,6 +45,18 @@ excerpt_separator: ''
 # Use Mailchimp
 mailchimp: true
 
+# Cloudinary
+cloudinary:
+  cloud_name: teslanomics
+  verbose: true
+  presets:
+    default:
+      min_width: 320
+      max_width: 1600
+      fallback_max_width: 800
+      steps: 5
+      sizes: "(min-width: 50rem) 50rem, 90vw"
+
 # Excerpt Settings
 excerpt_separator: "<!--excerpt-->"
 
@@ -65,6 +77,7 @@ gems:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-redirect-from
+  - jekyll-cloudinary
 
 # Exclude these files from your production _site
 exclude:

@@ -28,3 +28,25 @@ $georgia: Georgia, serif;
     @content;
   }
 }
+
+// Changing Susy default global settings
+$susy: (
+  columns: 12,
+  gutters: 1 / 4,
+  math: fluid,
+  output: flex,
+  gutter-position: inside,
+  // Tells Susy to use border-box
+  global-box-sizing: border-box,
+  use-custom: (rem: true
+    )
+  );
+
+// Makes border-box properties 
+@include border-box-sizing;
+
+@mixin center ($elementColumns) {
+  $margin: (susy-get(columns) - $elementColumns) / 2;
+  margin-left: span($margin wide of susy-get(columns));
+}
+
