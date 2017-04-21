@@ -2,6 +2,7 @@ backend:
   name: github
   repo: Teslanomics/teslanomics.github.io # Path to your Github repository
   branch: optimize # Branch to update
-  publish_mode: editorial_workflow
-  media_folder: "src/assets/images"
-  public_folder: "assets/images" # The src attribute for uploaded media will begin with /images/uploads
+  
+publish_mode: editorial_workflow
+media_folder: "src/assets/images"
+public_folder: "assets/images" # The src attribute for uploaded media will begin with /images/uploads
