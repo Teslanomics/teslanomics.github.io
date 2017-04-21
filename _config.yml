@@ -54,7 +54,6 @@ google_analytics: UA-280388-10
 
 # Extending Jekyll
 gems:
-  - jekyll-feed
   - jekyll-gist
   - jekyll-paginate
   - jekyll-sitemap
