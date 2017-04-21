@@ -5,6 +5,7 @@ const imageminJpegRecompress = require('imagemin-jpeg-recompress');
 const cache = require('gulp-cache');
 const size = require('gulp-size');
 
+
 // 'gulp images' -- optimizes and caches your images
 gulp.task('images', () =>
   gulp.src('src/assets/images/**/*')
@@ -23,3 +24,5 @@ gulp.task('images', () =>
     .pipe(gulp.dest('.tmp/assets/images'))
     .pipe(size({title: 'images'}))
 );
+
+
