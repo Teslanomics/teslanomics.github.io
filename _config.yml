@@ -61,7 +61,7 @@ google_analytics: UA-280388-10
 # Extending Jekyll
 gems:
   - jekyll-gist
-  - jekyll-paginate
+  - jekyll-paginate-v2
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-redirect-from

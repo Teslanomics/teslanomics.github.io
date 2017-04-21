@@ -5,7 +5,7 @@ gem 'redcarpet'
 
 # jekyll plugins
 gem 'jekyll-gist'
-gem 'jekyll-paginate'
+gem 'jekyll-paginate-v2'
 gem 'jekyll-sitemap'
 gem 'jekyll-seo-tag'
 gem 'jekyll-redirect-from'
