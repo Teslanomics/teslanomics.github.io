@@ -4,7 +4,7 @@ title: 'Tesla Model S : True Cost of Ownership Including Depreciation &#8211; Ho
 date: '2017-02-06T15:18:49.000+00:00'
 author: Ben Sullins
 layout: post
-image: "/assets/images/featured/Tesla-Model-S-Depreciation-1-e1491603875316"
+image: "/assets/images/featured/Tesla-Model-S-Depreciation.jpg"
 categories:
 - Tesla Analysis
 tags:
@@ -40,7 +40,7 @@ tags:
 youtube: OlGZIGmDaEk
 ---
 The Tesla Model S is in a class of its own in nearly all categories you look at. When it comes to depreciation, it also outperforms all the other Electric Vehicles (EVs) as well as the gas-powered (ICE) cars with a similar price tag. If you’re looking in the higher-end affordable luxury market, or the real luxury market you will be hard-pressed to find a better value for your dollar.
-
+<!--excerpt-->
 **Get $1K Off a New Tesla &#8211; http://bit.ly/2lft6KP**
 
 The four broad categories of expenses to look at when calculating the exact price of a car, EV or otherwise, are fuel, insurance, maintenance/repairs, and depreciation. The first three are out-of-pocket expenses that require you to spend money however depreciation is the largest of the four categories by far. The main difference with depreciation is that you don’t spend this money, rather, you lose the money when you go to sell the vehicle. Unlike other ICE cars or EVs I bet you won’t want to actually ever sell your Tesla, but in case you do, I wanted to provide some insight using the data I found.
