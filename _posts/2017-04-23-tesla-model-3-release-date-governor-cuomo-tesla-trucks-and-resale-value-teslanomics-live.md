@@ -2,7 +2,7 @@
 title: Tesla Model 3 Release Date, Governor Cuomo, Tesla Trucks and Resale Value -
   Teslanomics Live
 layout: post
-date: 04/022/2017 3:07 AM
+date: '2017-04-23 3:07 AM'
 author: Ben Sullins
 image: "/src/assets/images/featured/2017-04-23_10-08-33.jpg"
 categories:
