@@ -1,14 +1,10 @@
 <div class="posts">
 <!-- index of posts -->
-{% for post in paginator.posts %}
+  {% for post in paginator.posts %}
       <article class="post-index">
-      <div class="post-card">
-      <div class="post-image" style="background-image: url({{ site.baseurl }}{{post.image}});"></div>
-      <div class="post-card-content">
-					<a href="{{ post.url | prepend: site.baseurl }}"></a>
-					<div class="post-title-index"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></div>
-      </div>
-      </div>
+          <a href="{{ site.baseurl }}{{ post.url }}"><img class="post-image" src="{{ site.baseurl }}{{post.image}}" /></a>
+          <div class="post-title-index"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></div>
+
       </article>
   {% endfor %}
 </div>
