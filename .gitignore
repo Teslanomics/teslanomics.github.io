@@ -3,6 +3,7 @@
 # Ignore hidden folders
 # This takes care of .tmp, .sass-cache, and many others
 .*/
+!.tmp/
 
 # OSX
 ._*
@@ -51,7 +52,7 @@ tags
 
 # Packages
 node_modules/
-.tmp
+#.tmp
 test/
 
 # Sublime
