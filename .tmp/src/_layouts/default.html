@@ -5,14 +5,23 @@
     {% include head.html%}
 
   <body class="custom-background">
-  
+    <div class="wrapper-masthead">
+      <div class="container">
+        <header class="masthead clearfix">
+					<a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
 
-  {% include header.html %}
+          <nav>
+            <a href="{{ site.baseurl }}/">Episodes</a>
+            <a href="{{ site.baseurl }}/about">About</a>
+						<a href="{{ site.baseurl }}/contact">Contact</a>
+          </nav>
+        </header>
+      </div>
+    </div>
 
-		<div id="main" role="main" >
+		<div id="main" role="main" class="container">
 			{{ content }}
 		</div>
-
 
     <div class="wrapper-footer">
       <div class="container">
@@ -22,13 +31,12 @@
       </div>
     </div>
 
-
     {% include analytics.html %}
 		{% include optin.html %}
 
       <!-- JS -->
   <!-- inject:js -->
-  <script src="/assets/javascript/index.js"></script>
+  <script src="/assets/javascript/index.min.js"></script>
   <!-- endinject -->
       
   </body>
