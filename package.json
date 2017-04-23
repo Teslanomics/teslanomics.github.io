@@ -8,7 +8,7 @@
     "email": "rohit.goswami@aol.com"
   },
   "scripts": {
-    "setup": "bundle install && npm install && make"
+    "setup": "bundle install && yarn"
   },
   "repository": {
     "type": "git",

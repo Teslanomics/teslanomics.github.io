@@ -130,3 +130,4 @@ gulp.task('imagemin', () => {
 // 'gulp fullbuild' -- same as 'gulp' but doesn't serve your site in your browser
 // 'gulp fullbuild --prod' -- same as above but with production settings
 gulp.task('fullbuild', ['js', 'sass', 'imagemin', 'build']);
+gulp.task('default', ['serve']);
