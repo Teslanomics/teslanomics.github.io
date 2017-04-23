@@ -6,6 +6,11 @@ const gulp = require('gulp');
 const requireDir = require('require-dir');
 const tasks = requireDir('./gulp/tasks', {recurse: true}); // eslint-disable-line
 
+gulp.task('copy-folder', function() {  
+  gulp.src('./.tmp/src/**/*')
+    .pipe(gulp.dest('./src/'));
+});
+
 // 'gulp inject' -- injects your CSS and JS into either the header or the footer
 gulp.task('inject', gulp.parallel('inject:head', 'inject:footer'));
 
@@ -25,7 +30,7 @@ gulp.task('clean', gulp.parallel('clean:assets', 'clean:gzip', 'clean:dist', 'cl
 
 // 'gulp build' -- same as 'gulp' but doesn't serve your site in your browser
 // 'gulp build --prod' -- same as above but with production settings
-gulp.task('build', gulp.series('clean', 'assets', 'build:site', 'html'));
+gulp.task('build', gulp.series('copy-folder', 'clean', 'assets', 'build:site', 'html'));
 
 // You can also just use 'gulp upload' but this way you can see all the main
 // tasks in the gulpfile instead of having to hunt for the deploy tasks
@@ -33,7 +38,7 @@ gulp.task('deploy', gulp.series('upload'));
 
 // 'gulp rebuild' -- WARNING: Erases your assets and built site, use only when
 // you need to do a complete rebuild
-gulp.task('rebuild', gulp.series('clean', 'clean:images'));
+gulp.task('rebuild', gulp.series('copy-folder', 'clean', 'clean:images'));
 
 // 'gulp check' -- checks your site configuration for errors and lint your JS
 gulp.task('check', gulp.series('site:check'));
@@ -42,4 +47,4 @@ gulp.task('check', gulp.series('site:check'));
 // injects them into the templates, then builds your site, copied the assets
 // into their directory and serves the site
 // 'gulp --prod' -- same as above but with production settings
-gulp.task('default', gulp.series('build', 'serve'));
+gulp.task('default', gulp.series('copy-folder', 'build', 'serve'));
