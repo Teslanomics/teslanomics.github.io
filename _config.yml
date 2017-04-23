@@ -4,10 +4,6 @@ title: Teslanomics
 description: Decoding the Economics of Tesla
 url: https://teslanomics.netlify.com
 
-# Used so Jekyll outputs the site correctly so Gulp can do what it wants
-source: .tmp/src
-destination: .tmp/dist
-exclude: ['assets']
 
 # Timezone of site
 timezone: America/Los_Angeles
@@ -73,3 +69,17 @@ exclude:
   - LICENSE
   - README.md
   - CNAME
+
+exclude:
+  - node_modules
+  - Gemfile
+  - Gemfile.lock
+  - gulpfile.*
+  - package.json
+  - README.md
+  - makefile
+keep_files:
+  - css/main.css
+  - css/main.min.css
+  - scripts/main.js
+  - scripts/main.min.js

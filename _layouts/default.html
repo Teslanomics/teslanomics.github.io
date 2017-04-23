@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    {% include head.html%}
+
+  <body class="custom-background">
+<div class="susy">
+  
+
+  {% include header.html %}
+
+		<div id="main" role="main" class="container">
+			{{ content }}
+		</div>
+
+
+    <div class="wrapper-footer">
+      <div class="container">
+        <footer class="footer">
+          {% include footer.html %}
+        </footer>
+      </div>
+    </div>
+
+    
+</div>
+    {% include analytics.html %}
+		{% include optin.html %}
+
+      <!-- JS -->
+  <!-- inject:js -->
+  <script src="/assets/javascript/index.min.js"></script>
+  <!-- endinject -->
+      
+  </body>
+</html>
