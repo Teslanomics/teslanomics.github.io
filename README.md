@@ -22,9 +22,19 @@ $ gulp fullbuild [--prod]
 In your `_config.yml` and `humans.txt` you should add your Github and Twitter
 profile if you want to.
 
-## Install
+## Installation [Linux]
 ```sh
 $ yarn setup
+```
+
+## Installation [MacOS]
+```sh
+$ brew install yarn
+$ yarn
+$ sudo npm install gulp-cli -g
+$ brew unlink imagemagick
+$ brew install imagemagick@6 && brew link imagemagick@6 --force
+$ PKG_CONFIG_PATH=/usr/local/opt/imagemagick@6/lib/pkgconfig bundle
 ```
 
 ## Owner
