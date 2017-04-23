@@ -36,6 +36,7 @@
     "yargs": "^4.7.0"
   },
   "dependencies": {
+    "gulp-clean-dest": "^0.2.0",
     "imagemin-jpeg-recompress": "^5.1.0"
   }
 }
