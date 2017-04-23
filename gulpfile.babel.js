@@ -126,3 +126,7 @@ gulp.task('imagemin', () => {
     .pipe($.imagemin())
     .pipe(gulp.dest('_site/assets'));
 });
+
+// 'gulp fullbuild' -- same as 'gulp' but doesn't serve your site in your browser
+// 'gulp fullbuild --prod' -- same as above but with production settings
+gulp.task('fullbuild', ['js', 'sass', 'imagemin', 'build']);
