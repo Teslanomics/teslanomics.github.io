@@ -15,7 +15,6 @@ const reload = browserSync.reload;
 gulp.task('serve', ['browser-sync'], () => {
   gulp.watch(['_sass/**/*.scss'], ['sass']);
   gulp.watch(['_js/**/*.js'], ['js']);
-  gulp.watch(['_assets/**/*'], ['imagemin']);
   gulp.watch(['_data/*', '*.html', '_layouts/**/*', '_includes/**/*', 'posts/**/*'], ['build:reload']);
 });
 
@@ -31,11 +30,6 @@ gulp.task('build:reload', ['build'], () => { reload(); });
 //  TASKS FOR DEPLOYMENT
 // ======================
 
-// First run htmlmin, then deploy to github
-gulp.task('deploy', ['htmlmin'], () => {
-  return gulp.src('./_site/**/*').pipe($.ghPages({branch: 'prod'}));
-});
-
 // First run build:prod and then minify HTML
 gulp.task('htmlmin', ['build:prod'], () => {
   return gulp.src('./_site/**/*.html')
@@ -45,7 +39,7 @@ gulp.task('htmlmin', ['build:prod'], () => {
 });
 
 // Runs jekyll build for 'production' environment
-gulp.task('build:prod', ['js', 'sass', 'imagemin'], done => {
+gulp.task('build:prod', ['js', 'sass'], done => {
   var productionEnv = process.env;
       productionEnv.JEKYLL_ENV = 'production';
 
@@ -57,7 +51,7 @@ gulp.task('build:prod', ['js', 'sass', 'imagemin'], done => {
 // ====================
 
 // Browser sync + styles for the notification
-gulp.task('browser-sync', ['js', 'sass', 'imagemin', 'build'], () => {
+gulp.task('browser-sync', ['js', 'sass', 'build'], () => {
   browserSync({
     notify: {
       styles: [
@@ -120,14 +114,8 @@ gulp.task('js', () => {
     .pipe(gulp.dest('_site/scripts'));
 });
 
-// Optimise images + copy any other assets
-gulp.task('imagemin', () => {
-  return gulp.src('_assets/*')
-    .pipe($.imagemin())
-    .pipe(gulp.dest('_site/assets'));
-});
 
 // 'gulp fullbuild' -- same as 'gulp' but doesn't serve your site in your browser
 // 'gulp fullbuild --prod' -- same as above but with production settings
-gulp.task('fullbuild', ['js', 'sass', 'imagemin', 'build']);
+gulp.task('fullbuild', ['js', 'sass', 'build']);
 gulp.task('default', ['serve']);
