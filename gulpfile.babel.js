@@ -15,7 +15,7 @@ const reload = browserSync.reload;
 gulp.task('serve', ['browser-sync'], () => {
   gulp.watch(['_sass/**/*.scss'], ['sass']);
   gulp.watch(['_js/**/*.js'], ['js']);
-  gulp.watch(['_data/*', '*.html', '_layouts/**/*', '_includes/**/*', 'posts/**/*'], ['build:reload']);
+  gulp.watch(['_data/*', '*.html', '*.md', '_layouts/**/*', '_includes/**/*', '_posts/**/*', '_drafts/**/*'], ['build:reload']);
 });
 
 // Builds Jekyll site (including drafts)
