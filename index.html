@@ -4,11 +4,14 @@ layout: default
 
 <div class="first-vid">
 <!-- just the first post -->
-{% include first-video.html %}
+{% for post in site.posts limit:1 %}
+	<div class="videoWrapper">
+		<iframe width="853" height="480" src="https://www.youtube.com/embed/{{ post.youtube }}?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+	</div>
+{% endfor %}
 </div>
 
 <div class="full">
 <!-- Pagination -->
-{% include paginate.html %}  
+{% include paginate.html %}
 </div>
-
