@@ -130,13 +130,28 @@ module Jekyll
       <!DOCTYPE html>
       <html>
       <head>
+      <style>
+      body {background-image: url('/images/Teslanomics-Background-Grayscale-SF.jpg');}
+      p, a {
+        color: #eb3237;
+        font-familiy: sans-serif;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+      }
+      h1 {
+        color: #ffff;
+        text-align: center;
+        margin: 15rem;
+      }
+      </style>
       <title>Redirecting...</title>
       <link rel="canonical" href="#{destination_path}"/>
       <meta http-equiv="content-type" content="text/html; charset=utf-8" />
       <meta http-equiv="refresh" content="0; url=#{destination_path}" />
       </head>
       <body>
-        <p><strong>Redirecting...</strong></p>
+        <h1><strong>Redirecting...</strong></h1>
         <p><a href='#{destination_path}'>Click here if you are not redirected.</a></p>
         <script>
           document.location.href = "#{destination_path}";
