@@ -16,8 +16,8 @@ avatar: images/teslanomics-website-logo.png
 # called by using 'site.author.name' and so on
 # NOTE: Don't use @ in front of your Twitter username
 author:
-  name: Rohit Goswami
-  email: rohit.goswami@aol.com
+  name: Ben Sullins
+  email: ben@teslanomics.co
   uri: https://teslanomics.netlify.com
   bio: Blank
   twitter:

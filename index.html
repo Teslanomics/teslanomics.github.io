@@ -1,10 +1,10 @@
 ---
 layout: default
-pagination: 
+pagination:
   enabled: true
 ---
 
-<div class="first-vid">
+<div class="first-vid">	
 <!-- just the first post -->
 {% for post in site.posts limit:1 %}
 	<div class="videoWrapper">
@@ -14,4 +14,4 @@ pagination:
 </div>
 
 <!-- Pagination -->
-{% include paginate.html %}  
+{% include paginate.html %}
