@@ -10,6 +10,10 @@ categories:
 - News
 tags: []
 author: Ben Sullins
+description: |-
+  This week we start with a story from Steven Turner. Steven shared a great story with me recently about how he used our referral code to buy his new Tesla Model S and what it really means to him. You have to listen to his email.
+
+  Tesla blogged that their planning to expand their supercharger network! I'm not suggesting it is in response to my video last week but the timing does seem suspicious :)
 ---
 
 
