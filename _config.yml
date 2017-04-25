@@ -12,6 +12,25 @@ timezone: America/Los_Angeles
 avatar: images/teslanomics-website-logo.png
 
 
+
+# Includes an icon in the footer for each username you enter
+footer-links:
+  dribbble:
+  email:
+  facebook: teslanomics
+  flickr:
+  github:
+  instagram:
+  linkedin:
+  pinterest:
+  rss: # just type anything here for a working RSS icon
+  twitter: teslanomicsco
+  stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
+  youtube: channel/UCbEbf0-PoSuHD0TgMbxomDg # channel/<your_long_string> or user/<user-name>
+  googleplus: # anything in your profile username that comes after plus.google.com/
+  soundcloud:
+
+
 # Same as the title etc for your site but can instead be
 # called by using 'site.author.name' and so on
 # NOTE: Don't use @ in front of your Twitter username
