@@ -3,7 +3,7 @@ title: Steven's Model S Story, Autopilot 2 Lawsuit, Supercharger Network Growth 
   Teslanomics Live
 layout: post
 date: 2017-04-24 19:43
-image: "/images/featured/live-cover-20170424.jpg"
+image: "/images/featured/live-cover-20170424-500.jpg"
 youtube: vo2_vs5gVIQ
 categories:
 - Teslanomics Live
