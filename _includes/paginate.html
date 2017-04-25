@@ -1,12 +1,39 @@
 <div class="posts">
 <!-- index of posts -->
-  {% for post in paginator.posts %}
+
+	{% if paginator.page == 1 %}
+		<div class="first-vid">
+		<!-- just the first post -->
+		{% include first-video.html %}
+		</div>
+
+		{% for post in paginator.posts offset:1 limit:6 %}
+				<article class="post-index">
+						<a href="{{ site.baseurl }}{{ post.url }}"><img class="post-image" src="{{ site.baseurl }}{{post.image}}" /></a>
+						<div class="post-title-index"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></div>
+
+				</article>
+		{% endfor %}
+
+		{% else %}
+
+		{% for post in paginator.posts %}
+				<article class="post-index">
+						<a href="{{ site.baseurl }}{{ post.url }}"><img class="post-image" src="{{ site.baseurl }}{{post.image}}" /></a>
+						<div class="post-title-index"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></div>
+
+				</article>
+		{% endfor %}
+
+	{% endif %}
+
+  <!-- {% for post in paginator.posts offset:1 %}
       <article class="post-index">
           <a href="{{ site.baseurl }}{{ post.url }}"><img class="post-image" src="{{ site.baseurl }}{{post.image}}" /></a>
           <div class="post-title-index"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></div>
 
       </article>
-  {% endfor %}
+  {% endfor %} -->
 </div>
 
 <!-- Pagination links -->
