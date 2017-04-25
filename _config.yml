@@ -42,8 +42,8 @@ author:
   email: ben@teslanomics.co
   uri: https://teslanomics.netlify.com
   bio: Blank
-  twitter:
-  github:
+  twitter: teslanomicsco
+  github: 
 
 # _config.build.yml overwrites these options when you run `gulp build`
 # Enables future posts (posts with dates in the future) and drafts
@@ -55,7 +55,7 @@ lsi: false
 #limit_posts: 10
 
 # Permalink structure and pagination options
-permalink: /:year/:month/:title.html
+permalink: :title.html
 # Pagination Settings
 pagination:
   enabled: true
