@@ -16,7 +16,7 @@ tags:
 - center
 - mobile
 youtube: 9Y6XyJMgPoo
-image: ''
+image: "/images/featured/tesla-service-thumb-500.jpg"
 description: ''
 ---
 
