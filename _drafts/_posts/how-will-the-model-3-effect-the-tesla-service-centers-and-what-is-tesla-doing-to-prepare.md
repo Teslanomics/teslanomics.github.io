@@ -16,7 +16,7 @@ tags:
 - center
 - mobile
 youtube: 9Y6XyJMgPoo
-image: "/images/featured/tesla-service-shortage-2-500w.jpg"
+image: "/images/featured/tesla-service-center-shortage-500.jpg"
 description: ''
 ---
 
