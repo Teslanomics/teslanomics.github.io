@@ -7,7 +7,7 @@
 		{% include first-video.html %}
 		</div>
 
-		{% for post in paginator.posts offset:1 limit:6 %}
+		{% for post in paginator.posts offset:1 %}
 				<article class="post-index">
 						<a href="{{ site.baseurl }}{{ post.url }}"><img class="post-image" src="{{ site.baseurl }}{{post.image}}" /></a>
 						<div class="post-title-index"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></div>
@@ -17,7 +17,7 @@
 
 		{% else %}
 
-		{% for post in paginator.posts %}
+		{% for post in paginator.posts limit:12 %}
 				<article class="post-index">
 						<a href="{{ site.baseurl }}{{ post.url }}"><img class="post-image" src="{{ site.baseurl }}{{post.image}}" /></a>
 						<div class="post-title-index"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></div>
