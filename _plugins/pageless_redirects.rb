@@ -133,8 +133,8 @@ module Jekyll
       <style>
       body {background-image: url('/images/Teslanomics-Background-Grayscale-SF.jpg');}
       p, a {
-        color: #eb3237;
-        font-familiy: sans-serif;
+        color: #fff;
+        font-familiy: "Helvetica Neue", Helvetica, Arial, sans-serif;
         font-size: 20px;
         font-weight: bold;
         text-align: center;
@@ -143,6 +143,7 @@ module Jekyll
         color: #ffff;
         text-align: center;
         margin: 15rem;
+				font-familiy: "Helvetica Neue", Helvetica, Arial, sans-serif;
       }
       </style>
       <title>Redirecting...</title>
@@ -151,7 +152,7 @@ module Jekyll
       <meta http-equiv="refresh" content="0; url=#{destination_path}" />
       </head>
       <body>
-        <h1><strong>Redirecting...</strong></h1>
+        <h1>Redirecting...</h1>
         <p><a href='#{destination_path}'>Click here if you are not redirected.</a></p>
         <script>
           document.location.href = "#{destination_path}";
