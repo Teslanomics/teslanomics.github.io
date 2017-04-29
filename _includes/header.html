@@ -5,11 +5,33 @@
         <header class="masthead clearfix">
           <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.baseurl }}/{{ site.avatar }}" /></a>
 
+
+					<style>
+					#join-button {
+						background: #FF5C5C;
+						border: 1px solid #FF5C5C;
+						border-radius: 5px;
+						color: #fff;
+						font-size: 18px;
+						padding: 4px 6px;
+						line-height: 23px;
+						text-align: center;
+						vertical-align: middle;
+						cursor: pointer;
+						display: inline;
+						margin: 0;
+						width: 80px;
+						height: 40px;
+					}
+					</style>
+
           <nav>
             <a href="{{ site.baseurl }}/">Episodes</a>
             <a href="{{ site.baseurl }}/about">About</a>
             <a href="{{ site.baseurl }}/contact">Contact</a>
-						<a href="{{ site.baseurl }}/join.html" style="color:#FF5C5C; font-weight:800;">Join</a>
+						<a href="{{ site.baseurl }}/join.html">
+							<button id="join-button">Join</button>
+						</a>
           </nav>
         </header>
       </div>
