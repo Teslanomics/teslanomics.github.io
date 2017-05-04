@@ -15,7 +15,7 @@ youtube: Jsc-46mty0c
 image: "/images/featured/Tesla Cost Calculator-500w.jpg"
 description: ''
 ---
-<iframe frameborder="0" marginheight="0" marginwidth="0" allowtransparency="true" class="tableauViz" style="display: block; width: 75%; height: 1200; margin: 0px; padding: 0px; border: none;" width="75%" height="1200" src="https://public.tableau.com/views/tesla-charging-costs/self?:embed=y&amp;:showVizHome=no&amp;:hoswidtt_url=https%3A%2F%2Fpublic.tableau.com%2F&amp;:tabs=yes&amp;:toolbar=yes&amp;:animate_transition=yes&amp;:display_static_image=no&amp;:display_spinner=no&amp;:display_overlay=yes&amp;:display_count=yes"></iframe>
+<iframe frameborder="0" marginheight="0" marginwidth="0" allowtransparency="true" class="tableauViz" style="display: block; width: 90%; height: 900; margin: 0px; padding: 0px; border: none;" width="90%" height="900" src="https://public.tableau.com/views/tesla-charging-costs/self?:embed=y&amp;:showVizHome=no&amp;:hoswidtt_url=https%3A%2F%2Fpublic.tableau.com%2F&amp;:tabs=yes&amp;:toolbar=yes&amp;:animate_transition=yes&amp;:display_static_image=no&amp;:display_spinner=no&amp;:display_overlay=yes&amp;:display_count=yes"></iframe>
 
 [
 ](https://teslanomics.co/td)
