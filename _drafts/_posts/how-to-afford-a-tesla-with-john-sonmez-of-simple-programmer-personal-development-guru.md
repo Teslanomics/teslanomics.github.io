@@ -15,7 +15,7 @@ tags:
 - real estate
 - self development
 youtube: lEw9zNWxmvo
-image: ''
+image: "/images/featured/interview-sonmez-sullins.jpg"
 description: ''
 ---
 
