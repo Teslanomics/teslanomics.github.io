@@ -13,7 +13,7 @@ tags:
 - tech
 categories:
 - Product Reviews
-image: ''
+image: "/images/featured/navdy-review.jpg"
 description: ''
 ---
 
