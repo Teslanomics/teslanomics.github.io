@@ -14,8 +14,8 @@ tags:
 - fuel
 - maintenance
 - insurance
-image: ''
-youtube: ''
+image: "/images/featured/Choosing Between a Model S and Model X 500w.jpeg"
+youtube: AjI8lvEOw0I
 description: ''
 ---
 
