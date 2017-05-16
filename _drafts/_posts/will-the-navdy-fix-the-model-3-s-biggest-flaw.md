@@ -20,7 +20,7 @@ description: ''
 
 **// Ready to Buy a Model S or X?**
 
-Use our referral code and get $1,000 off. Get started at [https://teslanomics.co/td](https://teslanomics.co/td)
+Use our referral code and instantly get $1,000 off. Get started at [https://teslanomics.co/td](https://teslanomics.co/td)
 
 **// Disclaimer**
 
