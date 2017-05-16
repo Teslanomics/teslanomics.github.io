@@ -6,11 +6,12 @@
 		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-		ga('create', '{{ site.google_analytics }}', {'siteSpeedSampleRate': 100});		
+		ga('create', '{{ site.google_analytics }}', {'siteSpeedSampleRate': 100});
 		ga('send', 'pageview', {
 		  'page': '{{ site.baseurl }}{{ page.url }}',
 		  'title': '{{ page.title | replace: "'", "\\'" }}'
 		});
 	</script>
 	<!-- End Google Analytics -->
+	<meta name="google-site-verification" content="ul7r0cua6Liho7hJXMaNXq-bJS_9nm7DHknvBSnz9XI" />
 {% endif %}
