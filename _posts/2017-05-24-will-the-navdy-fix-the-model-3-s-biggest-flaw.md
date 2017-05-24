@@ -2,7 +2,7 @@
 title: Tesla Model 3's Biggest Flaw Solved by Navdy? My Review of the Navdy Heads
   Up Display
 layout: post
-date: 2017-05-16 09:54
+date: 2017-05-24 09:54
 author: Ben Sullins
 youtube: 8Zu0ScaSJ_0
 tags:
