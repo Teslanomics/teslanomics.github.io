@@ -1,9 +1,10 @@
 ---
-title: Will the Navdy Fix the Model 3's Biggest Flaw?
+title: Tesla Model 3's Biggest Flaw Solved by Navdy? My Review of the Navdy Heads
+  Up Display
 layout: post
 date: 2017-05-16 09:54
 author: Ben Sullins
-youtube: w7sa7zN53pc
+youtube: 8Zu0ScaSJ_0
 tags:
 - navdy
 - review
