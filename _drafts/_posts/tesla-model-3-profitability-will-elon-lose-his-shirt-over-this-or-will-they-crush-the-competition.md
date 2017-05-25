@@ -12,7 +12,7 @@ tags:
 - tesla pricing
 youtube: 08R6qThkf-8
 author: ''
-image: ''
+image: "/images/featured/Model_3_Profitable-_(2).jpg"
 description: ''
 ---
 
