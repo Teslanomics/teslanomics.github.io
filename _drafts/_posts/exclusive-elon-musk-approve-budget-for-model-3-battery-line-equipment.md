@@ -11,7 +11,7 @@ tags:
 - battery
 - production
 - gigafactory
-image: ''
+image: "/images/featured/battery-cover-600.jpg"
 youtube: ''
 description: ''
 ---
