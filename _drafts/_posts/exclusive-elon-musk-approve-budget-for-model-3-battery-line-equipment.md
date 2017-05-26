@@ -1,6 +1,6 @@
 ---
-title: 'EXCLUSIVE: Tesla Model 3 Battery Line Budget at Gigafactory 1 Approved by
-  Elon'
+title: 'EXCLUSIVE: Tesla Dumps $216M Into Model 3 Battery Line Budget at Gigafactory
+  1, Approved by Elon'
 layout: post
 date: 2017-05-25 21:01
 author: Ben Sullins
