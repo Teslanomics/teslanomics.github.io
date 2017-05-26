@@ -1,6 +1,5 @@
 ---
-title: 'EXCLUSIVE: Tesla Dumps $216M Into Model 3 Battery Line Budget at Gigafactory
-  1, Approved by Elon'
+title: 'EXCLUSIVE: Tesla Dumps $216M Into Model 3 Battery Line at Gigafactory 1'
 layout: post
 date: 2017-05-25 21:01
 author: Ben Sullins
@@ -12,7 +11,7 @@ tags:
 - production
 - gigafactory
 image: "/images/featured/battery-cover-600.jpg"
-youtube: ''
+youtube: 746frhedR0U
 description: ''
 ---
 
