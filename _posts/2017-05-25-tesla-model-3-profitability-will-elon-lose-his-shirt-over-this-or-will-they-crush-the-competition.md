@@ -10,7 +10,7 @@ tags:
 - profitability
 - gigafactory
 - tesla pricing
-youtube: 08R6qThkf
+youtube: 08R6qThkf-8
 author: ''
 image: "/images/featured/Model_3_Profitable-_(2).jpg"
 description: ''
