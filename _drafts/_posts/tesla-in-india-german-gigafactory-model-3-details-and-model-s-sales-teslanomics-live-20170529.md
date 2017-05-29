@@ -14,7 +14,7 @@ tags:
 - model 3
 - referral
 youtube: oJMgMuZmtAE
-image: ''
+image: "/images/featured/Teslanomics Live 20179515 600w.jpeg"
 description: ''
 ---
 
@@ -69,7 +69,7 @@ They modified the ones listed under the Model S and added some under Model 3:
 
 * 18″ or 19″ Wheels
 
-// Up Close Model 3 Photos ([teslarati](http://www.teslarati.com/tesla-model-3-interior-dashboard-center-console/))
+**// Up Close Model 3 Photos (<a href="http://www.teslarati.com/tesla-model-3-interior-dashboard-center-console/" class="">teslarati</a>)**
 
 - Dash super interesting
 
@@ -79,7 +79,7 @@ They modified the ones listed under the Model S and added some under Model 3:
 
 The Model 3 is looking great. There still seem to be some issues to work out but overall I think it will be a head turner.
 
-// Tesla Model S Sales Dominate Luxury Market ([electrek](https://electrek.co/2017/05/26/tesls-model-s-leading-us-large-luxury-segment/))
+**// Tesla Model S Sales Dominate Luxury Market ([electrek](https://electrek.co/2017/05/26/tesls-model-s-leading-us-large-luxury-segment/))**
 
 - Tesla’s Model S outsells Mercedes S-Class, Porsche Panamera, and BMW 6/7 Series combined in the US
 
