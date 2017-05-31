@@ -1,7 +1,7 @@
 ---
 title: 'Tesla Model S vs Model X: Which One is Right For You?'
 layout: post
-date: '2017-05-31T13:48:36.413Z'
+date: 2017-05-31 06:48
 author: Ben Sullins
 categories:
 - Tesla Versus
@@ -18,6 +18,8 @@ image: "/images/featured/Choosing Between a Model S and Model X 500w.jpeg"
 youtube: AjI8lvEOw0I
 description: ''
 ---
+
+
 For many, choosing between a **model S and model X**<span style="color: rgb(25, 25, 25); font-size: 1rem;"> will come down to your needs. Whether that be you have a larger family and need the extra seating, or you want to sit up higher than the rest of traffic and get a better view of what's going on.</span>
 
 In any event, there are a lot of factors to consider. In this episode I'm excited to have **Zac from Now You Know** join me and break down the differences between the Tesla Model S and X to help you decide which is right for you.
@@ -36,10 +38,4 @@ The biggest difference between the two vehicles, we both agree, is the functiona
 
 Either way, we both agree, you'll be happy with your purchase :)
 
-If you are in the market for a **new Tesla**, make sure to **save $1,000** by using our referral code. Each quarter Tesla gives out a limited number of referrals to current owners to share with others. Visit [https://teslanomics.co/td](https://teslanomics.co/td) to learn more.
-
-<span style="font-size: 1rem;"><b>// Join Our Community on Patreon!</b></span>
-
-We're now using Patreon as a way to build out the community of passionate, intelligent people that love the detailed analysis of the facts behind Tesla and their products.
-
-Learn more at **[https://teslanomics.co/patreon](https://teslanomics.co/patreon)**
+****
