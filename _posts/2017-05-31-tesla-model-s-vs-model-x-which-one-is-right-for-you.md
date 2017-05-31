@@ -18,13 +18,7 @@ image: "/images/featured/Choosing Between a Model S and Model X 500w.jpeg"
 youtube: AjI8lvEOw0I
 description: ''
 ---
-
-
-### **// Ready to Buy Your Tesla?**
-
-Use our referral code and instantly receive $1,000 off the purchase price. Visit [https://teslanomics.co/td](https://teslanomics.co/td) to learn more. Limited quantities available!
-
-For many, choosing between a **model S and model X** will come down to your needs. Whether that be you have a larger family and need the extra seating, or you want to sit up higher than the rest of traffic and get a better view of what's going on.
+For many, choosing between a **model S and model X**<span style="color: rgb(25, 25, 25); font-size: 1rem;"> will come down to your needs. Whether that be you have a larger family and need the extra seating, or you want to sit up higher than the rest of traffic and get a better view of what's going on.</span>
 
 In any event, there are a lot of factors to consider. In this episode I'm excited to have **Zac from Now You Know** join me and break down the differences between the Tesla Model S and X to help you decide which is right for you.
 
