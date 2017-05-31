@@ -1,7 +1,7 @@
 ---
 title: 'Tesla Model S vs Model X: Which One is Right For You?'
 layout: post
-date: 2017-05-16 16:29
+date: '2017-05-31T13:48:36.413Z'
 author: Ben Sullins
 categories:
 - Tesla Versus
