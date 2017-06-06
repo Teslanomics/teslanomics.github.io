@@ -12,7 +12,7 @@ tags:
 - interview
 categories:
 - analysis
-image: "/images/featured/POPUlar_Model_3Config_600w.jpg"
+image: ''
 description: ''
 ---
 
