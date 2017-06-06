@@ -1,5 +1,5 @@
 ---
-title: Tesla Model 3 Most Popular Configuration Will Cost Around $50K
+title: Tesla Model 3 Will Cost Around $50K - New Survey of 10K Reservation Holders
 layout: post
 date: 2017-06-06 13:17
 author: Ben Sullins
@@ -12,7 +12,7 @@ tags:
 - interview
 categories:
 - analysis
-image: ''
+image: "/images/featured/model3-50k-600.jpg"
 description: ''
 ---
 
