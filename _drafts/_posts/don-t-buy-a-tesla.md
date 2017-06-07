@@ -27,7 +27,7 @@ Beyond looking at luxury vehicle options side-by-side, I wanted to dive deeper i
 
 Going back to Edmunds.com, you can get a full true cost of ownership snapshot for both the Porche Panamera and Mercedes Benz S-Class. This include depreciation, financing, repairs and maintenance, etc. Note, this does change over time, so numbers will vary depending on when you look.
 
-Once I looked at each vehicle individually, I wanted to see how they stacked up side-by-side. Over a 5-year period, I charted out the costs of depreciation, financing, fuel, insurance, maintenance, repairs, tax credits as well as taxes and fees. You can explore these numbers via the link below. For financing, insurance as well as tax and fees, the numbers are subjective, varying from person to person. Fuel on the on the other hand, the Tesla Model S crushes both vehicles as an EV. The maintenance and repair categories are other areas where Tesla takes the cake, as it comes with a vehicle maintenance package and everything else is covered under its warranty. The Tesla is also the only category where owners are eligible for a tax credit. You can learn more about the electric vehicle tax credit here: https://www.youtube.com/watch?v=UWHgBUmoxzE
+Once I looked at each vehicle individually, I wanted to see how they stacked up side-by-side. Over a 5-year period, I charted out the costs of depreciation, financing, fuel, insurance, maintenance, repairs, tax credits as well as taxes and fees. You can explore these numbers via the link below. For financing, insurance as well as tax and fees, the numbers are subjective, varying from person to person. Fuel on the on the other hand, the Tesla Model S crushes both vehicles as an EV. The maintenance and repair categories are other areas where Tesla takes the cake, as it comes with a vehicle maintenance package and everything else is covered under its warranty. The Tesla is also the only category where owners are eligible for a tax credit. You can learn more about the electric vehicle tax credit here: [https://www.youtube.com/watch?v=UWHgBUmoxzE](https://www.youtube.com/watch?v=UWHgBUmoxzE)
 
 <iframe frameborder="0" marginheight="0" marginwidth="0" allowtransparency="true" class="tableauViz" style="display: block; width: 100%; height: 1350; margin: 0px; padding: 0px; border: none;" width="100%" height="1350" src="https://public.tableau.com/views/TeslaTrueCostofOwnership/viz?:embed=y&amp;:showVizHome=no&amp;:hoswidtt_url=https%3A%2F%2Fpublic.tableau.com%2F&amp;:tabs=no&amp;:toolbar=yes&amp;:animate_transition=yes&amp;:display_static_image=no&amp;:display_spinner=no&amp;:display_overlay=yes&amp;:display_count=yes"></iframe>
 
@@ -39,12 +39,12 @@ So, if you’re comparing these vehicles, consider this data. Or, if you don’t
 
 Check out the Tesla.com Affordability Calculator: https://www.tesla.com/support/affordability-calculator
 
-As mentioned, I also used U.S. News: https://cars.usnews.com/cars-trucks/compare?trims=13121-386836_12925-380450_13141-377119 and Edmonds.com to compile a lot of my data
+As mentioned, I also used U.S. News: [https://cars.usnews.com/cars-trucks/compare?trims=13121-386836_12925-380450_13141-377119](https://cars.usnews.com/cars-trucks/compare?trims=13121-386836_12925-380450_13141-377119) and [Edmonds.com](Edmonds.com) to compile a lot of my data
 
-You can also view my calculations: https://docs.google.com/spreadsheets/d/1JhAP79vE9ymu6MURCctNuHMTS6XdKtWxHAkKdidZzds/edit#gid=0
+You can also view my calculations: [https://docs.google.com/spreadsheets/d/1JhAP79vE9ymu6MURCctNuHMTS6XdKtWxHAkKdidZzds/edit#gid=0](https://docs.google.com/spreadsheets/d/1JhAP79vE9ymu6MURCctNuHMTS6XdKtWxHAkKdidZzds/edit#gid=0)
 
-Dive into the Auto List study I mentioned: http://insideevs.com/tesla-model-s-depreciates-only-28-in-first-50000-miles/
+Dive into the Auto List study I mentioned: [http://insideevs.com/tesla-model-s-depreciates-only-28-in-first-50000-miles/](http://insideevs.com/tesla-model-s-depreciates-only-28-in-first-50000-miles/)
 
-A BIG thank you to Wunder Capital for supporting the show. Wunder Capital helps people like you and me invest as little as $1,000 in solar projects. Check them out at wundercapital.com/teslanomics
+A BIG thank you to Wunder Capital for supporting the show. Wunder Capital helps people like you and me invest as little as $1,000 in solar projects. Check them out at [wundercapital.com/teslanomics](wundercapital.com/teslanomics)
 
 Music provided by: Epidemic Sound
