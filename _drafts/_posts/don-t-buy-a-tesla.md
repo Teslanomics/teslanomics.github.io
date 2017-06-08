@@ -2,7 +2,7 @@
 title: 'Don''t Buy A Tesla! '
 layout: post
 date: 2017-06-06 16:14
-image: "/images/featured/NO!_(3) (1).jpg"
+image: "/images/featured/dontbuytesla-600w.jpeg"
 categories:
 - Analysis
 tags:
@@ -12,7 +12,7 @@ tags:
 - 'cost comparisons '
 - Model S
 youtube: Zv5WxoS8sAA
-author: ''
+author: Ben Sullins
 description: ''
 ---
 
