@@ -2,7 +2,7 @@
 title: 'Don''t Buy A Tesla! '
 layout: post
 date: 2017-06-06 16:14
-image: "/images/featured/dontbuytesla-600w.jpeg"
+image: "/images/featured/NO!_(3) (3)-1.jpg"
 categories:
 - Analysis
 tags:
@@ -12,7 +12,7 @@ tags:
 - 'cost comparisons '
 - Model S
 youtube: Zv5WxoS8sAA
-author: Ben Sullins
+author: ''
 description: ''
 ---
 
@@ -37,7 +37,7 @@ This is the data I used to come up with the true cost of ownership for the Tesla
 
 So, if you’re comparing these vehicles, consider this data. Or, if you don’t take my word for it, go take a test drive. And, if you do, let me know via the comments below.
 
-Check out the Tesla.com Affordability Calculator: https://www.tesla.com/support/affordability-calculator
+Check out the Tesla.com Affordability Calculator: [https://www.tesla.com/support/affordability-calculator](https://www.tesla.com/support/affordability-calculator)
 
 As mentioned, I also used U.S. News: [https://cars.usnews.com/cars-trucks/compare?trims=13121-386836_12925-380450_13141-377119](https://cars.usnews.com/cars-trucks/compare?trims=13121-386836_12925-380450_13141-377119) and [Edmonds.com](Edmonds.com) to compile a lot of my data
 
