@@ -12,7 +12,7 @@ tags:
 - ev industry
 - usa
 image: "/images/featured/model3deliveryestimate2-600w.jpg"
-youtube: asdf
+youtube: WbzST5TAlEo
 description: ''
 ---
 
@@ -31,7 +31,7 @@ And [the] Model X...has way too many cool things in it that should have really b
 
 [There will] just be a single motor to begin with and then we will have the dual motor config, if we are lucky, toward the end of this year or more likely early next," said Musk.
 
-These are some aggressive numbers for Model 3 production. Tesla is projecting to product “1,000 vehicles per week in July, 4,000 per week in August and 5,000 per week in September, before hitting the target of 10,000 vehicles per week sometime in 2018." In 2018, the goal is produce 400,000 vehicles.
+Tesla is projecting to product “1,000 vehicles per week in July, 4,000 per week in August and 5,000 per week in September, before hitting the target of 10,000 vehicles per week sometime in 2018." In 2018, the goal is to produce 400,000 vehicles.
 
 Despite Tesla’s high hopes, industry analyst, Steve Funk, says it isn’t possible.
 
@@ -41,23 +41,23 @@ According to Funk, the paint shop and production line appear to be the bottlenec
 
 "Because Tesla has not expanded the Fremont factory, it is reasonable to expect the two assembly lines have a nominal capacity similar to NUMMI. Here is the NUMMI capacity:
 
-Truck Line (Model S and X): nominal capacity 180,720 jobs/year (48 jph)
+- Truck Line (Model S and X): nominal capacity 180,720 jobs/year (48 jph)
 
-Small Car Line (Model 3): nominal capacity 225,900 jobs/ year (60 jph)
+- Small Car Line (Model 3): nominal capacity 225,900 jobs/ year (60 jph)
 
 From 2000 to 2009, NUMMI produced an average of 154,522 Tacomas on the Truck Line, less than the nominal capacity. Because the truck line is slower than the small car line, Tesla uses it for Model S/X production.
 
-Tesla forecasts Model S/X production to be no more than 100,000 units in 2017. Presumably this is demand constrained.
+Tesla forecasts Model S/X production to be no more than 100,000 units in 2017. Presumably, this is demand constrained.
 
 The small car line is faster and is slated to assemble the Model 3. The 225,900 capacity figure is based on two shifts with straight time.” Funk predicted.
 
-Based on this, and my learnings from my recent trip to Fremont, I agree that this Tesla plant alone won’t get them to the huge number they’re projecting. In fact, Musk even stated that the Fremont plant is “bursting at the seams.” To meet their high projections, Tesla need to give “serious consideration” to more factories - potentially as many as 20.
+Based on this, and my learnings from my recent trip to Fremont, I agree that this Tesla plant alone won’t get them to the huge number they’re projecting. In fact, Musk even stated that the Fremont plant is “bursting at the seams.” To meet their high projections, Tesla needs to give “serious consideration” to more factories - potentially as many as 20.
 
-Considering these factors and my personal learnings, I am downgrading Tesla’s originally published estimate of around 100K Model 3’s in 2017 to around 83,000. I think the production lines will become automated in early September, and this is when they’ll see a big jump in efficiency.
+Considering these factors and my learnings, I am downgrading Tesla’s originally published estimate of around 100K Model 3’s in 2017 to around 83,000. I think the production lines will become automated in early September, and this is when they’ll see a big jump in efficiency.
 
 Musk also talked about how Model 3 production is exponential instead of linear. Musk said: "Another thing I really want to emphasize is the production ramp tends to look like -- is exponential. Ultimately it is an S-curve. An exponential goes to linear then goes to log. And it's very difficult to predict exactly where that beginning part of the exponential and the S-curve fits in between quarterly reporting." Based on this, once the equipment is installed, in both the gigafactory and the production will grow exponentially.
 
-Looking at the numbers more realistically, using an reasonable growth curve, Tesla will hit the 5,000 cars per week sometime in late October. By the end of the year, I’m estimating they’ll be at 6,000 per week. So, when you add the numbers, we’re at almost 83,000 by the end of 2017.
+Looking at the numbers more realistically, using a reasonable growth curve, Tesla will hit the 5,000 cars per week sometime in late October. By the end of the year, I’m estimating they’ll be at 6,000 per week. So, when you add the numbers, we’re at almost 83,000 by the end of 2017.
 
 I compiled the numbers and insights for this episode from the following sources.
 
@@ -74,3 +74,4 @@ I compiled the numbers and insights for this episode from the following sources.
 [Market Adoption S-Curve Model](http://www.clear-lines.com/blog/post/S-shaped-market-adoption-curve.aspx)
 
 A BIG thank you to Wunder Capital for supporting the show. Wunder Capital helps people like you and me invest as little as $1,000 in solar projects. Check them out at [http://wundercapital.com/teslanomics](http://wundercapital.com/teslanomics)
+
