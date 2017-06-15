@@ -1,5 +1,5 @@
 ---
-title: Tesla Will Deliver 83K Model 3's in 2017 - Prediction
+title: 'Tesla Model 3 Prediction: 83K Deliveries in 2017'
 layout: post
 date: 2017-06-14 20:41
 author: Ben Sullins
@@ -71,5 +71,6 @@ I compiled the numbers and insights for this episode from the following sources.
 
 <a href="https://docs.google.com/spreadsheets/d/1u3r-0TSXE_DncEqWtvUY0lOnMhcnu62ctTnq2eF_RIM/edit#gid=1479761403" style="font-size: 1rem; background-color: rgb(255, 255, 255);">Delivery Details</a>
 
-A BIG thank you to Wunder Capital for supporting the show. Wunder Capital helps people like you and me invest as little as $1,000 in solar projects. Check them out at [http://wundercapital.com/teslanomics](http://wundercapital.com/teslanomics)
+[Market Adoption S-Curve Model](http://www.clear-lines.com/blog/post/S-shaped-market-adoption-curve.aspx)
 
+A BIG thank you to Wunder Capital for supporting the show. Wunder Capital helps people like you and me invest as little as $1,000 in solar projects. Check them out at [http://wundercapital.com/teslanomics](http://wundercapital.com/teslanomics)
