@@ -21,6 +21,8 @@ Tesla is going to sell almost 83,000 Model 3’s in 2017 based on my forecast mo
 
 Looking at the EV market, the Tesla Model 3 hits the mass market consumer. With an estimated base price of $35,000, maybe a little higher, the attainability of this electric vehicle reaches more prospective owners. In fact, there are already 400,000 reservations and deliveries are set to begin in July.
 
+![](/images/featured/model3-delivery-estimates-dashboard.png)
+
 At a recent shareholder event, Elon Musk shared key production learnings from the Tesla Model X that is helping to optimize production of the Model 3.
 
 "We have kept the initial configurations for Model 3 very simple. This is critical to achieving a rapid production ramp. Big mistake we made with the X [is] way too much complexity right at the beginning...that was very foolish.
@@ -70,3 +72,4 @@ I compiled the numbers and insights for this episode from the following sources.
 <a href="https://docs.google.com/spreadsheets/d/1u3r-0TSXE_DncEqWtvUY0lOnMhcnu62ctTnq2eF_RIM/edit#gid=1479761403" style="font-size: 1rem; background-color: rgb(255, 255, 255);">Delivery Details</a>
 
 A BIG thank you to Wunder Capital for supporting the show. Wunder Capital helps people like you and me invest as little as $1,000 in solar projects. Check them out at [http://wundercapital.com/teslanomics](http://wundercapital.com/teslanomics)
+
