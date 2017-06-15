@@ -1,6 +1,5 @@
 ---
-title: TESLA MODEL 3 PREDICTION - 83K Delivered in 2017, Will It Be Enough to Please
-  Investors?
+title: Tesla Will Deliver 83K Model 3's in 2017 - Prediction
 layout: post
 date: 2017-06-14 20:41
 author: Ben Sullins
@@ -13,7 +12,7 @@ tags:
 - ev industry
 - usa
 image: ''
-youtube: ''
+youtube: asdf
 description: ''
 ---
 
