@@ -11,7 +11,7 @@ tags:
 - sales
 - ev industry
 - usa
-image: ''
+image: "/images/featured/model3deliveryestimate2-600w.jpg"
 youtube: asdf
 description: ''
 ---
