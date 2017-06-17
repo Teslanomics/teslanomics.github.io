@@ -15,13 +15,12 @@ function getQueryVariable(variable)
        }
        return(false);
 }
-</script>
-
-<img id="img-estimate" />
-<script>
 
 img = getQueryVariable("img");
 console.log(img);
+
 document.getElementById("img-estimate").src=img;
 
 </script>
+
+<img id="img-estimate" src="" />
