@@ -17,7 +17,8 @@ function getQueryVariable(variable)
 }
 
 img = getQueryVariable("img");
-console.log("image = ".img);
+console.log("image = ");
+console.log(img);
 
 document.getElementById("img-estimate").src=img;
 
