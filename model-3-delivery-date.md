@@ -17,7 +17,7 @@ function getQueryVariable(variable)
 }
 </script>
 
-<img id="img-estimate"></div>
+<img id="img-estimate" />
 <script>
 
 img = getQueryVariable("img");
