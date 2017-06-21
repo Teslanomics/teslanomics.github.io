@@ -2,7 +2,7 @@
 layout: page
 title: Model 3 Delivery Estimate from Teslanomics
 permalink: "/model-3-delivery-date"
-published: true
+published: ''
 ---
 <script>
 function getQueryVariable(variable)
