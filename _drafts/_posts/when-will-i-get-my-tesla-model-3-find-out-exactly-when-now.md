@@ -27,9 +27,9 @@ According to Musk’s recent comments at a shareholders event, there are several
 
 "[There will] just be a single motor to begin with. And then, we will have the dual motor config, if we are lucky, toward the end of this year or more likely early next.”
 
-So, which options you want with your Model 3, may impact your delivery date. Additionally, based on their previous rollout strategy and the fact that California is where the Tesla factory is, Californians will likely be the first to get their Model 3s.
+So, which options you want with your Model 3, may impact your delivery date. Additionally, based on their previous roll-out strategy and the fact that California is where the Tesla factory is, Californians will likely be the first to get their Model 3s.
 
-The last bit of information needed to determine when you’ll get your Model 3 is your location. This helps to understand the natural delay from their rollout plan as well as shipping time. For example, in Japan, I’m estimating it takes 41 days just for shipping.
+The last bit of information needed to determine when you’ll get your Model 3 is your location. This helps to understand the natural delay from their roll-out plan as well as shipping time. For example, in Japan, I’m estimating it takes 41 days just for shipping.
 
 After you’ve entered all your information in my Tesla Model 3 delivery tool, you just need to click the big button. Then, “Tesllllll-YeAh!” You’ll get an estimated delivery date on a beautiful, printable page that you can hang on your wall and share on social media. In case you missed that link, here it is:  https://teslanomics.co/model-3-delivery-estimator
 
