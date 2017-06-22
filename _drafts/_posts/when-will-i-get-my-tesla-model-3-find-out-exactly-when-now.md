@@ -1,17 +1,17 @@
 ---
-title: When will I get my Tesla Model 3? Find out exactly when now!
 author: Ben Sullins
-layout: post
-date: 2017-06-21 13:14
 categories:
 - analysis
+date: 2017-06-21 13:14
+image: "/images/featured/m3estimator-thumb-600w.jpeg"
+layout: post
 tags:
 - tesla
 - tesla model 3
 - tesla news
 - Model 3
+title: When will I get my Tesla Model 3? Find out exactly when now!
 youtube: M9-qF3YKyTc
-image: ''
 ---
 
 
@@ -31,6 +31,6 @@ So, which options you want with your Model 3, may impact your delivery date. Add
 
 The last bit of information needed to determine when you’ll get your Model 3 is your location. This helps to understand the natural delay from their rollout plan as well as shipping time. For example, in Japan, I’m estimating it takes 41 days just for shipping.
 
-After you’ve entered all your information in my Tesla Model 3 delivery tool, you just need to click the big button. Then, “Tesllllll-YeAh!” You’ll get an estimated delivery date on a beautiful, printable page that you can hang on your wall and share on social media. In case you missed that link, here it is: https://docs.google.com/spreadsheets/d/1rKDw72FOIMmSY8wBVl0ECjAjwYV9shlvRiVKKzfu3L8/edit#gid=0
+After you’ve entered all your information in my Tesla Model 3 delivery tool, you just need to click the big button. Then, “Tesllllll-YeAh!” You’ll get an estimated delivery date on a beautiful, printable page that you can hang on your wall and share on social media. In case you missed that link, here it is:  https://teslanomics.co/model-3-delivery-estimator
 
 A big thanks to Troy and the other folks at Tesla Motors Club for proviing the data and algorithm to come up with these estimates: https://teslamotorsclub.com/tmc/threads/model-3-delivery-estimator.77890/#post-1748851
