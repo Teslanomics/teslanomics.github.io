@@ -20,7 +20,7 @@ function getQueryVariable(variable)
 imgSrc = getQueryVariable("img");
 
 var img = document.createElement("img");
-img.src = imgSrc;
+img.src = decodeURIComponent(imgSrc);
 
 var src = document.getElementById("estimate");
 src.appendChild(img);
