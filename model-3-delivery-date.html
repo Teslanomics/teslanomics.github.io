@@ -33,8 +33,15 @@ if (h == 'https%3A%2F%2Fpublic.tableau.com%2Fviews%2FTeslaModel3DeliveryEstimato
 	img.src = decodeURIComponent(imgSrc);
 	img.style = "max-width:500px; width:100%; height:auto;";
 
+	var a = document.createElement('a');
+	a.appendChild(img);
+	a.title = "Tesla Model 3 Delivery Estimate from Teslanomics";
+	a.href = imgSrc;
+
 	var src = document.getElementById("estimate");
-	src.appendChild(img);
+	src.appendChild(a);
+
+	// build sharing links
 
 } else {
 
