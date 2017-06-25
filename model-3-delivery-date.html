@@ -21,12 +21,15 @@ imgSrc = getQueryVariable("img");
 
 // add logic to make sure image is coming from tableau public
 h = imgSrc.substring(0,109);
-console.log(h);
 
-var img = document.createElement("img");
-img.src = decodeURIComponent(imgSrc);
+if (h == 'https%3A%2F%2Fpublic.tableau.com%2Fviews%2FTeslaModel3DeliveryEstimator-Large%2FDeliveryEstimate%3FProdSeqNum') {
 
-var src = document.getElementById("estimate");
-src.appendChild(img);
+	var img = document.createElement("img");
+	img.src = decodeURIComponent(imgSrc);
+
+	var src = document.getElementById("estimate");
+	src.appendChild(img);
+
+}
 
 </script>
