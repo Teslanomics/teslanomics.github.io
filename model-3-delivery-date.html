@@ -13,13 +13,15 @@ function getQueryVariable(variable)
        for (var i=0;i<vars.length;i++) {
                var pair = vars[i].split("=");
                if(pair[0] == variable){return pair[1];}
-       }
-			 console.log(query);
+       }			 
        return(false);
 }
 
 imgSrc = getQueryVariable("img");
 
+// add logic to make sure image is coming from tableau public
+l = getLocation(imgSrc);
+console.log(l.hostname);
 
 var img = document.createElement("img");
 img.src = decodeURIComponent(imgSrc);
