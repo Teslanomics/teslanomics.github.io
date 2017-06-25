@@ -20,7 +20,7 @@ function getQueryVariable(variable)
 imgSrc = getQueryVariable("img");
 
 // add logic to make sure image is coming from tableau public
-h = imgSrc.left(109);
+h = imgSrc.substring(0,109);
 console.log(h);
 
 var img = document.createElement("img");
