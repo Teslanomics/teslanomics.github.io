@@ -17,9 +17,11 @@ function getQueryVariable(variable)
 }
 
 imgSrc = getQueryVariable("img");
-console.log(imgSrc);
-document.getElementById("img-estimate").src=imgSrc;
+
+var img = document.createElement("img");
+img.src = imgSrc;
+
+var src = document.getElementById("body");
+src.appendChild(img);
 
 </script>
-
-<img id="img-estimate" title="My Tesla Model 3 Delivery Estimate" src="" />
