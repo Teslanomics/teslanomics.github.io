@@ -36,7 +36,7 @@ if (h == 'https%3A%2F%2Fpublic.tableau.com%2Fviews%2FTeslaModel3DeliveryEstimato
 	var a = document.createElement('a');
 	a.appendChild(img);
 	a.title = "Tesla Model 3 Delivery Estimate from Teslanomics";
-	a.href = encodeURIComponent(imgSrc);
+	a.href = decodeURIComponent(imgSrc);
 	a.target = "_blank";
 
 	var src = document.getElementById("estimate");
