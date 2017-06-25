@@ -20,11 +20,8 @@ function getQueryVariable(variable)
 imgSrc = getQueryVariable("img");
 
 // add logic to make sure image is coming from tableau public
-var parser = document.createElement('a');
-parser.href = imgSrc;
-
-console.log("host = "+parser.hostname); // => "example.com"
-
+h = imgSrc.left(109);
+console.log(h);
 
 var img = document.createElement("img");
 img.src = decodeURIComponent(imgSrc);
