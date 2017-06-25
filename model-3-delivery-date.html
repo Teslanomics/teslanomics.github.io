@@ -4,7 +4,9 @@ title: Model 3 Delivery Estimate from Teslanomics
 permalink: "/model-3-delivery-date"
 published: true
 ---
-<div id="estimate" style="margin:auto; padding:10px;"></div>
+<div id="estimate" style="margin:auto; padding:10px;">
+ {% include ripple.html %}
+</div>
 <div id="credits"><p>Data sourced from <a href="https://teslamotorsclub.com/tmc/threads/model-3-delivery-estimator.77890/#post-1748851" target="_blank">Tesla Motors Club</a></p></div>
 
 
@@ -43,6 +45,10 @@ if (h == 'https%3A%2F%2Fpublic.tableau.com%2Fviews%2FTeslaModel3DeliveryEstimato
 
 	var src = document.getElementById("estimate");
 	src.appendChild(a);
+
+	//hide spinner
+	var loader = document.getElementByClassName("lds-css")
+	loader.style.visibility = "hidden";
 
 	// build sharing links
 
