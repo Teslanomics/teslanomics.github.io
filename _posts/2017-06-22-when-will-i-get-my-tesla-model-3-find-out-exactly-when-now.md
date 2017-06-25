@@ -19,7 +19,9 @@ youtube: M9-qF3YKyTc
 
 We’re all wondering… “When am I going to get my Tesla Model 3!?” I’ve built a tool to help you figure out when you’re going to get your model 3! It all started when…
 
-I got call from Musk the other day, and he let me know there was a disturbance in the force. He told me people were getting restless waiting for their Model 3s, and I was chosen to help ease their concerns. So, I decided to give you the power of the force by creating a tool to help you predict when you’ll get your Model 3. Get your delivery date now: https://teslanomics.co/model-3-delivery-estimator
+I got call from Musk the other day, and he let me know there was a disturbance in the force. He told me people were getting restless waiting for their Model 3s, and I was chosen to help ease their concerns. So, I decided to give you the power of the force by creating a tool to help you predict when you’ll get your Model 3. Get your delivery date now
+
+<iframe frameborder="0" marginheight="0" marginwidth="0" allowtransparency="true" class="tableauViz" style="display: block; width: 100%; height: 570px; margin: 0px; padding: 0px; border: none;" width="100%" height="570px" src="https://public.tableau.com/views/TeslaModel3DeliveryEstimator-Large/ChooseOptions?:embed=y&:showVizHome=no&:hoswidtt_url=https%3A%2F%2Fpublic.tableau.com%2F&:tabs=no&:toolbar=yes&:animate_transition=yes&:display_static_image=no&:display_spinner=no&:display_overlay=yes&:display_count=yes"></iframe>
 
 All kidding and Tesla superpowers aside, there are several factors that go into determining when your Model 3 will end up in your driveway. Step one in predicting when you’ll receive your Tesla is remembering when you made your reservation. During the Tesla unveiling event, the number of reservations was revealed, and this helped buyers calculate exactly where their place in line is. If you’re an existing Tesla owner, you’re in luck. You will get your Model 3 before general public.
 
