@@ -56,6 +56,10 @@ The main cost categories I look at are:
 
 Overall, I found that I saved over 30% on fuel and paid just under $18K including everything. That amount is mostly in part due to my 3yr term on my loan instead of the traditional longer term loans.
 
+## The Data
+<iframe src="https://docs.google.com/spreadsheets/d/11Hp3ja0zYj4jGUjGJALiVZ-EiFdLQ2gPNCgRK9rdslk/pubhtml?widget=true&amp;headers=false"></iframe>
+
+
 ## Question of the day?
 
 &#8211; Do you own a Model S or X? How much are you spending per year?
