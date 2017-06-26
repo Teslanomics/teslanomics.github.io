@@ -36,10 +36,12 @@ So here&#8217;s how I went about answering this question and analyzing the data
   4. Estimated MPG for a full-size sedan (equivalent to a model S)
 
 ## The Data
+<iframe src="https://docs.google.com/spreadsheets/d/11Hp3ja0zYj4jGUjGJALiVZ-EiFdLQ2gPNCgRK9rdslk/pubhtml?widget=true&amp;headers=false" style="width:100%; min-height: 400px;"></iframe>
+<br/>
+<a href="https://docs.google.com/spreadsheets/d/11Hp3ja0zYj4jGUjGJALiVZ-EiFdLQ2gPNCgRK9rdslk/edit?usp=sharing" target="_blank">View in Google Drive</a>
 
-##
 
-My Approach
+## My Approach
 
   * Determine my monthly cost for powering the Tesla
   * Calculate the approximate cost of driving in a legacy gas-powered sedan
