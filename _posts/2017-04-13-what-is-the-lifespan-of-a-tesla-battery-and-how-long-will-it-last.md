@@ -45,7 +45,7 @@ Haters love to claim that the Tesla car batteries, the ones that power the car, 
 
 [Use our code and get $1,000 off a new Tesla Model S or X](https://teslanomics.co/td)
 
-<iframe frameborder="0" marginheight="0" marginwidth="0" allowtransparency="true" class="tableauViz" style="display: block; width: 100%; height: 900; margin: 0px; padding: 0px; border: none;" width="100%" height="1300" src="https://public.tableau.com/views/TeslaBatteryDegradation/viz?:embed=y&:display_count=yes?:embed=y&:showVizHome=no&:hoswidtt_url=https%3A%2F%2Fpublic.tableau.com%2F&:tabs=yes&:toolbar=yes&:animate_transition=yes&:display_static_image=no&:display_spinner=no&:display_overlay=yes&:display_count=yes"></iframe>
+<iframe frameborder="0" marginheight="0" marginwidth="0" allowtransparency="true" class="tableauViz" style="display: block; width: 100%; height: 800; margin: 0px; padding: 0px; border: none;" width="100%" height="800" src="https://public.tableau.com/views/TeslaBatteryDegradation/viz?:embed=y&:display_count=yes?:embed=y&:showVizHome=no&:hoswidtt_url=https%3A%2F%2Fpublic.tableau.com%2F&:tabs=yes&:toolbar=yes&:animate_transition=yes&:display_static_image=no&:display_spinner=no&:display_overlay=yes&:display_count=yes"></iframe>
 
 ## Sources
 
