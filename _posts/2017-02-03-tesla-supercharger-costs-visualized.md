@@ -58,12 +58,7 @@ Tesla finally announced details about the Supercharger costs for new Tesla owner
 
 Visit this link below to calculate your trip. You’ll want to enter the total distance, starting charge, credits available, and car model. The model adjusts the coefficient used in the calculation of the effective rate. That basically takes into account the added cost of charging beyond 60kWh each time you stop. You could offset this if you only ever charge to 60kWh but the estimate should still be fairly accurate here.
 
-<div class='tableauPlaceholder' id='viz1486099419285' style='position: relative'>
-  <noscript>
-    <a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Te&#47;TeslaSuperchargerNetworkCosts&#47;US&#47;1_rss.png' style='border: none' /></a>
-  </noscript>
-</div>
-
+<iframe frameborder="0" marginheight="0" marginwidth="0" allowtransparency="true" class="tableauViz" style="display: block; width: 100%; height: 1300; margin: 0px; padding: 0px; border: none;" width="100%" height="1300" src="https://public.tableau.com/views/TeslaSuperchargerNetworkCosts/US?:embed=y&:showVizHome=no&:hoswidtt_url=https%3A%2F%2Fpublic.tableau.com%2F&:tabs=yes&:toolbar=yes&:animate_transition=yes&:display_static_image=no&:display_spinner=no&:display_overlay=yes&:display_count=yes"></iframe>
 
 
 // Sources
