@@ -152,8 +152,8 @@ module Jekyll
       <meta http-equiv="refresh" content="0; url=#{destination_path}" />
       </head>
       <body>
-				<img src="/images/loading.gif" style="display: block; margin-left: auto; margin-right: auto;" />
-        <h1 style="color:#fff;">Redirecting...</h1>
+				<h1 style="color:#fff;">Redirecting...</h1>
+				<img src="/images/loading.gif" style="display: block; margin-left: auto; margin-right: auto;" />        
         <p><a href='#{destination_path}'>Click here if you are not redirected.</a></p>
         <script>
           document.location.href = "#{destination_path}";
