@@ -2,7 +2,7 @@
 title: Tesla Model 3 Will Dominate the EV Market
 author: Ben Sullins
 layout: post
-date: 2017-06-26 09:44
+date: '2017-06-29T15:19:30.128Z'
 image: "/images/featured/Impact_Thumb_-_600w (1).jpg"
 tags:
 - tesla
