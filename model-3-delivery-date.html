@@ -7,14 +7,66 @@ published: true
 <div id="estimate" style="margin:auto; padding:10px;">
  <!-- {% include ripple.html %} -->
 </div>
-<div id="credits">
-	<p>Data sourced from <a href="https://teslamotorsclub.com/tmc/threads/model-3-delivery-estimator.77890/#post-1748851" target="_blank">Tesla Motors Club</a></p>
-	<strong><a href="/model-3-delivery-estimator">Start Over</a></strong><br/>
-</div>
 <div id="yt">
 	<h2>How it Works</h2>
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/M9-qF3YKyTc?ecver=1" frameborder="0" allowfullscreen></iframe>
+	<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/M9-qF3YKyTc?ecver=1" frameborder="0" allowfullscreen></iframe> -->
+	<div id="player"></div>
+	<script>
+	      var tag = document.createElement('script');
+
+	      tag.src = "https://www.youtube.com/iframe_api";
+	      var firstScriptTag = document.getElementsByTagName('script')[0];
+	      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+	      var player;
+	      function onYouTubeIframeAPIReady() {
+	        player = new YT.Player('player', {
+	          height: '100%',
+	          width: '100%',
+	          playerVars: {
+	                    autoplay: 1,
+	                    loop: 1,
+	                    controls: 1,
+	                    showinfo: 1,
+	                    autohide: 1,
+	                    modestbranding: 0,
+	                    cc_load_policy: 1,
+	                    vq: 'hd720',
+	                    videoId: 'M9-qF3YKyTc',
+	             },
+	          events: {
+	            'onReady': onPlayerReady,
+	            'onStateChange': onPlayerStateChange
+	          }
+	        });
+	      }
+
+
+	      function onPlayerReady(event) {
+	        event.target.playVideo();
+	        player.mute();
+	      }
+
+	      var done = false;
+	      function onPlayerStateChange(event) {
+
+	      }
+	      function stopVideo() {
+	        player.stopVideo();
+	      }
+	    </script>
+	<br/>
+
+
+	<strong><a href="/model-3-delivery-estimator">Start Over</a></strong><br/>
+
+
+
 </div>
+<div id="credits">
+	<small>Data sourced from <a href="https://teslamotorsclub.com/tmc/threads/model-3-delivery-estimator.77890/#post-1748851" target="_blank">Tesla Motors Club</a></small>
+</div>
+
 <script>var om58f7ad1712512,om58f7ad1712512_poll=function(){var r=0;return function(n,l){clearInterval(r),r=setInterval(n,l)}}();!function(e,t,n){if(e.getElementById(n)){om58f7ad1712512_poll(function(){if(window['om_loaded']){if(!om58f7ad1712512){om58f7ad1712512=new OptinMonsterApp();return om58f7ad1712512.init({"s":"31049.58f7ad1712512","staging":0,"dev":0,"beta":0});}}},25);return;}var d=false,o=e.createElement(t);o.id=n,o.src="//a.optnmstr.com/app/js/api.min.js",o.async=true,o.onload=o.onreadystatechange=function(){if(!d){if(!this.readyState||this.readyState==="loaded"||this.readyState==="complete"){try{d=om_loaded=true;om58f7ad1712512=new OptinMonsterApp();om58f7ad1712512.init({"s":"31049.58f7ad1712512","staging":0,"dev":0,"beta":0});o.onload=o.onreadystatechange=null;}catch(t){}}}};(document.getElementsByTagName("head")[0]||document.documentElement).appendChild(o)}(document,"script","omapi-script");</script>
 
 
