@@ -9,3 +9,4 @@ gem 'jekyll-paginate-v2'
 gem 'jekyll-sitemap'
 gem 'jekyll-seo-tag'
 gem 'jekyll-compose', group: [:jekyll_plugins]
+gem 'jekyll-redirect-from'
