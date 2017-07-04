@@ -2,7 +2,7 @@
 # Can be used in your theme by calling 'site.title' and so on
 title: Teslanomics
 description: Decoding the Economics of Tesla
-url: https://teslanomics.netlify.com
+url: https://teslanomics.co
 
 
 # Timezone of site
@@ -40,7 +40,7 @@ disqus: teslanomics
 author:
   name: Ben Sullins
   email: ben@teslanomics.co
-  uri: https://teslanomics.netlify.com
+  uri: https://teslanomics.co
   bio: Blank
   twitter: teslanomicsco
   github: teslanomics
