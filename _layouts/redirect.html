@@ -1,13 +1,38 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html>
+  <head>
 
-<article class="page">
+		<meta http-equiv="refresh" content="0; url={{ page.redirect_to }}">
 
-  <!-- <h1>{{ page.title }}</h1> -->
+    {% include head.html%}
 
-  <div class="entry">
-    {{ content }}
-		<h1>Redirecting to {{ page.redirect.to }}</h1>
-  </div>
-</article>
+  <body class="custom-background">
+<div class="susy">
+
+  {% include header.html %}
+
+		<div id="main" role="main" class="container">
+			{{ content }}
+			<img src="images/lg.bar-chart-preloader.gif" />
+		</div>
+
+
+    <div class="wrapper-footer">
+      <div class="container">
+        <footer class="footer">
+          {% include footer.html %}
+        </footer>
+      </div>
+    </div>
+
+
+</div>
+		<!-- {% include optin.html %} -->
+
+      <!-- JS -->
+  <!-- inject:js -->
+  <!-- <script src="/scripts/main.min.js"></script> -->
+  <!-- endinject -->
+
+  </body>
+</html>
