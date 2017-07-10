@@ -1,6 +1,6 @@
 ---
 author: Ben Sullins
-date: 2017-07-06 15:34
+date: '2017-07-10T13:33:35.898Z'
 layout: post
 title: The 10 Best EVs Under 50K You Can Buy TODAY
 categories:
