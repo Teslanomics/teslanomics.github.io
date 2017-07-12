@@ -1,12 +1,12 @@
 ---
-title: 'Tesla Buyer''s Guide: Which Tesla Is Right For You?'
 author: Ben Sullins
-layout: post
+categories: []
 date: 2017-07-11 12:46
 image: "/images/featured/Buyers_Guide_Thumb_600p.jpg"
-youtube: KS658FR_UIQ
-categories: []
+layout: post
 tags: []
+title: 'Tesla Buyer''s Guide: Which Tesla Is Right For You?'
+youtube: KS658FR_UIQ
 ---
 
 
@@ -16,11 +16,11 @@ There are some universal principles you should understand before choosing which 
 
 While the Model X costs more, being that it’s an SUV, it’s a good fit if:
 
-- You have a big family (over 5)
+* You have a big family (over 5)
 
-- You need tons of storage
+* You need tons of storage
 
-- And, like to command the road from a higher vantage point.
+* And, like to command the road from a higher vantage point.
 
 Depending on where you live, the Tesla Model X may present parking challenges, especially for city dwellers.
 
@@ -54,21 +54,21 @@ First, you can buy used. Tesla has a pre-owned site with both Model Ss and Xs av
 
 Another option and one I couldn’t leave out is the Tesla Model 3. While Model 3 isn’t available yet, there are already over 400,000 pre-orders. While I didn’t want to speculate on the Model 3’s key differentiators, we do know some basics about the Tesla Model 3.
 
-- It will go at least 215 miles on a single charge
+* It will go at least 215 miles on a single charge
 
-- It’s fast! It can go from 0-60 in under six seconds
+* It’s fast! It can go from 0-60 in under six seconds
 
-- It’s a five-seater
+* It’s a five-seater
 
-- It’ll be supercharger enabled, have autopilot and is designed to meet the same five- star safety rating as the Model S and X
+* It’ll be supercharger enabled, have autopilot and is designed to meet the same five- star safety rating as the Model S and X
 
-- The price will start at $35,000
+* The price will start at $35,000
 
 As I mentioned, there are already 400,000 Tesla Model 3 reservations, so don’t expect to be able to get one anytime soon, if you don’t already have a reservation.If you did want to have a bit of fun in considering when the Model 3 could end up in your drive, I built an estimator. By entering pieces of information about yourself, the Tesla Model 3 estimator predicts when you might get your Model 3. Try it out here: https://teslanomics.co/model-3-delivery-estimator
 
 I’d love to hear which Tesla model you’ve decided on. Please share in the comments below. Also, stay tuned for more in-depth buyers’ guides on each model as well as Tesla features and options updates.
 
-<span style="font-size: 1rem;">A BIG thank you to Wunder Capital for supporting the show. Wunder Capital helps people like you and me invest as little as $1,000 in solar projects. Check them out at wundercapital.com/teslanomics</span>
+<span style="font-size: 1rem;">A BIG thank you to Wunder Capital for supporting the show. Wunder Capital helps people like you and me invest as little as $1,000 in solar projects. Check them out at&nbsp;</span><span style="font-size: 1rem;">https://teslanomics.co/wunder</span>
 
 // My Gear //
 
