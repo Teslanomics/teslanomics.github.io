@@ -1,0 +1,161 @@
+---
+layout: page
+title: Model 3 Tax Credit Estimate from Teslanomics
+permalink: "/tax-credit"
+published: true
+---
+
+<div id="estimate"></div>
+
+<div id="sources">
+	<br/>
+	<h2>Sources</h2>
+	<ul>
+		<li><a href="https://twitter.com/teslanomicsco/status/881883723200942081">Teslanomics Model 3 Delivery Ramp</a></li>
+		<li><a href="https://en.wikipedia.org/wiki/Plug-in_electric_vehicles_in_the_United_States">Plug-in electric vehicles in the United States</a></li>
+		<li><a href="http://insideevs.com/monthly-plug-in-sales-scorecard/">InsideEVs Monthly Sales Scorecard</a></li>
+		<!-- <li><a href=""></a></li> -->
+
+</div>
+<br/>
+<div id="disclaimer">
+<small>*This estimate assumes several variables which may not be accurate. Do not rely on this information for making a purchase decision. Contact Tesla with more questions and information about your Model 3 purchase.</small>
+</div>
+
+<script>
+function getQtrYr(date) {
+	  var d = new Date(date);
+    var month = d.getUTCMonth()+1;
+		var yr = d.getUTCFullYear();
+
+		return (yr + "-Q" + (Math.ceil(month / 3)).toString());
+
+}
+
+function getQueryVariable(variable)
+{
+       var query = window.location.search.substring(1);
+       var vars = query.split("&");
+       for (var i=0;i<vars.length;i++) {
+               var pair = vars[i].split("=");
+               if(pair[0] == variable){return pair[1];}
+       }
+       return(false);
+}
+
+function getFedRebate(deliveryDate) {
+	var rebate = 0;
+
+	// simple switch statement from delivery ramp
+	switch (deliveryDate) {
+		case "2017-Q4":
+			rebate = 7500;
+			break;
+		case "2018-Q1":
+			rebate = 7500;
+			break;
+		case "2018-Q2":
+			rebate = 3750;
+			break;
+		case "2018-Q3":
+			rebate = 3750;
+			break;
+		case "2018-Q4":
+			rebate = 1875;
+			break;
+		case "2019-Q1":
+			rebate = 1875;
+			break;
+		default: 0;
+
+	}
+
+	return(rebate);
+
+}
+
+function getStateRebate(deliveryDate) {
+
+	var rebate = 0;
+	// source https://en.wikipedia.org/wiki/Plug-in_electric_vehicles_in_the_United_States#State_incentives
+
+	switch (deliveryDate) {
+		case "CA": rebate = 2500; break;
+		case "CO": rebate = 6000; break;
+		case "CT": rebate = 3000; break;
+		case "DE": rebate = 2200; break;
+		case "IN": rebate = 1650; break;
+		case "LA": rebate = 3000; break;
+		case "MD": rebate = 3000; break;
+		case "MA": rebate = 1000; break;
+		case "PA": rebate = 2000; break;
+		case "SC": rebate = 1500; break;
+		case "TN": rebate = 2500; break;
+		default: 0
+
+	}
+
+	return(rebate);
+
+}
+
+// read vars
+date = getQueryVariable("delivery-date");
+state = getQueryVariable("state");
+
+// logging
+console.log(date);
+console.log(state);
+
+// create h3 for date
+var strDate = document.createElement("h3");
+strDate.innerHTML = "Delivery Date: " + date;
+
+var strQtr = document.createElement("h3");
+strQtr.innerHTML = "Delivery Quarter: " + getQtrYr(date);
+
+// create h3 for state
+var strState = document.createElement("h3");
+strState.innerHTML = "State: " + state;
+
+// get fed rebate
+var fedRebate = document.createElement("h3");
+fedRebate.innerHTML = "Federal Rebate: " + getFedRebate(getQtrYr(date));
+
+//get stat rebate
+var stateRebate = document.createElement("h3");
+stateRebate.innerHTML = "State Rebate: " + getStateRebate(state);
+
+// add details to #estimate
+var resp = document.getElementById("estimate");
+resp.appendChild(strDate);
+resp.appendChild(strState);
+resp.appendChild(strQtr);
+resp.appendChild(fedRebate);
+resp.appendChild(stateRebate);
+
+// get fed rebate
+
+
+// get state rebate (if exists)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
