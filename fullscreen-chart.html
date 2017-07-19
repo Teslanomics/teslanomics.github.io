@@ -22,6 +22,8 @@
         // get source url
         hc = getQueryVariable("hc");
 
+
+        ///// JAVASCRIPT METHOD /////
         // create elements
         var hcContainer = document.createElement("div");
         hcContainer.id = 'highcharts-'+hc;
@@ -34,9 +36,20 @@
         // add script to container div
         hcContainer.appendChild(hcScript);
 
+        ///// IFRAME METHOD /////
+        // get height
+        h = obj.contentWindow.document.body.scrollHeight + 'px';
+
+        // create elements
+        var iframe = document.createElement("iframe");
+        iframe.class = 'highcharts-iframe';
+        iframe.src = '//cloud.highcharts.com/embed/' + hc;
+        iframe.style = 'border: 0; width: 100%; height: ' + h;
+
         // add to page
         var resp = document.getElementById("container");
-        resp.appendChild(hcContainer);
+        // resp.appendChild(hcContainer);
+        resp.appendChild(iframe);
 
       });
 
@@ -47,6 +60,11 @@
 
     <div id='container'></div>
     <!-- <div id='highcharts-epufuqo'><script src='//cloud.highcharts.com/inject/epufuqo' defer='defer'></script></div> -->
+
+    <!-- <iframe class='highcharts-iframe' src='//cloud.highcharts.com/embed/epufuqo' style='border: 0; width: 100%; height: 500px'></iframe> -->
+
+
+
 
   </body>
 </html>
