@@ -12,6 +12,10 @@
              }
              return(false);
       }
+      
+      function resizeIframe(obj) {
+        obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+      }
 
       document.addEventListener("DOMContentLoaded", function(event) {
 
@@ -25,6 +29,7 @@
         var hcScript = document.createElement("script");
         hcScript.src = '//cloud.highcharts.com/inject/'+hc;
         hcScript.setAttribute('defer', 'defer');
+        hcScript.setAttribute('onload','resizeIframe(this)');
 
         // add script to container div
         hcContainer.appendChild(hcScript);
@@ -34,6 +39,7 @@
         resp.appendChild(hcContainer);
 
       });
+
 
     </script>
   </head>
