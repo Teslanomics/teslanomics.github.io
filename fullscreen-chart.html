@@ -12,7 +12,7 @@
              }
              return(false);
       }
-      
+
       function resizeIframe(obj) {
         obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
       }
@@ -25,11 +25,11 @@
         // create elements
         var hcContainer = document.createElement("div");
         hcContainer.id = 'highcharts-'+hc;
+        hcContainer.setAttribute('onload','resizeIframe(this)');
 
         var hcScript = document.createElement("script");
         hcScript.src = '//cloud.highcharts.com/inject/'+hc;
         hcScript.setAttribute('defer', 'defer');
-        hcScript.setAttribute('onload','resizeIframe(this)');
 
         // add script to container div
         hcContainer.appendChild(hcScript);
