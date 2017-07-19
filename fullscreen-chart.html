@@ -20,11 +20,11 @@
 
         // create elements
         var hcContainer = document.createElement("div");
-        hcContainer.id = 'highcarts-'+hc;
+        hcContainer.id = 'highcharts-'+hc;
 
         var hcScript = document.createElement("script");
         hcScript.src = '//cloud.highcharts.com/inject/'+hc;
-        hcScript.defer = 'defer';
+        hcScript.setAttribute('defer', 'defer');
 
         // add script to container div
         hcContainer.appendChild(hcScript);
