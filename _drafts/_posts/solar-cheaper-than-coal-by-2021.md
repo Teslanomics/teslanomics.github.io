@@ -1,24 +1,24 @@
 ---
-title: Solar Cheaper Than Coal By 2021
 author: Ben Sullins
-layout: post
-date: 2017-07-19 14:43
-image: "/images/featured/Solar_Vs_Coal_Thumb-1.jpg"
 categories:
 - analysis
+date: 2017-07-19 14:43
+image: "/images/featured/Solar_Vs_Coal_Thumb-1.jpg"
+layout: post
 tags:
 - solar power
 - solar
 - alternative energy
 - tesla
 - coal power
-youtube: https://youtu.be/EFkE_beKk-w
+title: Solar Cheaper Than Coal By 2021
+youtube: EFkE_beKk-w
 ---
 
 
 By 2021, solar power will be cheaper than coal power, A new report from Bloomberg New Energy Finance (BNEF) shows that the price of solar power is dropping rapidly and much faster than anticipated. This week, we’re examining not only the cost of solar power, but its transition to a mainstream power source.
 
-The report’s lead author, Seb Henbest, said “costs of new energy technologies are falling in a way that it’s more a matter of when than if.”  If the report is correct, we could see a decline in global CO2 levels as early as 2026 - which is much sooner than forecasted by International Energy Agency.
+The report’s lead author, Seb Henbest, said “costs of new energy technologies are falling in a way that it’s more a matter of when than if.” If the report is correct, we could see a decline in global CO2 levels as early as 2026 - which is much sooner than forecasted by International Energy Agency.
 
 Countries like China and India are still installing coal plants. However, as suggested, once solar proves to be cheaper, things will likely turn around. In fact, China and India are preparing for the solar boom and are currently the biggest markets for new solar farms. They’ve also invested trillion of dollars in solar, accounting for 39% of investments in the solar power industry overall. And, China plans to invest even further. They’re aiming to spend at least $360 Billion on renewable energy by 2020 to not only fight climate change but to reduce pollution in their major cities.
 
@@ -54,35 +54,23 @@ https://www.bloomberg.com/news/articles/2017-04-17/saudis-seek-30-solar-wind-pro
 
 Music Credits:
 
-- https://soundcloud.com/joakimkarud
+* https://soundcloud.com/joakimkarud
 
-- http://creativecommons.org/licenses/b...
+* http://creativecommons.org/licenses/b...
 
-- https://youtu.be/XN-tBgJ5CVw
+* https://youtu.be/XN-tBgJ5CVw
 
-- https://soundcloud.com/light-foot
+* https://soundcloud.com/light-foot
 
-- http://creativecommons.org/licenses/b...
+* http://creativecommons.org/licenses/b...
 
-- https://youtu.be/GSSdXximD7c
+* https://youtu.be/GSSdXximD7c
 
-- https://soundcloud.com/joakimkarud
+* https://soundcloud.com/joakimkarud
 
-- http://creativecommons.org/licenses/b...
+* http://creativecommons.org/licenses/b...
 
-- https://youtu.be/K8eRXvLL7Wo
-
-As always, for the latest Tesla news, visit us at Teslanomics.co – and sign-up for our email updates!
-
-Teslanomics.co is on social and Patreon. Join the conversation:
-
-P: https://teslanomics.co/patreon
-
-FB: https://fb.com/teslanomics
-
-T: https://twitter.com/teslanomicsco
-
-YT: Subscribe to my channel and give this video a thumbs up
+* https://youtu.be/K8eRXvLL7Wo
 
 // My Gear //
 
