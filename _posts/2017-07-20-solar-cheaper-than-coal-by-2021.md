@@ -3,7 +3,7 @@ author: Ben Sullins
 categories:
 - analysis
 date: 2017-07-19 14:43
-image: "/images/featured/Solar_Vs_Coal_Thumb-1.jpg"
+image: "/images/featured/Solar_Vs_Coal_Thumb_600px.jpg"
 layout: post
 tags:
 - solar power
