@@ -16,13 +16,13 @@ youtube: EFkE_beKk-w
 ---
 
 
-By 2021, solar power will be cheaper than coal power, A new report from Bloomberg New Energy Finance (BNEF) shows that the price of solar power is dropping rapidly and much faster than anticipated. This week, we’re examining not only the cost of solar power, but its transition to a mainstream power source.
+By 2021, solar power will be cheaper than coal power, A new report from Bloomberg New Energy Finance (BNEF) shows that the price of solar power is dropping rapidly and much faster than anticipated. This week, we’re examining not only the cost of solar power but its transition to a mainstream power source.
 
-The report’s lead author, Seb Henbest, said “costs of new energy technologies are falling in a way that it’s more a matter of when than if.” If the report is correct, we could see a decline in global CO2 levels as early as 2026 - which is much sooner than forecasted by International Energy Agency.
+The report’s lead author, Seb Henbest, said: “costs of new energy technologies are falling in a way that it’s more a matter of when than if.” If the report is correct, we could see a decline in global CO2 levels as early as 2026 - which is much sooner than foretasted by International Energy Agency.
 
 Countries like China and India are still installing coal plants. However, as suggested, once solar proves to be cheaper, things will likely turn around. In fact, China and India are preparing for the solar boom and are currently the biggest markets for new solar farms. They’ve also invested trillion of dollars in solar, accounting for 39% of investments in the solar power industry overall. And, China plans to invest even further. They’re aiming to spend at least $360 Billion on renewable energy by 2020 to not only fight climate change but to reduce pollution in their major cities.
 
-Despite Donald Trump saying: "we’re going to bring back the coal industry,” Solar power is become the energy front running in the US with prices dropping. In fact, the Bloomberg report predicts that US solar powers costs will drop by 67% by 2040, while Canada will see a 63% drop.
+Despite Donald Trump saying: "we’re going to bring back the coal industry,” Solar power is becoming the energy front running in the US with prices dropping. In fact, the Bloomberg report predicts that US solar powers costs will drop by 67% by 2040, while Canada will see a 63% drop.
 
 While these solar price drops for Canada and the US are huge, they don’t hold candles to Japan. It’s projected that Japan will see a 70% drop by 2022 and 85% shortly after that.
 
