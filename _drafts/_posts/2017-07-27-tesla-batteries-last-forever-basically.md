@@ -1,15 +1,15 @@
 ---
-title: Tesla Batteries Last Forever (Basically)
 author: Ben Sullins
-layout: post
-date: 2017-07-25 00:00
-image: "/images/featured/Batteries_Thumb_600px.jpg"
 categories:
 - Analysis
+date: 2017-07-27 00:00
+image: "/images/featured/Batteries_Thumb_600px.jpg"
+layout: post
 tags:
 - tesla
 - batteries
 - degradation
+title: Tesla Batteries Last Forever (Basically)
 youtube: Gb_i4ihsJ1w
 ---
 
