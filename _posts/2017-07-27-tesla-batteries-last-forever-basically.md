@@ -14,7 +14,7 @@ youtube: Gb_i4ihsJ1w
 ---
 New data suggests Tesla batteries last up to 25 years. In this episode, we’ll be diving into this data and seeing how it translates to owners.
 
-<iframe frameborder="0" marginheight="0" marginwidth="0" allowtransparency="true" class="tableauViz" style="display: block; width: 100%; height: 800px; margin: 0px; padding: 0px; border: none;" width="100%" height="800px" src="https://public.tableau.com/shared/F4KGMBCMN?:embed=y&:showVizHome=no&:hoswidtt_url=https%3A%2F%2Fpublic.tableau.com%2F&:tabs=yes&:toolbar=yes&:animate_transition=yes&:display_static_image=no&:display_spinner=no&:display_overlay=yes&:display_count=yes"></iframe>
+<iframe frameborder="0" marginheight="0" marginwidth="0" allowtransparency="true" class="tableauViz" style="display: block; width: 100%; height: 800px; margin: 0px; padding: 0px; border: none;" width="100%" height="800px" src="https://public.tableau.com/shared/F4KGMBCMN?:embed=y&:showVizHome=no&:hoswidtt_url=https%3A%2F%2Fpublic.tableau.com%2F&:tabs=no&:toolbar=yes&:animate_transition=yes&:display_static_image=no&:display_spinner=no&:display_overlay=yes&:display_count=yes"></iframe>
 
 Back in April, I shared data on Tesla battery degradation. Since then, Tesla owners  have been measuring and sharing their battery degradation data – and the results have been surprising. Tesla owners who contributed to this data first drained their EV batteries down to 0%, then charged fully them to 100%. This is to get a consistent measurement on how much energy a battery can hold.
 
