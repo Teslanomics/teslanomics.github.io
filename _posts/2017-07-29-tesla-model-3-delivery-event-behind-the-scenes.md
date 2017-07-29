@@ -18,8 +18,8 @@ At the event, I did my best Casey Neistat impression and captured what I could. 
 
 And go check out these awesome people in the video:
 
-[Saúl López](https://www.youtube.com/channel/UCP92h2vCD3hw1xbNqIGY2RQ)
-[Austin Evans](https://www.youtube.com/user/duncan33303)
-[Dan (What's Inside)](https://www.youtube.com/user/lincolnmarkham)
-[Jesse (Now You Know)](https://www.youtube.com/channel/UCMFmrcGuFNu_59L0pHcR0OA)
-[MKBHD](https://www.youtube.com/user/marquesbrownlee)
+- [Saúl López](https://www.youtube.com/channel/UCP92h2vCD3hw1xbNqIGY2RQ)
+- [Austin Evans](https://www.youtube.com/user/duncan33303)
+- [Dan (What's Inside)](https://www.youtube.com/user/lincolnmarkham)
+- [Jesse (Now You Know)](https://www.youtube.com/channel/UCMFmrcGuFNu_59L0pHcR0OA)
+- [MKBHD](https://www.youtube.com/user/marquesbrownlee)
