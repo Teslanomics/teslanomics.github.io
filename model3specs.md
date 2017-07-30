@@ -14,7 +14,7 @@ Model 3 is designed to achieve the highest safety ratings in every category. Com
 
 Model 3 is currently in production, and deliveries to employee reservation holders began on July 28, 2017 at the Tesla Factory in Fremont, CA. Reservations for Model 3 first opened on March 31, 2016 and remain available today.
 
-* EPA estimated range
+\*EPA estimated range
 
 
 # STANDARD EQUIPMENT
