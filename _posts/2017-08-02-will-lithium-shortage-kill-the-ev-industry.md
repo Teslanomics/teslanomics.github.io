@@ -18,13 +18,9 @@ First I thought we should talk about where you can find lithium today. The truth
 
 But you might be surprised to know it’s also used in things like tools, aerospace equipment, military applications and backup storage for our Electric grid. And of course, Tesla’s and other electric cars
 
-//
+**// Looking to buy a Tesla S or X? Use our referral code and instantly receive $1,000 off and Free Supercharging! (limited)**
 
-Looking to buy a Tesla S or X? Use our referral code and instantly receive $1,000 off and Free Supercharging! (limited)
-
-Get Started - https://teslanomics.co/td
-
-//
+**Get Started - [https://teslanomics.co/td](https://teslanomics.co/td)**
 
 It is so good for batteries that 39% of all Lithium production goes towards battery production. So what is Lithium anyway?
 
@@ -62,22 +58,10 @@ If you’re an investor in companies reliant on lithium for their batteries such
 
 We’ve got a long road ahead of us and probably by the time we need to worry about a shortage of Lithium we’ll have a new way to make batteries that are even better.
 
-// Join Our Community on Patreon!
+**// Sources**
 
-We're now using Patreon as a way to build out the community of passionate, intelligent people that love the detailed analysis of the facts behind Tesla and their products.
+[https://minerals.usgs.gov/minerals/pubs/commodity/lithium/mcs-2017-lithi.pdf](https://minerals.usgs.gov/minerals/pubs/commodity/lithium/mcs-2017-lithi.pdf)
 
-Learn more at https://teslanomics.co/patreon
+[https://pubs.usgs.gov/circ/1371/pdf/circ1371_508.pdf](https://pubs.usgs.gov/circ/1371/pdf/circ1371_508.pdf)
 
-// Join the Convo Online
-
-fb https://fb.com/teslanomics
-
-tw https://twitter.com/teslanomicsco
-
-// Sources
-
-https://minerals.usgs.gov/minerals/pubs/commodity/lithium/mcs-2017-lithi.pdf
-
-https://pubs.usgs.gov/circ/1371/pdf/circ1371_508.pdf
-
-http://jalopnik.com/the-problem-that-could-derail-the-electric-car-revoluti-1796728488
+[http://jalopnik.com/the-problem-that-could-derail-the-electric-car-revoluti-1796728488](http://jalopnik.com/the-problem-that-could-derail-the-electric-car-revoluti-1796728488)
