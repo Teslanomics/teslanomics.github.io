@@ -2,7 +2,7 @@
 title: Will Lithium Shortage Kill The EV Industry?
 author: Ben Sullins
 layout: post
-date: 2017-07-29 10:33
+date: 2017-08-02 10:33
 youtube: 5RWIo-j7V7c
 tags:
 - lithium
