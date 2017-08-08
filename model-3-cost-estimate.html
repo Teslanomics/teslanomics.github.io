@@ -1,0 +1,66 @@
+---
+layout: page
+title: Model 3 Cost Estimate from Teslanomics
+permalink: "/model-3-cost-estimate"
+published: true
+---
+
+<div id="estimate" style="margin:auto; padding:10px;">
+
+</div>
+	<strong><a href="/model-3-cost-estimator">Start Over</a></strong><br/>
+
+</div>
+<div id="credits">
+	<small>Data sourced from <a href="https://tesla.com/presskit" target="_blank">tesla.com</a></small>
+</div>
+
+<script>var om58f7ad1712512,om58f7ad1712512_poll=function(){var r=0;return function(n,l){clearInterval(r),r=setInterval(n,l)}}();!function(e,t,n){if(e.getElementById(n)){om58f7ad1712512_poll(function(){if(window['om_loaded']){if(!om58f7ad1712512){om58f7ad1712512=new OptinMonsterApp();return om58f7ad1712512.init({"s":"31049.58f7ad1712512","staging":0,"dev":0,"beta":0});}}},25);return;}var d=false,o=e.createElement(t);o.id=n,o.src="//a.optnmstr.com/app/js/api.min.js",o.async=true,o.onload=o.onreadystatechange=function(){if(!d){if(!this.readyState||this.readyState==="loaded"||this.readyState==="complete"){try{d=om_loaded=true;om58f7ad1712512=new OptinMonsterApp();om58f7ad1712512.init({"s":"31049.58f7ad1712512","staging":0,"dev":0,"beta":0});o.onload=o.onreadystatechange=null;}catch(t){}}}};(document.getElementsByTagName("head")[0]||document.documentElement).appendChild(o)}(document,"script","omapi-script");</script>
+
+
+<script>
+function getQueryVariable(variable)
+{
+       var query = window.location.search.substring(1);
+       var vars = query.split("&");
+       for (var i=0;i<vars.length;i++) {
+               var pair = vars[i].split("=");
+               if(pair[0] == variable){return pair[1];}
+       }
+       return(false);
+}
+
+imgSrc = getQueryVariable("img");
+
+// add logic to make sure image is coming from tableau public
+h = imgSrc.substring(0,86);
+
+// test that it's a valid image
+if (h == 'https%3A%2F%2Fpublic.tableau.com%2Fviews%2FTeslaModel3CostEstimator%2Fcost%3FOption%3D') {
+
+	console.log("good test");
+	var img = document.createElement("img");
+	img.src = decodeURIComponent(imgSrc);
+	img.style = "max-width:500px; width:100%; height:auto;";
+
+	var a = document.createElement('a');
+	a.appendChild(img);
+	a.title = "Tesla Model 3 Cost Estimate from Teslanomics";
+	a.href = decodeURIComponent(imgSrc);
+	a.target = "_blank";
+
+	var src = document.getElementById("estimate");
+	src.appendChild(a);
+
+} else {
+
+	console.log("bad test");
+	var img = document.createElement("img");
+	img.src = "http://via.placeholder.com/350x150?text=Oops!";
+
+	var src = document.getElementById("estimate");
+	src.appendChild(img);
+
+}
+
+</script>
