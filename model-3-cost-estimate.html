@@ -5,7 +5,7 @@ permalink: "/model-3-cost-estimate"
 published: true
 ---
 
-<div id="estimate" style="margin:auto; padding:10px; width:850px;">
+<div id="estimate" style="margin:auto; padding:10px; width:850px;" onload="loadImg()">
 
 	<h1><a href="/model-3-cost-estimator">Start Over</a></h1>
 
@@ -29,37 +29,39 @@ function getQueryVariable(variable)
        return(false);
 }
 
-imgSrc = getQueryVariable("img");
+function loadImg(){
+	imgSrc = getQueryVariable("img");
 
-// add logic to make sure image is coming from tableau public
-h = imgSrc.substring(0,86);
+	// add logic to make sure image is coming from tableau public
+	h = imgSrc.substring(0,86);
 
-// test that it's a valid image
-if (h == 'https%3A%2F%2Fpublic.tableau.com%2Fviews%2FTeslaModel3CostEstimator%2Fcost%3FOption%3D') {
+	// test that it's a valid image
+	if (h == 'https%3A%2F%2Fpublic.tableau.com%2Fviews%2FTeslaModel3CostEstimator%2Fcost%3FOption%3D') {
 
-	console.log("good test");
-	var img = document.createElement("img");
-	img.src = decodeURIComponent(imgSrc);
-	img.style = "max-width:850px; width:100%; height:auto;";
+		console.log("good test");
+		var img = document.createElement("img");
+		img.src = decodeURIComponent(imgSrc);
+		img.style = "max-width:850px; width:100%; height:auto;";
 
-	var a = document.createElement('a');
-	a.appendChild(img);
-	a.title = "Tesla Model 3 Cost Estimate from Teslanomics";
-	a.href = decodeURIComponent(imgSrc);
-	a.target = "_blank";
+		var a = document.createElement('a');
+		a.appendChild(img);
+		a.title = "Tesla Model 3 Cost Estimate from Teslanomics";
+		a.href = decodeURIComponent(imgSrc);
+		a.target = "_blank";
 
-	var src = document.getElementById("estimate");
-	src.appendChild(a);
+		var src = document.getElementById("estimate");
+		src.appendChild(a);
 
-} else {
+	} else {
 
-	console.log("bad test");
-	var img = document.createElement("img");
-	img.src = "http://via.placeholder.com/350x150?text=Oops!";
+		console.log("bad test");
+		var img = document.createElement("img");
+		img.src = "http://via.placeholder.com/350x150?text=Oops!";
 
-	var src = document.getElementById("estimate");
-	src.appendChild(img);
+		var src = document.getElementById("estimate");
+		src.appendChild(img);
 
+	}
 }
 
 </script>
