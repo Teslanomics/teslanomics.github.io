@@ -12,7 +12,7 @@ tags:
 - legal opinion
 - tax implications
 youtube: ztmyOggJZ0A
-published: false
+published: true
 ---
 I've heard a TON about people wanting to either buy or sell a Tesla Model 3 reservation. The fact of the matter is that Tesla does not allow this without their prior written consent. That doesn't prevent you, however, from selling the car immediately after taking ownership. There might be some implications of doing this however so you'll want to beware before acting on any of these ideas. To learn more go get on my email list at https://teslanomics.co and stay updated on everything we're doing!
 
