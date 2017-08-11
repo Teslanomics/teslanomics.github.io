@@ -90,6 +90,12 @@ li img {
 	max-width: 100px;
 }
 
+label {
+	&:hover, &:focus, &:active {
+		border: 1px solid rgba($font-color,.5);
+	}
+}
+
 label > input{ /* HIDE RADIO */
   visibility: hidden; /* Makes input not-clickable */
   position: absolute; /* Remove input from document flow */
@@ -102,22 +108,18 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
   border:2px solid #474747;
 }
 
-label > input + circle{
-	cursor:pointer;
-  border:2px solid transparent;
+input[type="radio"]:active ~ label {
+  opacity: 1;
 }
 
-label > input:not(:checked) + circle {
-   fill-opacity: 0.5;
+input[type="radio"]:checked ~ label {
+  opacity: 1;
+	border: 1px solid $font-color;
 }
 
 /*label > input:not(:checked) + img{
 	opacity: 0.5;
 }*/
-
-.wheelOption {
-	max-width: 70px;
-}
 
 
 </style>
@@ -135,7 +137,7 @@ label > input:not(:checked) + circle {
 		}
 
 
-		console.log(car.color + '-' + car.wheel +'.png');
+		// console.log(car.color + '-' + car.wheel +'.png');
 
 		//set car
 		document.getElementById('carImg').src="/images/m3/" + car.color + '-' + car.wheel +'.png';
@@ -206,7 +208,7 @@ label > input:not(:checked) + circle {
 		</div>
 
 		<div id="colorChoice">
-			<p class="choiceHeader">Select Color</p>
+			<p class="choiceHeader">Choose Color</p>
 			<div id="colorChoiceLabel">Solid Black</div>
 				<!-- black -->
 				<label>
