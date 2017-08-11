@@ -6,8 +6,28 @@ published: true
 ---
 <style>
 
+/* Color palette */
+
+
+ :root {
+   --form-bg-color: white;
+	 --font-color: #474747;
+	 --submit-color: #E85454;
+	 --submit-color-darker: #00824A;
+	 --submit-font-color: #fff;
+
+}
+
+form {
+	color: var(--font-color);
+	background-color: var(--form-bg-color);
+	padding: 5px;
+	margin: 15px auto;
+	width:100%;
+}
+
 select {
-	min-width: 350px;
+	min-width: 335px;
 	margin-bottom: 5px;
 	max-width: 500px;
 	display: block;
@@ -29,8 +49,56 @@ input.radio {
 
 circle {
 	margin:5px;
+	transition: all .5s ease-in-out;
+	&:hover, &:focus, &:active {
+		border: 1px solid rgba($font-color,.5);
+	}
 }
 
+
+.form__button {
+	height: 60px;
+	width: 100%;
+	max-width: 600px;
+	border: none;
+	background-color: var(--submit-color);
+	color: var(--submit-font-color);
+	text-transform: uppercase;
+	font-family: 'Source Sans Pro', sans-serif;
+	padding: 0 20px;
+	border-radius: 5px;
+	font-weight: 900;
+	cursor: pointer;
+	margin: 20px 0;
+	transition: all .25s ease-in-out;
+	&:hover, &:focus {
+		background-color: var(--submit-color-darker);
+		text-shadow: 1px 1px 1px rgba(0,0,0,.25);
+		outline: none;
+	}
+}
+
+ul {
+	width:100%;
+	margin: 5px auto;
+}
+
+li {
+	width: 50%;
+	min-width: 100px;
+	margin: 0 auto;
+	list-style-type: none;
+	float:left;
+}
+
+li p {
+	text-align: center;
+}
+
+li img {
+	display: block;
+	margin: auto;
+}
 
 </style>
 
@@ -127,31 +195,37 @@ circle {
 
 		<div id="wheelChoice">
 			<p class="choiceHeader">Select Wheel</p>
-			<div id="wheelChoiceLabel">18" Aero</div>
-
-			<img
-				src="/images/m3/aero-draw.png"
-				onclick="document.getElementById('wheelChoiceLabel').innerHTML='18in. Aero'"
-				style="margin:10px; width:100px"
-			/>
-
-			<img
-				src="/images/m3/sport-draw.png"
-				onclick="document.getElementById('wheelChoiceLabel').innerHTML='19in. Sport +$1,500'"
-				style="margin:10px; width:100px"
-			/>
+			<!-- <div id="wheelChoiceLabel">18" Aero</div> -->
+			<ul>
+				<li>
+					<img
+						src="/images/m3/aero-draw.png"
+						onclick="document.getElementById('wheelChoiceLabel').innerHTML='18in. Aero'"
+						style="margin:10px; width:100px"
+					/>
+					<p>18" Aero</p>
+				</li>
+				<li>
+					<img
+						src="/images/m3/sport-draw.png"
+						onclick="document.getElementById('wheelChoiceLabel').innerHTML='19in. Sport +$1,500'"
+						style="margin:10px; width:100px"
+					/>
+					<p>19" Sport</p>
+				</li>
+			</ul>
 		</div>
 
 		<div id="previewImage">
 			<p class="choiceHeader">Your Car</p>
 			<img src="/images/m3/black-aero.png"
-				style="width:100%; max-width:850px; margin:15px; background-color:#fff;"
+				style="width:95%; max-width:850px; margin:5px; background-color:#fff; padding:5px;"
 			/>
 		</div>
 
-
-
 	</div>
+
+	<button class="form__button" type="submit">See Your Cost</button>
 
 
 </form>
