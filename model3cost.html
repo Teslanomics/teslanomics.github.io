@@ -6,9 +6,6 @@ published: true
 ---
 <style>
 
-/* Color palette */
-
-
  :root {
    --form-bg-color: white;
 	 --font-color: #474747;
@@ -48,7 +45,6 @@ input.radio {
 }
 
 circle {
-	margin:5px;
 	transition: all .5s ease-in-out;
 	&:hover, &:focus, &:active {
 		border: 1px solid rgba($font-color,.5);
@@ -78,15 +74,14 @@ circle {
 	}
 }
 
-ul {
+#wheelChoice {
 	width:100%;
 	margin: 5px auto;
+	display: block;
 }
 
 li {
-	width: 50%;
-	min-width: 100px;
-	margin: 0 auto;
+	width: 45%;
 	list-style-type: none;
 	float:left;
 }
@@ -98,9 +93,38 @@ li p {
 li img {
 	display: block;
 	margin: auto;
+	max-width: 100px;
 }
 
+
 </style>
+
+<script>
+
+	var car = {"color":"black","wheel":"aero"};
+
+	function updateCar(option,value) {
+
+		if(option == "color"){
+			car.color = value;
+		} else {
+			car.wheel = value;
+		}
+
+
+		console.log(car.color + '-' + car.wheel +'.png');
+
+		//set car
+		document.getElementById('carImg').src="/images/m3/" + car.color + '-' + car.wheel +'.png';
+
+	}
+
+	function	updateColorChoice(color){
+		document.getElementById('colorChoiceLabel').innerHTML=color;
+	}
+
+
+</script>
 
 <form id="model3Cost">
 
@@ -166,27 +190,27 @@ li img {
 			<svg height="100" width="350">
 				<!-- black -->
   			<circle cx="25" cy="50" r="25" fill="#0A0B0B" stroke="#ACAEB0" stroke-width="1px"
-					onclick="document.getElementById('colorChoiceLabel').innerHTML='Solid Black'"
+					onclick="updateColorChoice('Solid Black'); updateCar('color','black');"
 				/>
 				<!-- midnight -->
-				<circle cx="80" cy="50" r="25" fill="#2F2E35" stroke="#ACAEB0" stroke-width="1px"
-					onclick="document.getElementById('colorChoiceLabel').innerHTML='Midnight Silver Metallic +$1,000'"
+				<circle cx="85" cy="50" r="25" fill="#2F2E35" stroke="#ACAEB0" stroke-width="1px"
+					onclick="updateColorChoice('Midnight Silver Metallic +$1,000'); updateCar('color','midnight');"
 				/>
 				<!-- blue -->
-				<circle cx="135" cy="50" r="25" fill="#111E45" stroke="#ACAEB0" stroke-width="1px"
-					onclick="document.getElementById('colorChoiceLabel').innerHTML='Deep Blue Metallic +$1,000'"
+				<circle cx="145" cy="50" r="25" fill="#111E45" stroke="#ACAEB0" stroke-width="1px"
+					onclick="updateColorChoice('Deep Blue Metallic +$1,000'); updateCar('color','blue');"
 				/>
 				<!-- silver -->
-				<circle cx="190" cy="50" r="25" fill="#ACAEB0"
-					onclick="document.getElementById('colorChoiceLabel').innerHTML='Silver Metallic +$1,000'"
+				<circle cx="200" cy="50" r="25" fill="#ACAEB0"
+					onclick="updateColorChoice('Silver Metallic +$1,000'); updateCar('color','silver');"
 				/>
 				<!-- white -->
-				<circle cx="245" cy="50" r="25" fill="#FDFEFE" stroke="#ACAEB0" stroke-width="1px"
-					onclick="document.getElementById('colorChoiceLabel').innerHTML='Pearl White Multi-Coat +$1,000'"
+				<circle cx="255" cy="50" r="25" fill="#FDFEFE" stroke="#ACAEB0" stroke-width="1px"
+					onclick="updateColorChoice('Pearl White Multi-Coat +$1,000'); updateCar('color','white');"
 				/>
 				<!-- red -->
-				<circle cx="300" cy="50" r="25" fill="#BE3844"
-					onclick="document.getElementById('colorChoiceLabel').innerHTML='Red Multi-Coat +$1,000'"
+				<circle cx="315" cy="50" r="25" fill="#BE3844"
+					onclick="updateColorChoice('Red Multi-Coat +$1,000'); updateCar('color','red');"
 				/>
 			</svg>
 
@@ -194,22 +218,22 @@ li img {
 		</div>
 
 		<div id="wheelChoice">
-			<p class="choiceHeader">Select Wheel</p>
+			<p class="choiceHeader">Wheel</p>
 			<!-- <div id="wheelChoiceLabel">18" Aero</div> -->
 			<ul>
-				<li>
+				<li id="aero">
 					<img
 						src="/images/m3/aero-draw.png"
-						onclick="document.getElementById('wheelChoiceLabel').innerHTML='18in. Aero'"
-						style="margin:10px; width:100px"
+						onclick=updateCar('wheel','aero');
+						style="width:100%"
 					/>
 					<p>18" Aero</p>
 				</li>
-				<li>
+				<li id="sport">
 					<img
 						src="/images/m3/sport-draw.png"
-						onclick="document.getElementById('wheelChoiceLabel').innerHTML='19in. Sport +$1,500'"
-						style="margin:10px; width:100px"
+						onclick="updateCar('wheel','sport')";
+						style="width:100%"
 					/>
 					<p>19" Sport</p>
 				</li>
@@ -218,7 +242,7 @@ li img {
 
 		<div id="previewImage">
 			<p class="choiceHeader">Your Car</p>
-			<img src="/images/m3/black-aero.png"
+			<img id="carImg" src="/images/m3/black-aero.png"
 				style="width:95%; max-width:850px; margin:5px; background-color:#fff; padding:5px;"
 			/>
 		</div>
