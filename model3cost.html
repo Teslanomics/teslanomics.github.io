@@ -74,12 +74,6 @@ circle {
 	}
 }
 
-#wheelChoice {
-	width:100%;
-	margin: 5px auto;
-	display: block;
-}
-
 li {
 	width: 45%;
 	list-style-type: none;
@@ -94,6 +88,35 @@ li img {
 	display: block;
 	margin: auto;
 	max-width: 100px;
+}
+
+label > input{ /* HIDE RADIO */
+  visibility: hidden; /* Makes input not-clickable */
+  position: absolute; /* Remove input from document flow */
+}
+label > input + img{ /* IMAGE STYLES */
+  cursor:pointer;
+  border:2px solid transparent;
+}
+label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
+  border:2px solid #474747;
+}
+
+label > input + circle{
+	cursor:pointer;
+  border:2px solid transparent;
+}
+
+label > input:not(:checked) + circle {
+   fill-opacity: 0.5;
+}
+
+/*label > input:not(:checked) + img{
+	opacity: 0.5;
+}*/
+
+.wheelOption {
+	max-width: 70px;
 }
 
 
@@ -127,9 +150,8 @@ li img {
 </script>
 
 <form id="model3Cost">
-
 	<label class="choiceHeader" for="regionSelect">Choose Region</label>
-	<select id="regionSelect" form="model3Cost">
+	<select id="regionSelect" name="region" form="model3Cost">
 		<option value="USA">USA</option>
 		<option value="Non-USA">Latin America</option>
 		<option value="Non-USA">Europe</option>
@@ -139,7 +161,7 @@ li img {
 
 
 	<label class="choiceHeader" for="deliverySelect">Choose Delivery Quarter</label>
-	<select id="deliverySelect" form="model3Cost">
+	<select id="deliverySelect" name="taxCredit" form="model3Cost">
 		<option value="2017Q4">2017Q4</option>
 		<option value="2018Q1">2018Q1</option>
 		<option value="2018Q2">2018Q2</option>
@@ -150,7 +172,6 @@ li img {
 		<option value="2019Q3">2019Q3</option>
 		<option value="2019Q4">2019Q4</option>
 	</select>
-
 
 	<div id="upgrades" class="full">
 
@@ -187,31 +208,60 @@ li img {
 		<div id="colorChoice">
 			<p class="choiceHeader">Select Color</p>
 			<div id="colorChoiceLabel">Solid Black</div>
-			<svg height="100" width="350">
 				<!-- black -->
-  			<circle cx="25" cy="50" r="25" fill="#0A0B0B" stroke="#ACAEB0" stroke-width="1px"
-					onclick="updateColorChoice('Solid Black'); updateCar('color','black');"
-				/>
+				<label>
+			    <input type="radio" name="color" value="black" checked/>
+					<svg height="100" width="50">
+						<circle cx="25" cy="50" r="25" fill="#0A0B0B" stroke="#ACAEB0" stroke-width="1px"
+							onclick="updateColorChoice('Solid Black'); updateCar('color','black');"/>
+					</svg>
+			  </label>
 				<!-- midnight -->
-				<circle cx="85" cy="50" r="25" fill="#2F2E35" stroke="#ACAEB0" stroke-width="1px"
-					onclick="updateColorChoice('Midnight Silver Metallic +$1,000'); updateCar('color','midnight');"
-				/>
+				<label>
+			    <input type="radio" name="color" value="midnight"/>
+					<svg height="100" width="50">
+						<circle cx="25" cy="50" r="25" fill="#2F2E35" stroke="#ACAEB0" stroke-width="1px"
+							onclick="updateColorChoice('Midnight Silver Metallic +$1,000'); updateCar('color','midnight');"
+						/>
+					</svg>
+			  </label>
 				<!-- blue -->
-				<circle cx="145" cy="50" r="25" fill="#111E45" stroke="#ACAEB0" stroke-width="1px"
-					onclick="updateColorChoice('Deep Blue Metallic +$1,000'); updateCar('color','blue');"
-				/>
+				<label>
+			    <input type="radio" name="color" value="blue"/>
+					<svg height="100" width="50">
+						<circle cx="25" cy="50" r="25" fill="#111E45" stroke="#ACAEB0" stroke-width="1px"
+							onclick="updateColorChoice('Deep Blue Metallic +$1,000'); updateCar('color','blue');"
+						/>
+					</svg>
+			  </label>
+
 				<!-- silver -->
-				<circle cx="200" cy="50" r="25" fill="#ACAEB0"
-					onclick="updateColorChoice('Silver Metallic +$1,000'); updateCar('color','silver');"
-				/>
+				<label>
+			    <input type="radio" name="color" value="silver"/>
+					<svg height="100" width="50">
+						<circle cx="25" cy="50" r="25" fill="#ACAEB0"
+							onclick="updateColorChoice('Silver Metallic +$1,000'); updateCar('color','silver');"
+						/>
+					</svg>
+			  </label>
 				<!-- white -->
-				<circle cx="255" cy="50" r="25" fill="#FDFEFE" stroke="#ACAEB0" stroke-width="1px"
-					onclick="updateColorChoice('Pearl White Multi-Coat +$1,000'); updateCar('color','white');"
-				/>
+				<label>
+					<input type="radio" name="color" value="white"/>
+					<svg height="100" width="50">
+						<circle cx="25" cy="50" r="25" fill="#FDFEFE" stroke="#ACAEB0" stroke-width="1px"
+							onclick="updateColorChoice('Pearl White Multi-Coat +$1,000'); updateCar('color','white');"
+						/>
+					</svg>
+				</label>
 				<!-- red -->
-				<circle cx="315" cy="50" r="25" fill="#BE3844"
-					onclick="updateColorChoice('Red Multi-Coat +$1,000'); updateCar('color','red');"
-				/>
+				<label>
+					<input type="radio" name="color" value="red"/>
+					<svg height="100" width="50">
+						<circle cx="25" cy="50" r="25" fill="#BE3844"
+							onclick="updateColorChoice('Red Multi-Coat +$1,000'); updateCar('color','red');"
+						/>
+					</svg>
+				</label>
 			</svg>
 
 
@@ -219,25 +269,24 @@ li img {
 
 		<div id="wheelChoice">
 			<p class="choiceHeader">Wheel</p>
-			<!-- <div id="wheelChoiceLabel">18" Aero</div> -->
-			<ul>
-				<li id="aero">
-					<img
-						src="/images/m3/aero-draw.png"
-						onclick=updateCar('wheel','aero');
-						style="width:100%"
-					/>
-					<p>18" Aero</p>
-				</li>
-				<li id="sport">
-					<img
-						src="/images/m3/sport-draw.png"
-						onclick="updateCar('wheel','sport')";
-						style="width:100%"
-					/>
-					<p>19" Sport</p>
-				</li>
-			</ul>
+			<label>
+		    <input type="radio" name="wheel" value="aero" class="wheelOption" checked/>
+				<img
+					src="/images/m3/aero-draw.png"
+					onclick=updateCar('wheel','aero');
+					style="width:50px;"
+				/>
+				18" Aero
+		  </label>
+			<label>
+				<input type="radio" name="wheel" value="sport" class="wheelOption"/>
+				<img
+					src="/images/m3/sport-draw.png"
+					onclick="updateCar('wheel','sport')";
+					style="width:50px;"
+				/>
+				19" Sport
+			</label>
 		</div>
 
 		<div id="previewImage">
