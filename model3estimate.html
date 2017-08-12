@@ -6,6 +6,15 @@ published: true
 ---
 <style>
 
+:root {
+	--form-bg-color: white;
+	--font-color: #474747;
+	--submit-color: #E85454;
+	--submit-color-darker: #00824A;
+	--submit-font-color: #fff;
+
+}
+
 .full-width {
 	width:100%;
 	padding: 10px;
@@ -21,11 +30,32 @@ published: true
 	color: #474747;
 }
 
+.banner {
+	height: 60px;
+	width: 100%;
+	max-width: 600px;
+	border: none;
+	background-color: var(--submit-color);
+	color: var(--submit-font-color);
+	text-transform: uppercase;
+	font-family: 'Source Sans Pro', sans-serif;
+	padding: 0 20px;
+	border-radius: 5px;
+	font-weight: 900;
+	cursor: pointer;
+	margin: 20px 0;
+}
 
 </style>
 
 
 <script>
+
+	function toCur(n, currency) {
+	    return currency + " " + n.toFixed(0).replace(/./g, function(c, i, a) {
+	        return i > 0 && c !== "." && (a.length - i) % 3 === 0 ? "," + c : c;
+	    });
+	}
 
 	function getQueryVariable(variable)
 	{
@@ -64,19 +94,18 @@ published: true
 			var r2c2 = r2.insertCell(1);
 			var r2c3 = r2.insertCell(2);
 
-			r2c1.innerHTML = "$54,000";
-			r2c2.innerHTML = "-$7,500";
-			r2c3.innerHTML = "$46,500";
+			//get amounts
+			r2c1.innerHTML = toCur(+subTotal,"$");
+			r2c2.innerHTML = toCur(+taxCredit,"$");
+			r2c3.innerHTML = toCur(+total,"$");
 
 		}
 
 	}
 
-	function loadCar(){
+	function loadCar(carColor, carWheel){
 
 		//load car color
-		carColor = getQueryVariable("color");
-		carWheel = getQueryVariable("wheel");
 		carImg = '/images/m3/' + carColor + '-' + carWheel + '.png'
 
 		console.log(carImg);
@@ -86,8 +115,25 @@ published: true
 
 	document.addEventListener( 'DOMContentLoaded', function () {
 
+			subTotal = 0;
+			total = 0;
+
+			//get all query vars
+			carColor = getQueryVariable("color");
+			carWheel = getQueryVariable("wheel");
+			batteryCost = getQueryVariable("battery");
+			taxCredit = getQueryVariable("taxCredit");
+			autopilotCost = getQueryVariable("autopilot");
+			premiumCost = getQueryVariable("premium");
+			wheelCost = getQueryVariable("wheelCost");
+			paintCost = getQueryVariable("paintCost");
+
+			//calculate totals
+			subTotal += +batteryCost + +autopilotCost + +premiumCost + +wheelCost + +paintCost;
+			total += +subTotal + +taxCredit;
+
 	    fillTable('summaryTable');
-			loadCar();
+			loadCar(carColor, carWheel);
 
 
 	}, false );
