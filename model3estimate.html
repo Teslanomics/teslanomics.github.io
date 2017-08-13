@@ -16,11 +16,6 @@ published: true
 
 }
 
-.full-width {
-	width:100%;
-	/*padding: 10px;*/
-}
-
 #summaryTable tbody th {
    font-size: 24px;
 	 font-weight: lighter;
@@ -30,7 +25,8 @@ published: true
 	background-color: #fff;
 	color: #474747;
 	max-width: 600px;
-	padding: 10px 0;
+	margin: 10px;
+	width: 95%;
 }
 
 #estimate h1, h2, h3 {
@@ -39,8 +35,6 @@ published: true
 
 .banner {
 	height: 70px;
-	width: 100%;
-	max-width: 600px;
 	border: none;
 	background-color: var(--submit-color);
 	color: var(--submit-font-color);
@@ -52,6 +46,7 @@ published: true
 
 table {
 	text-align: center;
+	width:100%;
 }
 
 #disclaimer {
@@ -208,25 +203,24 @@ table {
 	}, false );
 </script>
 <div id="estimate">
-	<img src="/images/teslanomics-logo-black.png" style="width:95%; max-width:550px; margin: 0 20px;" />
+	<img src="/images/teslanomics-logo-black.png" style="width:90%; margin: 10px;" />
 	<div id="banner">
 		<h1 style="color:#fff; text-align:center;" class="banner">Your Model 3</h1>
 	</div>
 	<div id="summary">
-		<table id="summaryTable" width="100%"></table>
+		<table id="summaryTable"></table>
 	</div>
 	<div id="carImgContainer">
 			<img id="carImg" src="/images/m3/blur.png"
-				style="width:95%; max-width:850px; margin:15px; background-color:#fff;"
+				style="width:95%; max-width:850px; margin:15px auto; background-color:#fff;"
 			/>
 	</div>
 	<div id="details">
 		<h1>Cost Details</h1>
-		<table id="detailsTable" width="100%"></table>
+		<table id="detailsTable"></table>
 		<!-- <table id="upgradesTable" width="50%"></table> -->
 	</div>
 	<div id="disclaimer">
-		<p>*this is an estimate and to be used for entertainment purposes only. Pleae consult Tesla for your actual price. This also does not include taxes and fees which vary by location.</p>
-		<p>**The tax credit estimate is only for US customers and is an estimate only</p>
+		<small>*this is an estimate and to be used for entertainment purposes only</small>
 	</div>
 </div>
