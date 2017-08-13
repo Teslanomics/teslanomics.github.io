@@ -12,12 +12,13 @@ published: true
 	--submit-color: #E85454;
 	--submit-color-darker: #00824A;
 	--submit-font-color: #fff;
+	--light-gray: #bdbdbd;
 
 }
 
 .full-width {
 	width:100%;
-	padding: 10px;
+	/*padding: 10px;*/
 }
 
 #summaryTable tbody th {
@@ -28,26 +29,36 @@ published: true
 #estimate {
 	background-color: #fff;
 	color: #474747;
+	max-width: 600px;
+	padding: 10px 0;
+}
+
+#estimate h1, h2, h3 {
+	color: #474747;
 }
 
 .banner {
-	height: 60px;
+	height: 70px;
 	width: 100%;
 	max-width: 600px;
 	border: none;
 	background-color: var(--submit-color);
 	color: var(--submit-font-color);
-	text-transform: uppercase;
 	font-family: 'Source Sans Pro', sans-serif;
-	padding: 0 20px;
-	border-radius: 5px;
-	font-weight: 900;
-	cursor: pointer;
-	margin: 20px;
 	text-align: center;
-	vertical-align: middle;
-	font-size: 2em;
+	line-height: 70px;
+	/*padding: 10px 0;*/
 }
+
+table {
+	text-align: center;
+}
+
+#disclaimer {
+	font-size: .5em;
+	color: var(--light-gray);
+}
+
 
 </style>
 
@@ -58,6 +69,10 @@ published: true
 	    return currency + " " + n.toFixed(0).replace(/./g, function(c, i, a) {
 	        return i > 0 && c !== "." && (a.length - i) % 3 === 0 ? "," + c : c;
 	    });
+	}
+
+	function toTitleCase(str)	{
+	    return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
 	}
 
 	function getQueryVariable(variable)
@@ -73,9 +88,9 @@ published: true
 
 	function fillTable(tableID) {
 
-		if(tableID=='summaryTable') {
+		var table = document.getElementById(tableID);
 
-			var table = document.getElementById(tableID);
+		if(tableID=='summaryTable') {
 
 			//table header
 			var header = table.createTHead();
@@ -102,6 +117,55 @@ published: true
 			r2c2.innerHTML = toCur(+taxCredit,"$");
 			r2c3.innerHTML = toCur(+total,"$");
 
+		} else if(tableID=="detailsTable") {
+
+			var r1 = table.insertRow(0);
+			var r1c1 = r1.insertCell(0);
+			var r1c2 = r1.insertCell(1);
+			var r1c3 = r1.insertCell(2);
+			var r1c4 = r1.insertCell(3);
+
+			var r2 = table.insertRow(1);
+			var r2c1 = r2.insertCell(0);
+			var r2c2 = r2.insertCell(1);
+			var r2c3 = r2.insertCell(2);
+			var r2c4 = r2.insertCell(3);
+
+			var r3 = table.insertRow(2);
+			var r3c1 = r3.insertCell(0);
+			var r3c2 = r3.insertCell(1);
+			var r3c3 = r3.insertCell(2);
+			var r3c4 = r3.insertCell(3);
+
+			//get amounts
+			r1c1.innerHTML = toTitleCase("battery cost:");
+			r1c2.innerHTML = toCur(+batteryCost,"");
+
+			r2c1.innerHTML = toTitleCase(carWheel + " wheels:");
+			r2c2.innerHTML = toCur(+wheelCost,"");
+
+			r3c1.innerHTML = toTitleCase(carColor + " Paint:");
+			r3c2.innerHTML = toCur(+paintCost,"");
+
+			r1c3.innerHTML = "Autopilot:";
+			r1c4.innerHTML = toCur(+autopilotCost,"");
+
+			r2c3.innerHTML = "Premium:";
+			r2c4.innerHTML = toCur(+premiumCost,"");
+
+		} else if(tableID=="upgradesTable") {
+
+			var r1 = table.insertRow(0);
+			var r1c1 = r1.insertCell(0);
+			var r1c2 = r1.insertCell(1);
+
+			var r2 = table.insertRow(1);
+			var r2c1 = r2.insertCell(0);
+			var r2c2 = r2.insertCell(1);
+
+			r1c1.innerHTML = "Autopilot: " + toCur(+autopilotCost,"$");
+			r2c1.innerHTML = "Premium: " + toCur(+premiumCost,"$");
+
 		}
 
 	}
@@ -111,7 +175,7 @@ published: true
 		//load car color
 		carImg = '/images/m3/' + carColor + '-' + carWheel + '.png'
 
-		console.log(carImg);
+		// console.log(carImg);
 
 		document.getElementById('carImg').src=carImg;
 	}
@@ -122,36 +186,47 @@ published: true
 			total = 0;
 
 			//get all query vars
-			carColor = getQueryVariable("color");
-			carWheel = getQueryVariable("wheel");
-			batteryCost = getQueryVariable("battery");
+			carColor = getQueryVariable("color"); //option
+			carWheel = getQueryVariable("wheel"); //option
+			batteryCost = getQueryVariable("battery"); //option
 			taxCredit = getQueryVariable("taxCredit");
-			autopilotCost = getQueryVariable("autopilot");
-			premiumCost = getQueryVariable("premium");
-			wheelCost = getQueryVariable("wheelCost");
-			paintCost = getQueryVariable("paintCost");
+			autopilotCost = getQueryVariable("autopilot"); //upgrade
+			premiumCost = getQueryVariable("premium"); //upgrade
+			wheelCost = getQueryVariable("wheelCost"); //option
+			paintCost = getQueryVariable("paintCost"); //option
 
 			//calculate totals
 			subTotal += +batteryCost + +autopilotCost + +premiumCost + +wheelCost + +paintCost;
 			total += +subTotal + +taxCredit;
 
 	    fillTable('summaryTable');
+			fillTable('detailsTable');
+			// fillTable('upgradesTable');
 			loadCar(carColor, carWheel);
 
 
 	}, false );
 </script>
 <div id="estimate">
-	<div class="banner">Your Model 3</div>
+	<img src="/images/teslanomics-logo-black.png" style="width:95%; max-width:550px; margin: 0 20px;" />
+	<div id="banner">
+		<h1 style="color:#fff; text-align:center;" class="banner">Your Model 3</h1>
+	</div>
 	<div id="summary">
 		<table id="summaryTable" width="100%"></table>
 	</div>
 	<div id="carImgContainer">
 			<img id="carImg" src="/images/m3/blur.png"
-				style="width:95%; max-width:850px; margin:5px; background-color:#fff; padding:5px;"
+				style="width:95%; max-width:850px; margin:15px; background-color:#fff;"
 			/>
 	</div>
 	<div id="details">
-		<table id="detailTable" width="100%"></table>
+		<h1>Cost Details</h1>
+		<table id="detailsTable" width="100%"></table>
+		<!-- <table id="upgradesTable" width="50%"></table> -->
+	</div>
+	<div id="disclaimer">
+		<p>*this is an estimate and to be used for entertainment purposes only. Pleae consult Tesla for your actual price. This also does not include taxes and fees which vary by location.</p>
+		<p>**The tax credit estimate is only for US customers and is an estimate only</p>
 	</div>
 </div>
