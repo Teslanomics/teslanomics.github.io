@@ -171,8 +171,6 @@ table {
 		//load car color
 		carImg = '/images/m3/' + carColor + '-' + carWheel + '.png'
 
-		// console.log(carImg);
-
 		document.getElementById('carImg').src=carImg;
 	}
 
@@ -190,6 +188,14 @@ table {
 			premiumCost = getQueryVariable("premium"); //upgrade
 			wheelCost = getQueryVariable("wheelCost"); //option
 			paintCost = getQueryVariable("paintCost"); //option
+			region = getQueryVariable("region"); //option
+
+			// if non-usa then no tax Credit
+			if(region=="Non-USA"){
+				taxCredit=0;
+			}
+
+
 
 			//calculate totals
 			subTotal += +batteryCost + +autopilotCost + +premiumCost + +wheelCost + +paintCost;
