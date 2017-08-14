@@ -65,6 +65,7 @@ table {
 
 .left {
 	text-align: left;
+	min-width: 60px;	
 }
 
 
@@ -146,20 +147,20 @@ table {
 			var r3c4 = r3.insertCell(3);
 
 			//add classes to align
-			r1c1.className = 'right';
-			r1c3.className = 'right';
-			r1c2.className = 'center';
-			r1c4.className = 'center';
+			r1c1.className = 'left';
+			r1c2.className = 'left';
+			r1c3.className = 'left';
+			r1c4.className = 'left';
 
-			r2c1.className = 'right';
-			r2c3.className = 'right';
-			r2c2.className = 'center';
-			r2c4.className = 'center';
+			r2c1.className = 'left';
+			r2c2.className = 'left';
+			r2c3.className = 'left';
+			r2c4.className = 'left';
 
-			r3c1.className = 'right';
-			r3c3.className = 'right';
-			r3c2.className = 'center';
-			r3c4.className = 'center';
+			r3c1.className = 'left';
+			r3c2.className = 'left';
+			r3c3.className = 'left';
+			r3c4.className = 'left';
 
 			//get amounts
 			r1c1.innerHTML = toTitleCase("battery cost: ");

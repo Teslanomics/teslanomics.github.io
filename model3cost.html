@@ -1,6 +1,6 @@
 ---
-layout: page-no-title
-title: Model 3 Cost Estimator from Teslanomics
+layout: page
+title: Model 3 Cost Estimator
 permalink: "/model3cost"
 published: true
 ---
@@ -19,9 +19,9 @@ form {
 	color: var(--font-color);
 	background-color: var(--form-bg-color);
 	padding: 5px;
-	margin: 15px;
+	margin: 15px auto;
 	width:100%;
-  max-width: 600px;
+  max-width: 800px;
 }
 
 select {
@@ -100,6 +100,7 @@ label {
 label > input{ /* HIDE RADIO */
   visibility: hidden; /* Makes input not-clickable */
   position: absolute; /* Remove input from document flow */
+	float:left;
 }
 label > input + img{ /* IMAGE STYLES */
   cursor:pointer;
