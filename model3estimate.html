@@ -55,6 +55,18 @@ table {
 	font-size: 1.3em;
 }
 
+#detailsTable {
+	margin: 5px;
+}
+
+.right {
+	text-align: right;
+}
+
+.left {
+	text-align: left;
+}
+
 
 </style>
 
@@ -133,17 +145,33 @@ table {
 			var r3c3 = r3.insertCell(2);
 			var r3c4 = r3.insertCell(3);
 
+			//add classes to align
+			r1c1.className = 'right';
+			r1c3.className = 'right';
+			r1c2.className = 'center';
+			r1c4.className = 'center';
+
+			r2c1.className = 'right';
+			r2c3.className = 'right';
+			r2c2.className = 'center';
+			r2c4.className = 'center';
+
+			r3c1.className = 'right';
+			r3c3.className = 'right';
+			r3c2.className = 'center';
+			r3c4.className = 'center';
+
 			//get amounts
-			r1c1.innerHTML = toTitleCase("battery cost:");
+			r1c1.innerHTML = toTitleCase("battery cost: ");
 			r1c2.innerHTML = toCur(+batteryCost,"");
 
-			r2c1.innerHTML = toTitleCase(carWheel + " wheels:");
+			r2c1.innerHTML = toTitleCase(carWheel + " wheels: ");
 			r2c2.innerHTML = toCur(+wheelCost,"");
 
-			r3c1.innerHTML = toTitleCase(carColor + " Paint:");
+			r3c1.innerHTML = toTitleCase(carColor + " Paint: ");
 			r3c2.innerHTML = toCur(+paintCost,"");
 
-			r1c3.innerHTML = "Autopilot:";
+			r1c3.innerHTML = "Autopilot: ";
 			r1c4.innerHTML = toCur(+autopilotCost,"");
 
 			r2c3.innerHTML = "Premium:";
@@ -194,8 +222,6 @@ table {
 			if(region=="Non-USA"){
 				taxCredit=0;
 			}
-
-
 
 			//calculate totals
 			subTotal += +batteryCost + +autopilotCost + +premiumCost + +wheelCost + +paintCost;
