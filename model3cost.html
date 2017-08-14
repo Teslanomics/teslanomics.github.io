@@ -56,7 +56,7 @@ circle {
 .form__button {
 	height: 60px;
 	width: 100%;
-	max-width: 600px;
+	max-width: 800px;
 	border: none;
 	background-color: var(--submit-color);
 	color: var(--submit-font-color);
@@ -124,6 +124,11 @@ input[type="radio"]:checked ~ label {
 }*/
 
 
+.option {
+	float:left;
+	margin:10px;
+}
+
 </style>
 
 <script>
@@ -170,34 +175,37 @@ input[type="radio"]:checked ~ label {
 
 
 </script>
-
+<p>Choose your options below to recieve a cost estimate</p>
 <form id="model3Cost" action="model3estimate.html">
-	<label class="choiceHeader" for="regionSelect">Choose Region</label>
-	<select id="regionSelect" name="region" form="model3Cost">
-		<option value="USA">USA</option>
-		<option value="Non-USA">Latin America</option>
-		<option value="Non-USA">Europe</option>
-		<option value="Non-USA">Asia-Pacific</option>
-		<option value="Non-USA">Africa</option>
-	</select>
+	<div id="regionSelectDiv" class="option">
+		<label class="choiceHeader" for="regionSelect">Choose Region</label>
+		<select id="regionSelect" name="region" form="model3Cost">
+			<option value="USA">USA</option>
+			<option value="Non-USA">Latin America</option>
+			<option value="Non-USA">Europe</option>
+			<option value="Non-USA">Asia-Pacific</option>
+			<option value="Non-USA">Africa</option>
+		</select>
+	</div>
 
-
-	<label class="choiceHeader" for="deliverySelect">Choose Delivery Quarter</label>
-	<select id="deliverySelect" name="taxCredit" form="model3Cost">
-		<option value="-7500">2017Q4</option>
-		<option value="-7500">2018Q1</option>
-		<option value="-7500">2018Q2</option>
-		<option value="-3750">2018Q3</option>
-		<option value="-3750">2018Q4</option>
-		<option value="-1875">2019Q1</option>
-		<option value="-1875">2019Q2</option>
-		<option value="0">2019Q3</option>
-		<option value="0">2019Q4</option>
-	</select>
+	<div id="deliveryQtrDiv" class="option">
+		<label class="choiceHeader" for="deliverySelect">Choose Delivery Quarter</label>
+		<select id="deliverySelect" name="taxCredit" form="model3Cost">
+			<option value="-7500">2017Q4</option>
+			<option value="-7500">2018Q1</option>
+			<option value="-7500">2018Q2</option>
+			<option value="-3750">2018Q3</option>
+			<option value="-3750">2018Q4</option>
+			<option value="-1875">2019Q1</option>
+			<option value="-1875">2019Q2</option>
+			<option value="0">2019Q3</option>
+			<option value="0">2019Q4</option>
+		</select>
+	</div>
 
 	<div id="upgrades" class="full">
 
-		<div id="batteryChoice">
+		<div id="batteryChoice" class="option">
 			<p class="choiceHeader">Choose Battery</p>
 			<input type="radio" id="batteryChoice1" name="battery" value="35000" checked>
 			<label for="batteryChoice1">Standard ($35K)</label>
@@ -206,7 +214,7 @@ input[type="radio"]:checked ~ label {
 			<label for="batteryChoice2">Long Range ($44K)</label>
 		</div>
 
-		<div id="autopilotChoice">
+		<div id="autopilotChoice" class="option">
 			<p class="choiceHeader">Autopilot Option</p>
 			<input type="radio" id="autopilotChoice1" name="autopilot" value="0" checked>
 			<label for="autopilotChoice1">None ($0)</label><br/>
@@ -218,7 +226,7 @@ input[type="radio"]:checked ~ label {
 			<label for="autopilotChoice3">Full Self-Driving ($8K)</label>
 		</div>
 
-		<div id="premiumChoice">
+		<div id="premiumChoice" class="option">
 			<p class="choiceHeader">Premium Upgrade</p>
 			<input type="radio" id="premiumChoice1" name="premium" value="0" checked>
 			<label for="premiumChoice1">No ($0)</label>
@@ -227,9 +235,8 @@ input[type="radio"]:checked ~ label {
 			<label for="premiumChoice2">Yes ($5K)</label>
 		</div>
 
-		<div id="colorChoice">
-			<p class="choiceHeader">Choose Color</p>
-			<div id="colorChoiceLabel">Solid Black</div>
+		<div id="colorChoice" class="option">
+			<p class="choiceHeader">Choose Color <span id="colorChoiceLabel" style="font-weight: normal; font-size:1em;">Solid Black</span></p>				
 				<!-- black -->
 				<label>
 			    <input type="radio" name="color" value="black" checked/>
@@ -289,7 +296,7 @@ input[type="radio"]:checked ~ label {
 
 		</div>
 
-		<div id="wheelChoice">
+		<div id="wheelChoice" class="option">
 			<p class="choiceHeader">Wheel</p>
 			<label>
 		    <input type="radio" name="wheel" value="aero" class="wheelOption" checked/>
@@ -311,8 +318,8 @@ input[type="radio"]:checked ~ label {
 			</label>
 		</div>
 
-		<div id="previewImage">
-			<p class="choiceHeader">Your Car</p>
+		<div id="previewImage" class="option">
+			<!-- <p class="choiceHeader">Your Car</p> -->
 			<img id="carImg" src="/images/m3/black-aero.png"
 				style="width:95%; max-width:850px; margin:5px; background-color:#fff; padding:5px;"
 			/>
