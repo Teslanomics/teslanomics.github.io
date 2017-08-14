@@ -119,14 +119,20 @@ input[type="radio"]:checked ~ label {
 	border: 1px solid $font-color;
 }
 
-/*label > input:not(:checked) + img{
-	opacity: 0.5;
-}*/
+.preview {
+	margin: 20px;
+}
 
-
-.option {
+.left-div {
 	float:left;
-	margin:10px;
+	width:50%;
+	padding:10px;
+}
+
+.right-div {
+	float: right;
+	width:50%;
+	padding:10px;h
 }
 
 </style>
@@ -177,7 +183,7 @@ input[type="radio"]:checked ~ label {
 </script>
 <p>Choose your options below to recieve a cost estimate</p>
 <form id="model3Cost" action="model3estimate.html">
-	<div id="regionSelectDiv" class="option">
+	<div id="regionSelectDiv" class="left-div">
 		<label class="choiceHeader" for="regionSelect">Choose Region</label>
 		<select id="regionSelect" name="region" form="model3Cost">
 			<option value="USA">USA</option>
@@ -188,7 +194,7 @@ input[type="radio"]:checked ~ label {
 		</select>
 	</div>
 
-	<div id="deliveryQtrDiv" class="option">
+	<div id="deliveryQtrDiv" class="right-div">
 		<label class="choiceHeader" for="deliverySelect">Choose Delivery Quarter</label>
 		<select id="deliverySelect" name="taxCredit" form="model3Cost">
 			<option value="-7500">2017Q4</option>
@@ -205,16 +211,16 @@ input[type="radio"]:checked ~ label {
 
 	<div id="upgrades" class="full">
 
-		<div id="batteryChoice" class="option">
+		<div id="batteryChoice" class="left-div">
 			<p class="choiceHeader">Choose Battery</p>
 			<input type="radio" id="batteryChoice1" name="battery" value="35000" checked>
-			<label for="batteryChoice1">Standard ($35K)</label>
+			<label for="batteryChoice1">Standard ($35K)</label><br/>
 
 			<input type="radio" id="batteryChoice2" name="battery" value="44000">
 			<label for="batteryChoice2">Long Range ($44K)</label>
 		</div>
 
-		<div id="autopilotChoice" class="option">
+		<div id="autopilotChoice" class="right-div">
 			<p class="choiceHeader">Autopilot Option</p>
 			<input type="radio" id="autopilotChoice1" name="autopilot" value="0" checked>
 			<label for="autopilotChoice1">None ($0)</label><br/>
@@ -226,17 +232,18 @@ input[type="radio"]:checked ~ label {
 			<label for="autopilotChoice3">Full Self-Driving ($8K)</label>
 		</div>
 
-		<div id="premiumChoice" class="option">
+		<div id="premiumChoice" class="left-div">
 			<p class="choiceHeader">Premium Upgrade</p>
 			<input type="radio" id="premiumChoice1" name="premium" value="0" checked>
-			<label for="premiumChoice1">No ($0)</label>
+			<label for="premiumChoice1">No ($0)</label><br/>
 
 			<input type="radio" id="premiumChoice2" name="premium" value="5000">
 			<label for="premiumChoice2">Yes ($5K)</label>
 		</div>
 
-		<div id="colorChoice" class="option">
-			<p class="choiceHeader">Choose Color <span id="colorChoiceLabel" style="font-weight: normal; font-size:1em;">Solid Black</span></p>				
+		<div id="colorChoice" class="right-div">
+			<p class="choiceHeader">Choose Color</p>
+				<div id="colorChoiceLabel">Solid Black</div>
 				<!-- black -->
 				<label>
 			    <input type="radio" name="color" value="black" checked/>
@@ -296,7 +303,7 @@ input[type="radio"]:checked ~ label {
 
 		</div>
 
-		<div id="wheelChoice" class="option">
+		<div id="wheelChoice" class="right-div">
 			<p class="choiceHeader">Wheel</p>
 			<label>
 		    <input type="radio" name="wheel" value="aero" class="wheelOption" checked/>
@@ -318,7 +325,7 @@ input[type="radio"]:checked ~ label {
 			</label>
 		</div>
 
-		<div id="previewImage" class="option">
+		<div id="previewImage" class="preview">
 			<!-- <p class="choiceHeader">Your Car</p> -->
 			<img id="carImg" src="/images/m3/black-aero.png"
 				style="width:95%; max-width:850px; margin:5px; background-color:#fff; padding:5px;"
