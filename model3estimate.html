@@ -25,7 +25,7 @@ published: true
 	background-color: #fff;
 	color: #474747;
 	max-width: 600px;
-	margin: 10px;
+	margin: 10px auto;
 	width: 95%;
 }
 
@@ -65,12 +65,16 @@ table {
 
 .left {
 	text-align: left;
-	min-width: 60px;	
+	min-width: 60px;
 }
 
 
 </style>
 
+
+<!-- // option -->
+<script>var om58f7ad1712512,om58f7ad1712512_poll=function(){var r=0;return function(n,l){clearInterval(r),r=setInterval(n,l)}}();!function(e,t,n){if(e.getElementById(n)){om58f7ad1712512_poll(function(){if(window['om_loaded']){if(!om58f7ad1712512){om58f7ad1712512=new OptinMonsterApp();return om58f7ad1712512.init({"s":"31049.58f7ad1712512","staging":0,"dev":0,"beta":0});}}},25);return;}var d=false,o=e.createElement(t);o.id=n,o.src="//a.optnmstr.com/app/js/api.min.js",o.async=true,o.onload=o.onreadystatechange=function(){if(!d){if(!this.readyState||this.readyState==="loaded"||this.readyState==="complete"){try{d=om_loaded=true;om58f7ad1712512=new OptinMonsterApp();om58f7ad1712512.init({"s":"31049.58f7ad1712512","staging":0,"dev":0,"beta":0});o.onload=o.onreadystatechange=null;}catch(t){}}}};(document.getElementsByTagName("head")[0]||document.documentElement).appendChild(o)}(document,"script","omapi-script");
+</script>
 
 <script>
 
@@ -228,10 +232,13 @@ table {
 			subTotal += +batteryCost + +autopilotCost + +premiumCost + +wheelCost + +paintCost;
 			total += +subTotal + +taxCredit;
 
-	    fillTable('summaryTable');
-			fillTable('detailsTable');
-			// fillTable('upgradesTable');
-			loadCar(carColor, carWheel);
+			setTimeout(function() {
+
+				fillTable('summaryTable');
+				fillTable('detailsTable');
+				loadCar(carColor, carWheel);
+
+			}, (100));
 
 
 	}, false );
