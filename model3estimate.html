@@ -1,0 +1,339 @@
+---
+layout: page-no-title
+title: Model 3 Cost Estimate from Teslanomics
+permalink: "/model3estimate"
+published: true
+---
+<!-- optin -->
+<script>var om58f7ad1712512,om58f7ad1712512_poll=function(){var r=0;return function(n,l){clearInterval(r),r=setInterval(n,l)}}();!function(e,t,n){if(e.getElementById(n)){om58f7ad1712512_poll(function(){if(window['om_loaded']){if(!om58f7ad1712512){om58f7ad1712512=new OptinMonsterApp();return om58f7ad1712512.init({"s":"31049.58f7ad1712512","staging":0,"dev":0,"beta":0});}}},25);return;}var d=false,o=e.createElement(t);o.id=n,o.src="//a.optnmstr.com/app/js/api.min.js",o.async=true,o.onload=o.onreadystatechange=function(){if(!d){if(!this.readyState||this.readyState==="loaded"||this.readyState==="complete"){try{d=om_loaded=true;om58f7ad1712512=new OptinMonsterApp();om58f7ad1712512.init({"s":"31049.58f7ad1712512","staging":0,"dev":0,"beta":0});o.onload=o.onreadystatechange=null;}catch(t){}}}};(document.getElementsByTagName("head")[0]||document.documentElement).appendChild(o)}(document,"script","omapi-script");</script>
+
+
+<style>
+
+:root {
+	--form-bg-color: white;
+	--font-color: #474747;
+	--submit-color: #E85454;
+	--submit-color-darker: #00824A;
+	--submit-font-color: #fff;
+	--light-gray: #bdbdbd;
+
+}
+
+#summaryTable tbody th {
+   font-size: 24px;
+	 font-weight: lighter;
+}
+
+#estimate {
+	background-color: #fff;
+	color: #474747;
+	max-width: 600px;
+	margin: 10px auto;
+	width: 95%;
+}
+
+#estimate h1, h2, h3 {
+	color: #474747;
+}
+
+.banner {
+	height: 70px;
+	border: none;
+	background-color: var(--submit-color);
+	color: var(--submit-font-color);
+	font-family: 'Source Sans Pro', sans-serif;
+	text-align: center;
+	line-height: 70px;
+}
+
+table {
+	width:100%;
+}
+
+#disclaimer {
+	color: var(--light-gray);
+}
+
+#summaryTable {
+	font-size: 1.3em;
+}
+
+#detailsTable {
+	margin: 5px;
+}
+
+.right {
+	text-align: right;
+}
+
+.left {
+	text-align: left;
+	min-width: 60px;
+}
+
+
+</style>
+
+
+<!-- // option -->
+<script>var om58f7ad1712512,om58f7ad1712512_poll=function(){var r=0;return function(n,l){clearInterval(r),r=setInterval(n,l)}}();!function(e,t,n){if(e.getElementById(n)){om58f7ad1712512_poll(function(){if(window['om_loaded']){if(!om58f7ad1712512){om58f7ad1712512=new OptinMonsterApp();return om58f7ad1712512.init({"s":"31049.58f7ad1712512","staging":0,"dev":0,"beta":0});}}},25);return;}var d=false,o=e.createElement(t);o.id=n,o.src="//a.optnmstr.com/app/js/api.min.js",o.async=true,o.onload=o.onreadystatechange=function(){if(!d){if(!this.readyState||this.readyState==="loaded"||this.readyState==="complete"){try{d=om_loaded=true;om58f7ad1712512=new OptinMonsterApp();om58f7ad1712512.init({"s":"31049.58f7ad1712512","staging":0,"dev":0,"beta":0});o.onload=o.onreadystatechange=null;}catch(t){}}}};(document.getElementsByTagName("head")[0]||document.documentElement).appendChild(o)}(document,"script","omapi-script");
+</script>
+
+<script>
+
+	function toCur(n, currency) {
+	    return currency + " " + n.toFixed(0).replace(/./g, function(c, i, a) {
+	        return i > 0 && c !== "." && (a.length - i) % 3 === 0 ? "," + c : c;
+	    });
+	}
+
+	function toTitleCase(str)	{
+	    return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+	}
+
+	function getQueryVariable(variable)
+	{
+	       var query = window.location.search.substring(1);
+	       var vars = query.split("&");
+	       for (var i=0;i<vars.length;i++) {
+	               var pair = vars[i].split("=");
+	               if(pair[0] == variable){return pair[1];}
+	       }
+	       return(false);
+	}
+
+	function fillTable(tableID) {
+
+		var table = document.getElementById(tableID);
+
+		if(tableID=='summaryTable') {
+
+			//table header
+			var header = table.createTHead();
+			//subtotal
+			var r1 = header.insertRow(0);
+			var r1c1 = r1.insertCell(0);
+			//tax credit
+			var r1c2 = r1.insertCell(1);
+			//total
+			var r1c3 = r1.insertCell(2);
+
+			r1c1.innerHTML = "SubTotal";
+			r1c2.innerHTML = "Tax Credit";
+			r1c3.innerHTML = "Total";
+
+			//table details
+			var r2 = table.insertRow(1);
+			var r2c1 = r2.insertCell(0);
+			var r2c2 = r2.insertCell(1);
+			var r2c3 = r2.insertCell(2);
+
+			//get amounts
+			r2c1.innerHTML = toCur(+subTotal,"$");
+			r2c2.innerHTML = toCur(+taxCredit,"$");
+			r2c3.innerHTML = toCur(+total,"$");
+
+		} else if(tableID=="detailsTable") {
+
+			var r1 = table.insertRow(0);
+			var r1c1 = r1.insertCell(0);
+			var r1c2 = r1.insertCell(1);
+			var r1c3 = r1.insertCell(2);
+			var r1c4 = r1.insertCell(3);
+
+			var r2 = table.insertRow(1);
+			var r2c1 = r2.insertCell(0);
+			var r2c2 = r2.insertCell(1);
+			var r2c3 = r2.insertCell(2);
+			var r2c4 = r2.insertCell(3);
+
+			var r3 = table.insertRow(2);
+			var r3c1 = r3.insertCell(0);
+			var r3c2 = r3.insertCell(1);
+			var r3c3 = r3.insertCell(2);
+			var r3c4 = r3.insertCell(3);
+
+			//add classes to align
+			r1c1.className = 'left';
+			r1c2.className = 'left';
+			r1c3.className = 'left';
+			r1c4.className = 'left';
+
+			r2c1.className = 'left';
+			r2c2.className = 'left';
+			r2c3.className = 'left';
+			r2c4.className = 'left';
+
+			r3c1.className = 'left';
+			r3c2.className = 'left';
+			r3c3.className = 'left';
+			r3c4.className = 'left';
+
+			//get amounts
+			r1c1.innerHTML = toTitleCase("battery cost: ");
+			r1c2.innerHTML = toCur(+batteryCost,"");
+
+			r2c1.innerHTML = toTitleCase(carWheel + " wheels: ");
+			r2c2.innerHTML = toCur(+wheelCost,"");
+
+			r3c1.innerHTML = toTitleCase(carColor + " Paint: ");
+			r3c2.innerHTML = toCur(+paintCost,"");
+
+			r1c3.innerHTML = "Autopilot: ";
+			r1c4.innerHTML = toCur(+autopilotCost,"");
+
+			r2c3.innerHTML = "Premium:";
+			r2c4.innerHTML = toCur(+premiumCost,"");
+
+		} else if(tableID=="upgradesTable") {
+
+			var r1 = table.insertRow(0);
+			var r1c1 = r1.insertCell(0);
+			var r1c2 = r1.insertCell(1);
+
+			var r2 = table.insertRow(1);
+			var r2c1 = r2.insertCell(0);
+			var r2c2 = r2.insertCell(1);
+
+			r1c1.innerHTML = "Autopilot: " + toCur(+autopilotCost,"$");
+			r2c1.innerHTML = "Premium: " + toCur(+premiumCost,"$");
+
+		}
+
+	}
+
+	function loadCar(carColor, carWheel){
+
+		//load car color
+		carImg = '/images/m3/' + carColor + '-' + carWheel + '.png'
+
+		document.getElementById('carImg').src=carImg;
+	}
+
+	document.addEventListener( 'DOMContentLoaded', function () {
+
+			subTotal = 0;
+			total = 0;
+
+			//get all query vars
+			carColor = getQueryVariable("color"); //option
+			carWheel = getQueryVariable("wheel"); //option
+			batteryCost = getQueryVariable("battery"); //option
+			taxCredit = getQueryVariable("taxCredit");
+			autopilotCost = getQueryVariable("autopilot"); //upgrade
+			premiumCost = getQueryVariable("premium"); //upgrade
+			wheelCost = getQueryVariable("wheelCost"); //option
+			paintCost = getQueryVariable("paintCost"); //option
+			region = getQueryVariable("region"); //option
+
+			// if non-usa then no tax Credit
+			if(region=="Non-USA"){
+				taxCredit=0;
+			}
+
+			//calculate totals
+			subTotal += +batteryCost + +autopilotCost + +premiumCost + +wheelCost + +paintCost;
+			total += +subTotal + +taxCredit;
+
+			setTimeout(function() {
+
+				fillTable('summaryTable');
+				fillTable('detailsTable');
+				loadCar(carColor, carWheel);
+
+				//add link to full-size below estimate
+				var query = window.location.search.substring(1);
+				var a = document.createElement('a');
+
+				a.title = "Tesla Model 3 Delivery Estimate from Teslanomics";
+				a.href = "model3estimate-full.html?" + query;
+				a.target = "_blank";
+				a.appendChild(document.createTextNode("View Full Size"));
+				a.style = "color: #474747; margin-left:5px;"
+
+				document.getElementById("estimate").appendChild(a);
+
+				// console.log("model3estimate-full.html?" + query);
+				// console.log(a);
+
+			}, (2000));
+
+
+	}, false );
+</script>
+<div id="estimate">
+	<img src="/images/teslanomics-logo-black.png" style="width:95%; margin: 10px;" />
+	<div id="banner">
+		<h1 style="color:#fff; text-align:center;" class="banner">Your Model 3</h1>
+	</div>
+	<div id="summary">
+		<table id="summaryTable" style="text-align: center;"></table>
+	</div>
+	<div id="carImgContainer">
+			<img id="carImg" src="/images/m3/blur.png"
+				style="width:95%; max-width:850px; margin:15px auto; background-color:#fff;"
+			/>
+	</div>
+	<div id="details">
+		<h1>Cost Details</h1>
+		<table id="detailsTable"></table>
+		<!-- <table id="upgradesTable" width="50%"></table> -->
+	</div>
+	<div id="disclaimer">
+		<small>*this estimate is for entertainment purposes only</small>
+	</div>
+</div>
+<div id="yt">
+	<h1>How it Works</h1>
+
+	{% include m3charts.html %}
+
+	<br/>
+	<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/M9-qF3YKyTc?ecver=1" frameborder="0" allowfullscreen></iframe> -->
+	<div id="player"></div>
+	<script>
+    var tag = document.createElement('script');
+
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    var player;
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('player', {
+        height: '600px',
+        width: '100%',
+				videoId: 'BrelvDl2tpw',
+        playerVars: {
+                  autoplay: 1,
+                  loop: 1,
+                  controls: 1,
+                  showinfo: 1,
+                  autohide: 1,
+                  modestbranding: 0,
+                  cc_load_policy: 1,
+                  vq: 'hd720'
+           },
+        events: {
+          'onReady': onPlayerReady,
+          'onStateChange': onPlayerStateChange
+        }
+      });
+    }
+
+
+    function onPlayerReady(event) {
+      event.target.playVideo();
+      player.mute();
+    }
+
+    var done = false;
+    function onPlayerStateChange(event) {
+
+    }
+    function stopVideo() {
+      player.stopVideo();
+    }
+  </script>
+</div>
