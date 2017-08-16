@@ -3,66 +3,16 @@
 <script src="https://rawgit.com/mholt/PapaParse/master/papaparse.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-
-<div id="sxForecast">S X Forecast</div>
-<div id="threeForecast">3 Forecast</div>
+<p>This forecast is based on 5 years of historical S and X sales in the United States as collected by <a href="http://InsideEvs.com" target="_blank">InsideEvs.com</a>
+<div id="sxForecast">S X Forecast</div><br/>
+<p>This forecast was created using statements by Tesla about Model 3 production and the S-Curve Log growth model they describe (<a href="https://en.wikipedia.org/wiki/Logarithmic_growth" target="_blank">more</a>)</p>
+<div id="threeForecast">3 Forecast</div><br/>
+<p>This forecast combines the above totals for S, 3, and X. This projects that Tesla will have delivered 201,000 cars by the end of 2017. As Elon has tweeted however, they are willing to forego revenue goals to "<a href="https://twitter.com/elonmusk/status/716709914911989760?lang=en" target="_blank">maximize customer happiness</a>"</p>
 <div id="overallChart">Overall</div>
 
 <script>
 
-// 3
-$.get('/data/3_projections_20180815.csv', function(data) {
-
-		//parse csv
-		var csv = Papa.parse(data);
-		console.log(csv);
-
-    options = {
-        chart: {
-						renderTo: 'threeForecast',
-						type: 'column'
-        },
-        data: {
-					rows: csv.data,
-					seriesMapping: [{
-							 x: 0, // X values are pulled from column 0 by default
-							 y: 1 // Y values are pulled from column 1 by default
-							// name: 2,
-							// label: 3 // Labels are pulled from column 2 and picked up in the dataLabels.format below
-					}]
-        },
-        title: {
-            text: 'Model 3 Forecast'
-        },
-        yAxis: {
-            title: {
-                text: 'Deliveries'
-            }
-        },
-				xAxis: {
-					title: {
-						text: 'Quarter'
-					}
-				},
-				plotOptions: {
-            series: {
-								// name: '{point.name}',
-                // dataLabels: {
-								// 		// rotation: 100,
-								// 		align: 'left',
-                //     enabled: true,
-                //     format: '{point.label}'
-                // }
-            }
-        }
-    };
-
-		// Create the chart
-		var chart = new Highcharts.Chart(options);
-
-});
-
-//s x
+//3 forecasts
 $.get('/data/sx_projections_20180815.csv', function(data) {
 
 		//parse csv
@@ -72,19 +22,13 @@ $.get('/data/sx_projections_20180815.csv', function(data) {
     options = {
         chart: {
 						renderTo: 'sxForecast',
-						type: 'column'
+						type: 'line'
         },
         data: {
-					rows: csv.data,
-					seriesMapping: [{
-							 x: 0, // X values are pulled from column 0 by default
-							 y: 1 // Y values are pulled from column 1 by default
-							// name: 2,
-							// label: 3 // Labels are pulled from column 2 and picked up in the dataLabels.format below
-					}]
+					rows: csv.data
         },
         title: {
-            text: 'Projected S & X Deliveries'
+            text: 'Model S and X Sales'
         },
         yAxis: {
             title: {
@@ -95,18 +39,7 @@ $.get('/data/sx_projections_20180815.csv', function(data) {
 					title: {
 						text: 'Quarter'
 					}
-				},
-				plotOptions: {
-            series: {
-								// name: '{point.name}',
-                // dataLabels: {
-								// 		// rotation: 100,
-								// 		align: 'left',
-                //     enabled: true,
-                //     format: '{point.label}'
-                // }
-            }
-        }
+				}
     };
 
 		// Create the chart
@@ -114,7 +47,44 @@ $.get('/data/sx_projections_20180815.csv', function(data) {
 
 });
 
-//overall
+
+//3 forecasts
+$.get('/data/3_projections_20180815.csv', function(data) {
+
+		//parse csv
+		var csv = Papa.parse(data);
+		console.log(csv);
+
+    options = {
+        chart: {
+						renderTo: 'threeForecast',
+						type: 'line'
+        },
+        data: {
+					rows: csv.data
+        },
+        title: {
+            text: 'Projected Model 3 Sales'
+        },
+        yAxis: {
+            title: {
+                text: 'Deliveries'
+            }
+        },
+				xAxis: {
+					title: {
+						text: 'Month'
+					}
+				}
+    };
+
+		// Create the chart
+		var chart = new Highcharts.Chart(options);
+
+});
+
+
+//overalls
 $.get('/data/overall_projections_20180815.csv', function(data) {
 
 		//parse csv
@@ -129,18 +99,14 @@ $.get('/data/overall_projections_20180815.csv', function(data) {
         data: {
 					rows: csv.data,
 					seriesMapping: [{
-							//  x: 0, // X values are pulled from column 0 by default
-							//  y: 1, // Y values are pulled from column 1 by default
-							name: 2,
-							label: 3 // Labels are pulled from column 2 and picked up in the dataLabels.format below
-					}]
+            // x: 0, // X values are pulled from column 0 by default
+            // y: 1, // Y values are pulled from column 1 by default
+            label: 3// Labels are pulled from column 2 and picked up in the dataLabels.format below
+        	}]
         },
         title: {
             text: 'Projected Sales Overall'
         },
-				subtitle: {
-    				text: 'Model S, 3, X'
-				},
         yAxis: {
             title: {
                 text: 'Deliveries'
@@ -152,15 +118,17 @@ $.get('/data/overall_projections_20180815.csv', function(data) {
 					}
 				},
 				plotOptions: {
-            series: {
-								name: '{point.name}',
-                dataLabels: {
-										rotation: 100,
-										align: 'left',
-                    enabled: true,
-                    format: '{point.label}'
-                }
+					column: {
+            stacking: 'normal'
+        	},
+					series: {
+            dataLabels: {
+								rotation: 100,
+								align: 'left',
+                enabled: true,
+                format: '{point.label}'
             }
+        	}
         }
     };
 
