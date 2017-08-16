@@ -15,7 +15,7 @@ youtube: BrelvDl2tpw
 published: true
 ---
 I built a tool to let you calculate the cost of your model, including the federal tax credit. See what your Tesla Model 3 will cost here [https://teslanomics.co/model3cost](https://teslanomics.co/model3cost)
-
+ 
 The way this came about was when I had this idea to try and estimate when Tesla will deliver their 200,000th car in the US. To figure this out, I partnered with the team at [http://insideevs.com/](http://insideevs.com/) who have some excellent data going all the way back to when the Model S was first released back in 2012.
 
 Since then they’ve been meticulously tracking how many EVs Tesla, and others, have sold in the US. If you have any doubt about this data, I suggest you check out their monthly sales scorecard which they regularly update as new information comes out. These guys do their homework, so I feel good about where the data is coming from here
