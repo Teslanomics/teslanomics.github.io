@@ -11,7 +11,7 @@ tags:
 - cost
 - tesla
 - price
-youtube: BrelvDl2tpw
+youtube: r88ReJ0BbU8
 published: true
 ---
 The ethics problems facing Self-Driving cars are the same problems we’ve been facing since the Roman Empire.
