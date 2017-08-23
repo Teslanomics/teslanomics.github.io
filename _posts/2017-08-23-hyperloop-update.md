@@ -1,5 +1,5 @@
 ---
-title: Hyperloop: Everything You Need To Know
+title: "Hyperloop: Everything You Need To Know"
 author: Ben Sullins
 layout: post
 date: 2017-08-23 00:02:00 +0000
@@ -16,7 +16,6 @@ tags:
 youtube: lOPeDzHS3dk
 published: true
 ---
-
 Elon Musk is taking things to a new level with Hyperloop. If he’s successful, you’ll soon be able to take a train from NYC to DC in about 30min or from LA to SF in about 35min. The hyper loop is a type of train designed with pods that travel through vacuum sealed tubes which combines a few existing technologies and dates back more than a century. 
 
 The basic way it works is a segment of the train, or pod, is contained in a tube with practically no air and suspended using magnetic levitation. This combines an old idea called a VacTrain with another type of train which does exist called MagLev
