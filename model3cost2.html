@@ -201,7 +201,7 @@ published: true
 		document.getElementById('carImg').src="/images/m3/" + car.color + '-' + car.wheel +'.png';
 
 		//update total
-		$('#loanAmount').val(getCarCost(paintCost, wheelCost));
+		updateTotal();
 
 	}
 
@@ -214,48 +214,66 @@ published: true
 			$("#step"+n).fadeIn(500);
 	}
 
-	function getCarCost(paint, wheels){
+	function getCarCost(){
 
-		var battery = $('#battery').val(),
-		autopilot = $('#autopilot').val(),
-		premium = $('#premium').val(),
-		// color = $('#color').val(),
-		paintCost = paint,
-		wheelCost = wheels,
+		var battery = $("input[name=battery]:checked").val(),
+		autopilot = $("input[name=autopilot]:checked").val(),
+		premium = $("input[name=premium]:checked").val(),
+		paintCost = $("input[name=paintCost]").val(),
+		wheelCost = $("input[name=wheelCost]").val(),
 		subTotal = 0;
 
 		//calculate totals
 		subTotal += +battery + +autopilot + +premium + +wheelCost + +paintCost;
 
+
+		// console.log('battery: '+battery);
+		// console.log('autopilot: '+autopilot);
+		// console.log('premium: '+premium);
+		// console.log('wheelCost: '+wheelCost);
+		// console.log('paintCost: '+paintCost);
+		//
+		// console.log('subTotal: '+subTotal);
+
 		return subTotal;
+	}
+
+	function updateTotal() {
+
+		$('#loanAmount').val(getCarCost());
+
 	}
 
 	// pull in all the values and then pass them in a post to the estimate
 	function seeResults() {
 
-		    var loanAmount = $('#loanAmount').val(),
-		        loanMonths = $('#loanMonths').val(),
-		        loanInterest = $('#loanInterest').val(),
-		        loanYears = $('#loanYears').val(),
-		        loanDown = $('#loanDown').val(),
+		    // var loanAmount = $('#loanAmount').val(),
+		    //     loanMonths = $('#loanMonths').val(),
+		    //     loanInterest = $('#loanInterest').val(),
+		    //     loanYears = $('#loanYears').val(),
+		    //     loanDown = $('#loanDown').val(),
+				//
+				// 		kwhRate = $('#kwhRate').val(),
+				// 		drivingStyle = $('#drivingStyle').val(),
+				// 		insurance = $('#insurance').val(),
+				// 		doc = $('#doc').val(),
+				// 		shipping = $('#shipping').val(),
+				// 		incentives = $('#incentives').val(),
+				//
+		    //     loanAmount = parseInt(loanAmount),
+		    //     loanMonths = parseInt(loanMonths),
+		    //     loanDown = parseInt(loanDown),
+		    //     loanInterest = parseFloat(loanInterest),
+		    //     monInt = loanInterest / 1200,
+				//
+				// 		monnthlyLoanPayment = ((monInt + (monInt / (Math.pow((1 + monInt), loanMonths) -1))) * (loanAmount - (loanDown || 0))).toFixed(2);
+				//
+				//
 
-						kwhRate = $('#kwhRate').val(),
-						drivingStyle = $('#drivingStyle').val(),
-						insurance = $('#insurance').val(),
-						doc = $('#doc').val(),
-						shipping = $('#shipping').val(),
-						incentives = $('#incentives').val(),
-
-		        loanAmount = parseInt(loanAmount),
-		        loanMonths = parseInt(loanMonths),
-		        loanDown = parseInt(loanDown),
-		        loanInterest = parseFloat(loanInterest),
-		        monInt = loanInterest / 1200,
-
-						monnthlyLoanPayment = ((monInt + (monInt / (Math.pow((1 + monInt), loanMonths) -1))) * (loanAmount - (loanDown || 0))).toFixed(2);
-
-
-		    $("$output").html() = calculation;
+				var data = $('#data').serializeArray();
+				console.log(data);
+				$('#results').html(data);
+				$('#results').fadeIn(500);
 
 		}
 		$(function(){
@@ -273,7 +291,7 @@ published: true
 		      }
 		  });
 		  function doneTyping () {
-		    $('#loanYears').val(months/12);
+		    $('#loanYears').val((months/12).toFixed(0));
 		  }
 		})
 		$(function(){
@@ -290,7 +308,7 @@ published: true
 		      }
 		  });
 		  function doneTyping () {
-		    $('#loanYears').val(months/12);
+		    $('#loanYears').val((months/12).toFixed(0));
 		  }
 		})
 		$(function(){
@@ -315,7 +333,7 @@ published: true
 
 
 </script>
-<div id="main" class="controls">
+<div id="data">
 	<div id="step1" class="form">
 		<h2>Step 1: Configure Your Model 3</h2>
 		<!-- <div id="regionSelectDiv" class="option-left">
@@ -351,31 +369,31 @@ published: true
 
 			<div id="batteryChoice" class="option-left">
 				<p class="choiceHeader">Choose Battery</p>
-				<input type="radio" id="batteryChoice1" name="battery" value="35000" checked>
+				<input type="radio" id="batteryChoice1" name="battery" value="35000" onclick="updateTotal();" checked>
 				<label for="batteryChoice1">Standard ($35K)</label><br/>
 
-				<input type="radio" id="batteryChoice2" name="battery" value="44000">
+				<input type="radio" id="batteryChoice2" name="battery" value="44000" onclick="updateTotal();">
 				<label for="batteryChoice2">Long Range ($44K)</label>
 			</div>
 
 			<div id="autopilotChoice" class="option-right">
 				<p class="choiceHeader">Autopilot Option</p>
-				<input type="radio" id="autopilotChoice1" name="autopilot" value="0" checked>
+				<input type="radio" id="autopilotChoice1" name="autopilot" value="0" onclick="updateTotal()" checked>
 				<label for="autopilotChoice1">None ($0)</label><br/>
 
-				<input type="radio" id="autopilotChoice2" name="autopilot" value="5000">
+				<input type="radio" id="autopilotChoice2" name="autopilot" value="5000" onclick="updateTotal()">
 				<label for="autopilotChoice2">Enhanced Autopilot ($5K)</label><br/>
 
-				<input type="radio" id="autopilotChoice3" name="autopilot" value="8000">
+				<input type="radio" id="autopilotChoice3" name="autopilot" value="8000" onclick="updateTotal()">
 				<label for="autopilotChoice3">Full Self-Driving ($8K)</label>
 			</div>
 
 			<div id="premiumChoice" class="option-left">
 				<p class="choiceHeader">Premium Upgrade</p>
-				<input type="radio" id="premiumChoice1" name="premium" value="0" checked>
+				<input type="radio" id="premiumChoice1" name="premium" value="0" onclick="updateTotal()" checked>
 				<label for="premiumChoice1">No ($0)</label><br/>
 
-				<input type="radio" id="premiumChoice2" name="premium" value="5000">
+				<input type="radio" id="premiumChoice2" name="premium" value="5000" onclick="updateTotal()">
 				<label for="premiumChoice2">Yes ($5K)</label>
 			</div>
 
@@ -570,9 +588,9 @@ published: true
 			<label for="incentives">Incentives</label>
 		</p>
 		<p>
-			<button class="form__button" onclick="seeResults()">See Results</button>
+			<button class="form__button" onclick="seeResults();">See Results</button>
 		</p>
 	</div>
 </div>
 
-<div id="output"></div>
+<div id="results" style="display:none;"></div>
