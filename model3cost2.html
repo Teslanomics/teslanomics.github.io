@@ -550,20 +550,24 @@ published: true
 	<div id="step4" class="form" style="display:none;">
 		<h2>Step 4: Enter Options</h2>
 		<p>
-			<label for="amount" class="fa fa-usd"></label>
-			<input type="text" id="insurance" name="insurance" placeholder="Insurance/mo">
+			<label for="insurance" class="fa fa-car"></label>
+			<input type="text" id="insurance" name="insurance" placeholder="Insurance/mo" value="120">
+			<label for="insurance">Insurance/mo</label>
 		</p>
 		<p>
-			<label for="amount" class="fa fa-usd"></label>
-			<input type="text" id="doc" name="doc" placeholder="Dest. & Doc Fee">
+			<label for="doc" class="fa fa-pencil"></label>
+			<input type="text" id="doc" name="doc" placeholder="Dest. & Doc Fee" value="1200">
+			<label for="doc">Dest. & Doc Fees</label>
 		</p>
 		<p>
-			<label for="amount" class="fa fa-usd"></label>
-			<input type="text" id="shipping" name="shipping" placeholder="Shipping Fee">
+			<label for="shipping" class="fa fa-truck"></label>
+			<input type="text" id="shipping" name="shipping" placeholder="Shipping Fee" value="0">
+			<label for="shipping">Shipping</label>
 		</p>
 		<p>
-			<label for="amount" class="fa fa-usd"></label>
-			<input type="text" id="incentives" name="incentives" placeholder="Incentives">
+			<label for="incentives" class="fa fa-minus-circle"></label>
+			<input type="text" id="incentives" name="incentives" placeholder="Incentives" value="0">
+			<label for="incentives">Incentives</label>
 		</p>
 		<p>
 			<button class="form__button" onclick="seeResults()">See Results</button>
