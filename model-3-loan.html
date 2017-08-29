@@ -1,0 +1,142 @@
+---
+layout: page
+title: Model 3 Loan Estimator
+permalink: "/model-3-loan"
+published: true
+---
+<link rel="stylesheet" type="text/css" href="form.css">
+<style>
+label {
+	min-width: 20px;
+}
+</style>
+<script>
+	function getQueryVariable(variable) {
+				 var query = window.location.search.substring(1);
+				 var vars = query.split("&");
+				 for (var i=0;i<vars.length;i++) {
+								 var pair = vars[i].split("=");
+								 if(pair[0] == variable){return pair[1];}
+				 }
+				 return(false);
+	}
+
+
+	function myFunction() {
+	    var loan = $('#amount').val(),
+	        month = $('#months').val(),
+	        int = $('#interest').val(),
+	        years = $('#years').val(),
+	        down = $('#down').val(),
+					total = $('#amount').val(),
+	        amount = parseInt(loan),
+	        months = parseInt(month),
+	        down = parseInt(down),
+	        annInterest = parseFloat(int),
+	        monInt = annInterest / 1200,
+	        calculation = ((monInt + (monInt / (Math.pow((1 + monInt), months) -1))) * (amount - (down || 0))).toFixed(2);
+
+	    // document.getElementById("output").innerHTML = calculation;
+			window.location.replace('{{ site.baseurl }}/model-3-charging?loan=' + calculation + '&total=' + total);
+	}
+
+
+	$(function(){
+
+		var month = $(this).val(),
+	      doneTypingInterval = 500,
+	      months = parseInt(month),
+	      typingTimer,
+				total = getQueryVariable('total');
+
+		$("#amount").val(total);
+
+	  $('#months').keyup(function(){
+	      month = $(this).val();
+	      months = parseInt(month);
+
+	      clearTimeout(typingTimer);
+	      if (month) {
+	          typingTimer = setTimeout(doneTyping, doneTypingInterval);
+	      }
+	  });
+
+	  function doneTyping () {
+	    $('#years').val(months/12);
+	  }
+	})
+
+	$(function(){
+		var month = $(this).val(),
+	      doneTypingInterval = 500,
+	      months = parseInt(month),
+	      typingTimer;
+
+	  $('#months').keyup(function(){
+	      month = $(this).val();
+	      months = parseInt(month);
+
+	      clearTimeout(typingTimer);
+	      if (month) {
+	          typingTimer = setTimeout(doneTyping, doneTypingInterval);
+	      }
+	  });
+
+	  function doneTyping () {
+	    $('#years').val(months/12);
+	  }
+	})
+
+	$(function(){
+		var year = $(this).val(),
+	      doneTypingInterval = 500,
+	      years = parseInt(year),
+	      typingTimer;
+
+	  $('#years').keyup(function(){
+	      year = $(this).val();
+	      myears = parseInt(year);
+
+	      clearTimeout(typingTimer);
+	      if (year) {
+	          typingTimer = setTimeout(doneTyping, doneTypingInterval);
+	      }
+	  });
+
+	  function doneTyping () {
+	    $('#months').val(year * 12);
+	  }
+	})
+
+
+</script>
+<p>Enter your loan information</p>
+<div class="form">
+    <p>
+			<label for="amount" class="fa fa-usd"></label>
+      <input type="text" id="amount" name="amount" placeholder="Loan Amount">
+    </p>
+    <p>
+			<label for="months" class="fa fa-calendar"></label>
+      <input type="text" id="months" placeholder="Months">
+    </p>
+    <p>
+			<label for="years" class="fa fa-calendar"></label>
+      <input type="text" id="years" placeholder="Years">
+    </p>
+    <p>
+			<label for="interest" class="fa fa-percent"></label>
+      <input type="text" id="interest" placeholder="Interest Rate">
+    </p>
+   <p>
+		 <label for="down" class="fa fa-arrow-down"></label>
+      <input type="text" id="down" placeholder="Down Payment">
+    </p>
+    <p>
+      <button class="form__button" onclick="myFunction()">Next Step: Energy Cost</button>
+    </p>
+    <!-- <p id="output">Monthly Payment</p> --->
+</div>
+
+
+<!-- TODO: add How it Works video -->
