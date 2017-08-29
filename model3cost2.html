@@ -1,0 +1,467 @@
+---
+layout: page
+title: Model 3 Cost Estimator - Full
+permalink: "/model3cost2"
+published: true
+---
+<style>
+
+ :root {
+   --form-bg-color: white;
+	 --font-color: #474747;
+	 --submit-color: #E85454;
+	 --submit-color-darker: #00824A;
+	 --submit-font-color: #fff;
+	 --border-color: #474747;
+
+}
+
+.form {
+	color: var(--font-color);
+	background-color: var(--form-bg-color);
+	padding: 5px;
+	margin: 15px auto;
+	width:100%;
+  max-width: 800px;
+}
+
+.form h1,h2 {
+	color: var(--font-color);
+}
+
+select {
+	min-width: 335px;
+	margin-bottom: 5px;
+	max-width: 500px;
+	display: block;
+}
+
+.full {
+	width:100%;
+	display: block;
+}
+
+.choiceHeader {
+	font-weight: bold;
+	font-size: 1.5em;
+}
+
+input.radio {
+	display: block;
+}
+
+circle {
+	transition: all .5s ease-in-out;
+	&:hover, &:focus, &:active {
+		border: 1px solid rgba($font-color,.5);
+	}
+}
+
+input[type="text"] {
+    background: #f5f5f5;
+    border: 0;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    max-width: 215px;
+    padding: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.form__button {
+	height: 60px;
+	width: 100%;
+	max-width: 800px;
+	border: none;
+	background-color: var(--submit-color);
+	color: var(--submit-font-color);
+	text-transform: uppercase;
+	font-family: 'Source Sans Pro', sans-serif;
+	padding: 0 20px;
+	border-radius: 5px;
+	font-weight: 900;
+	cursor: pointer;
+	margin: 20px 0;
+	transition: all .25s ease-in-out;
+	&:hover, &:focus {
+		background-color: var(--submit-color-darker);
+		text-shadow: 1px 1px 1px rgba(0,0,0,.25);
+		outline: none;
+	}
+}
+
+li {
+	width: 45%;
+	list-style-type: none;
+	float:left;
+}
+
+li p {
+	text-align: center;
+}
+
+li img {
+	display: block;
+	margin: auto;
+	max-width: 100px;
+}
+
+label {
+	min-width: 25px;
+	&:hover, &:focus, &:active {
+		border: 1px solid rgba($font-color,.5);
+	}
+}
+
+label > input{ /* HIDE RADIO */
+  visibility: hidden; /* Makes input not-clickable */
+  position: absolute; /* Remove input from document flow */
+	float:left;
+}
+label > input + img{ /* IMAGE STYLES */
+  cursor:pointer;
+  border:2px solid transparent;
+}
+label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
+  border:2px solid #474747;
+}
+
+input[type="radio"]:active ~ label {
+  opacity: 1;
+}
+
+input[type="radio"]:checked ~ label {
+  opacity: 1;
+	border: 1px solid $font-color;
+}
+
+.preview {
+	margin: 20px;
+	min-height: 200px;
+}
+
+.option-left {
+	min-width: 350px;
+	float:left;
+	width:50%;
+	padding:10px;
+}
+
+.option-right {
+	min-width: 350px;
+	float: right;
+	width:50%;
+	padding: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+	[class*="option-"] {
+		width: 100%;
+		float:left;
+		padding:0px;
+	}
+}
+
+</style>
+
+<script>
+
+	var car = {"color":"black","wheel":"aero"};
+
+	function updateCar(option,value) {
+
+		wheelCost = 0;
+		paintCost = 0;
+
+		if(option == "color"){
+			car.color = value;
+		} else {
+			car.wheel = value;
+		}
+
+		//update Cost
+		if(car.wheel == 'sport'){
+			wheelCost = 1500;
+		} else {
+			wheelCost = 0;
+		}
+
+		if(car.color != 'black') {
+			paintCost = 1000;
+		} else {
+			paintCost = 0;
+		}
+
+		document.getElementById("wheelCost").value = wheelCost;
+		document.getElementById("paintCost").value = paintCost;
+
+		// console.log(car.color + '-' + car.wheel +'.png');
+
+		//set car
+		document.getElementById('carImg').src="/images/m3/" + car.color + '-' + car.wheel +'.png';
+
+	}
+
+	function	updateColorChoice(color){
+		document.getElementById('colorChoiceLabel').innerHTML=color;
+	}
+
+	function nextStep(n){
+			// $("#step"+(n-1)).fadeOut(50);
+			$("#step"+n).fadeIn(500);
+	}
+
+	function seeResults() {
+		
+	}
+
+
+</script>
+<div id="main" class="controls">
+	<div id="step1" class="form">
+		<h2>Step 1: Configure Your Model 3</h2>
+		<div id="regionSelectDiv" class="option-left">
+			<label class="choiceHeader" for="regionSelect">Choose Region</label>
+			<select id="regionSelect" name="region" form="model3Cost">
+				<option value="USA">USA</option>
+				<option value="Non-USA">Canada</option>
+				<option value="Non-USA">Mexico</option>
+				<option value="Non-USA">Latin America</option>
+				<option value="Non-USA">Europe</option>
+				<option value="Non-USA">UK</option>
+				<option value="Non-USA">Asia-Pacific</option>
+				<option value="Non-USA">Africa</option>
+			</select>
+		</div>
+
+		<div id="deliveryQtrDiv" class="option-right">
+			<label class="choiceHeader" for="deliverySelect">Choose Delivery Quarter</label>
+			<select id="deliverySelect" name="taxCredit" form="model3Cost">
+				<option value="-7500">2017Q4</option>
+				<option value="-7500">2018Q1</option>
+				<option value="-7500">2018Q2</option>
+				<option value="-3750">2018Q3</option>
+				<option value="-3750">2018Q4</option>
+				<option value="-1875">2019Q1</option>
+				<option value="-1875">2019Q2</option>
+				<option value="0">2019Q3</option>
+				<option value="0">2019Q4</option>
+			</select>
+		</div>
+
+		<div id="upgrades" class="full">
+
+			<div id="batteryChoice" class="option-left">
+				<p class="choiceHeader">Choose Battery</p>
+				<input type="radio" id="batteryChoice1" name="battery" value="35000" checked>
+				<label for="batteryChoice1">Standard ($35K)</label><br/>
+
+				<input type="radio" id="batteryChoice2" name="battery" value="44000">
+				<label for="batteryChoice2">Long Range ($44K)</label>
+			</div>
+
+			<div id="autopilotChoice" class="option-right">
+				<p class="choiceHeader">Autopilot Option</p>
+				<input type="radio" id="autopilotChoice1" name="autopilot" value="0" checked>
+				<label for="autopilotChoice1">None ($0)</label><br/>
+
+				<input type="radio" id="autopilotChoice2" name="autopilot" value="5000">
+				<label for="autopilotChoice2">Enhanced Autopilot ($5K)</label><br/>
+
+				<input type="radio" id="autopilotChoice3" name="autopilot" value="8000">
+				<label for="autopilotChoice3">Full Self-Driving ($8K)</label>
+			</div>
+
+			<div id="premiumChoice" class="option-left">
+				<p class="choiceHeader">Premium Upgrade</p>
+				<input type="radio" id="premiumChoice1" name="premium" value="0" checked>
+				<label for="premiumChoice1">No ($0)</label><br/>
+
+				<input type="radio" id="premiumChoice2" name="premium" value="5000">
+				<label for="premiumChoice2">Yes ($5K)</label>
+			</div>
+
+			<div id="colorChoice" class="option-right">
+				<p class="choiceHeader">Choose Color</p>
+					<div id="colorChoiceLabel">Solid Black</div>
+					<!-- black -->
+					<label>
+				    <input type="radio" name="color" value="black" checked/>
+						<svg height="100" width="50">
+							<circle cx="25" cy="50" r="25" fill="#0A0B0B" stroke="#ACAEB0" stroke-width="1px"
+								onclick="updateColorChoice('Solid Black'); updateCar('color','black');"/>
+						</svg>
+				  </label>
+					<!-- midnight -->
+					<label>
+				    <input type="radio" name="color" value="midnight"/>
+						<svg height="100" width="50">
+							<circle cx="25" cy="50" r="25" fill="#2F2E35" stroke="#ACAEB0" stroke-width="1px"
+								onclick="updateColorChoice('Midnight Silver Metallic +$1,000'); updateCar('color','midnight');"
+							/>
+						</svg>
+				  </label>
+					<!-- blue -->
+					<label>
+				    <input type="radio" name="color" value="blue"/>
+						<svg height="100" width="50">
+							<circle cx="25" cy="50" r="25" fill="#111E45" stroke="#ACAEB0" stroke-width="1px"
+								onclick="updateColorChoice('Deep Blue Metallic +$1,000'); updateCar('color','blue');"
+							/>
+						</svg>
+				  </label>
+
+					<!-- silver -->
+					<label>
+				    <input type="radio" name="color" value="silver"/>
+						<svg height="100" width="50">
+							<circle cx="25" cy="50" r="25" fill="#ACAEB0"
+								onclick="updateColorChoice('Silver Metallic +$1,000'); updateCar('color','silver');"
+							/>
+						</svg>
+				  </label>
+					<!-- white -->
+					<label>
+						<input type="radio" name="color" value="white"/>
+						<svg height="100" width="50">
+							<circle cx="25" cy="50" r="25" fill="#FDFEFE" stroke="#ACAEB0" stroke-width="1px"
+								onclick="updateColorChoice('Pearl White Multi-Coat +$1,000'); updateCar('color','white');"
+							/>
+						</svg>
+					</label>
+					<!-- red -->
+					<label>
+						<input type="radio" name="color" value="red"/>
+						<svg height="100" width="50">
+							<circle cx="25" cy="50" r="25" fill="#BE3844"
+								onclick="updateColorChoice('Red Multi-Coat +$1,000'); updateCar('color','red');"
+							/>
+						</svg>
+					</label>
+				</svg>
+
+
+			</div>
+
+			<div id="wheelChoice" class="option-right">
+				<p class="choiceHeader">Wheel</p>
+				<label>
+			    <input type="radio" name="wheel" value="aero" class="wheelOption" checked/>
+					<img
+						src="/images/m3/aero-draw.png"
+						onclick=updateCar('wheel','aero');
+						style="width:50px;"
+					/>
+					18" Aero
+			  </label>
+				<label>
+					<input type="radio" name="wheel" value="sport" class="wheelOption"/>
+					<img
+						src="/images/m3/sport-draw.png"
+						onclick="updateCar('wheel','sport')";
+						style="width:50px;"
+					/>
+					19" Sport
+				</label>
+			</div>
+
+			<div id="previewImage" class="preview">
+				<!-- <p class="choiceHeader">Your Car</p> -->
+				<img id="carImg" src="/images/m3/black-aero.png"
+					style="width:95%; max-width:850px; margin:5px; background-color:#fff; padding:5px;"
+				/>
+			</div>
+
+		</div>
+
+		<!-- hidden cost vars -->
+		<input type="hidden" name="wheelCost" id="wheelCost" value="0">
+		<input type="hidden" name="paintCost" id="paintCost" value="0">
+
+		<button class="form__button" onclick="nextStep(2)">Next Step: Loan</button>
+
+
+	</form>
+
+	<div id="step2" class="form" style="display:none;">
+		<h2>Step 2: Enter Loan Information</h2>
+		<p>
+			<label for="amount" class="fa fa-usd"></label>
+			<input type="text" id="amount" name="amount" placeholder="Loan Amount">
+		</p>
+		<p>
+			<label for="months" class="fa fa-calendar"></label>
+			<input type="text" id="months" placeholder="Months">
+		</p>
+		<p>
+			<label for="years" class="fa fa-calendar"></label>
+			<input type="text" id="years" placeholder="Years">
+		</p>
+		<p>
+			<label for="interest" class="fa fa-percent"></label>
+			<input type="text" id="interest" placeholder="Interest Rate">
+		</p>
+		<p>
+		 <label for="down" class="fa fa-arrow-down"></label>
+			<input type="text" id="down" placeholder="Down Payment">
+		</p>
+		<p>
+			<button class="form__button" onclick="nextStep(3)">Next Step: Energy Cost</button>
+		</p>
+	</div>
+
+	<div id="step3" class="form" style="display:none;">
+		<h2>Step 3: Enter Driving Habits</h2>
+			<p>
+				<label for="down" class="fa fa-car"></label>
+				<input type="text" id="commute" name="commute" placeholder="Daily Commute (mi)">
+			</p>
+
+			<p>
+				<label for="down" class="fa fa-bolt"></label>
+				<input type="text" id="rate" name="rate" placeholder="$ per kWh">
+			</p>
+
+				<div id="styleChoice" class="option-left">
+					<p class="choiceHeader">How do you drive?</p>
+
+					<input type="radio" id="styleChoice1" name="style" value="0.85">
+					<label for="styleChoice1">Slow</label><br/>
+
+					<input type="radio" id="styleChoice2" name="style" value="1.00" checked>
+					<label for="styleChoice2">Moderate</label><br/>
+
+					<input type="radio" id="styleChoice3" name="style" value="1.15">
+					<label for="styleChoice3">Fast</label>
+				</div>
+				<!-- efficiency ref - https://electrek.co/2017/07/28/tesla-accidentally-reveals-model-3-efficiency-hinting-at-impressive-range/-->
+
+
+			<button class="form__button" onclick="nextStep(4)">Last Step: Options</button>
+
+
+	</div>
+
+	<div id="step4" class="form" style="display:none;">
+		<h2>Step 4: Enter Options</h2>
+		<p>
+			<label for="amount" class="fa fa-usd"></label>
+			<input type="text" id="insurance" name="insurance" placeholder="Insurance/mo">
+		</p>
+		<p>
+			<label for="amount" class="fa fa-usd"></label>
+			<input type="text" id="doc" name="doc" placeholder="Dest. & Doc Fee">
+		</p>
+		<p>
+			<label for="amount" class="fa fa-usd"></label>
+			<input type="text" id="shipping" name="shipping" placeholder="Shipping Fee">
+		</p>
+		<p>
+			<label for="amount" class="fa fa-usd"></label>
+			<input type="text" id="incentives" name="incentives" placeholder="Incentives">
+		</p>
+		<p>
+			<button class="form__button" onclick="seeResults()">See Results</button>
+		</p>
+	</div>
+</div>
