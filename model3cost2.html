@@ -247,21 +247,57 @@ published: true
 
 	}
 
-	// pull in all the values and then pass them in a post to the estimate
-	function seeResults() {
+	function loadResults(data) {
 
-				var data = $('#data').serializeArray();
-				console.log(data);
-				$('#results').html(data);
-				$('#results').fadeIn(500);
+		var results = [],
+				rArr = [],
+				purchasePrice = 0;
+		//purchase price
+		purchasePrice += +data.battery + +data.autopilot + +data.premium + +data.wheelCost + +data.paintCost;
+		rArr.push('{ "Total Cost":"' + purchasePrice + '"}');
 
-		}
+		// monthly payment
+		var monInt		=	+data.loanInterest/1200,
+				payment 	=	0,
+				amount		= +data.loanAmount,
+				down			= +data.loanDown,
+				months		= +data.loanMonths;
 
+		payment = ((monInt + (monInt / (Math.pow((1 + monInt), months) -1))) * (amount - (down || 0))).toFixed(2);
+
+		rArr.push('{ "Monthly Payment":"' + payment + '"}');
+		// charging
+		// other
+
+		results = rArr.join(",");
+		$("#result").append(results);
+
+	}
+
+
+		// do something when the form is submitted
 		$(function() {
 			$("form").submit(function( event ) {
-			  console.log( $( this ).serializeArray() );
-			  event.preventDefault();
-				$("#result").html($( this ).serializeArray());
+
+				event.preventDefault();
+
+				data = $( this ).serializeArray();
+
+				// console.log( JSON.stringify(data) );
+
+				var dataMap = [],
+						dataObj = [];
+
+				$.map(data, function(item){
+				 dataMap.push('"' + item.name + '":"' + item.value + '"');
+				});
+
+				dataObj = "{" + dataMap.join(",") + "}";
+				results = JSON.parse(dataObj);
+
+				//load stuff
+				loadResults(results);
+
 			});
 		});
 
@@ -550,4 +586,7 @@ published: true
 	</div>
 </form>
 
-<div id="result" style="display:none;"></div>
+<div id="result">
+	<table id="summaryTable"></table>
+	<table id="detailsTable"></table>
+</div>
