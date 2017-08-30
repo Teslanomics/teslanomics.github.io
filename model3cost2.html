@@ -438,8 +438,11 @@ published: true
 				// console.log(data.California.Combine_Rate);
 				// console.log(data.California);
 				taxRate = $("input[name=taxRate]").val((rate*100).toFixed(2));
+				updateTotal();
 
 			});
+
+
 
 
 		}, "jsonp");
