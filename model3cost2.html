@@ -144,7 +144,7 @@ published: true
 
 	.preview {
 		margin: 20px;
-		min-height: 200px;
+		/*min-height: 200px;*/
 	}
 
 	.option-left {
@@ -171,6 +171,7 @@ published: true
 
 	table {
 		width: 100%;
+		max-width: 400px;
 		margin:5px;
 	};
 	table td {
@@ -241,7 +242,7 @@ published: true
 			$("#step"+n).fadeIn(500);
 	}
 
-	function getCarCost(){
+	function getCarCost(format){
 
 		var battery = $("input[name=battery]:checked").val(),
 		autopilot = $("input[name=autopilot]:checked").val(),
@@ -263,10 +264,13 @@ published: true
 		taxAmt += (+subTotal * (+taxRate/100)).toFixed(2);
 		total += (+subTotal + +taxAmt + +docFee).toFixed(2);
 
-		r.push('"Price" : "' + numeral(subTotal).format('$0,0') + '"');
-		r.push('"Taxes" : "' + numeral(taxAmt).format('$0,0') + '"');
-		r.push('"Fees" : "' + numeral(docFee).format('$0,0') + '"');
-		r.push('"Total" : "' + numeral(total).format('$0,0') + '"');
+
+			r.push('"Price" : "' + subTotal + '"');
+			r.push('"Taxes" : "' + taxAmt + '"');
+			r.push('"Fees" : "' + docFee + '"');
+			r.push('"Total" : "' + total + '"');
+
+
 
 		o = "{" + r.join(",") + "}";
 
@@ -286,33 +290,35 @@ published: true
     //   data:c
     // });
 
-		$("#purchaseDetails").html("<tr><td>Price</td><td>" + c.Price + "</td></tr>");
-		$("#purchaseDetails").append("<tr><td>Taxes</td><td>" + c.Taxes + "</td></tr>");
-		$("#purchaseDetails").append("<tr><td>Fees</td><td>" + c.Fees + "</td></tr>");
-		$("#purchaseDetails").append("<tr><td>Total</td><td>" + c.Total + "</td></tr>");
+		$("#purchaseDetails").html("<tr><td>Price</td><td>" + numeral(c.Price).format('$0,0') + "</td></tr>");
+		$("#purchaseDetails").append("<tr><td>Taxes</td><td>" + numeral(c.Taxes).format('$0,0.00') + "</td></tr>");
+		$("#purchaseDetails").append("<tr><td>Fees</td><td>" + numeral(c.Fees).format('$0,0') + "</td></tr>");
+		$("#purchaseDetails").append("<tr><td>Total</td><td>" + numeral(c.Total).format('$0,0.00') + "</td></tr>");
 
 		// makeTable($("#purchaseDetails"),c);
 
-		$('#loanAmount').val(c.Total);
+		$('#loanAmount').val(numeral(c.Total).format('$0,0.00'));
 
 	}
 
 	function loadResults(data) {
 
-		console.log(data);
+		// console.log(data);
 
 		var results = [],
-				rArr = [],
+				costsArr = [],
+				deetsArr = [],
+				finalCostArr = [],
 				purchasePrice = 0,
 				finalPrice = 0,
-				lessIncentives = numeral($("input[name=incentive]").val());
+				lessIncentives = Math.abs($("input[name=incentives]").val());
 
 		//purchase price
 
 		purchasePrice = getCarCost();
 
 		// rArr.push('{ "Total Cost":"' + numeral(purchasePrice.Total).format('$0,0') + '"}');
-		rArr.push('{ "item":"Total Cost","value":"' + numeral(purchasePrice.Total).format('$0,0') + '"}');
+		// costsArr.push('{ "item":"Total Cost","value":"' + numeral(purchasePrice.Total).format('$0,0') + '"}');
 
 		// monthly payment
 		var monInt		=	numeral(data.loanInterest).format('0.00')/1200,
@@ -330,7 +336,7 @@ published: true
 		payment = ((monInt + (monInt / (Math.pow((1 + monInt), months) -1))) * (amount - (down || 0))).toFixed(2);
 
 		// rArr.push('{ "Monthly Payment":"' + numeral(payment).format('$0,0.00') + '"}');
-		rArr.push('{ "item":"Monthly Payment","value":"' + numeral(payment).format('$0,0.00') + '"}');
+		costsArr.push('{ "item":"Payment","value":"' + numeral(payment).format('$0,0.00') + '"}');
 
 		// charging
 		dailyCost = 0,
@@ -356,44 +362,88 @@ published: true
 		min = (dd * 60).toFixed(0);
 		dailyDuration = hr + "hr " + min + "min";
 
-		console.log("dailyDuration: " + dailyDuration);
+		// console.log("dailyDuration: " + dailyDuration);
 
 		monthlyCost = (dailyCost*30).toFixed(2);
 
 		// rArr.push('{ "Daily Charging Cost":"' + numeral(dailyCost).format('$0.00') + '"}');
-		rArr.push('{ "item":"Daily Charging Cost","value":"' + numeral(dailyCost).format('$0.00') + '"}');
+		deetsArr.push('{ "item":"Daily Charging Cost","value":"' + numeral(dailyCost).format('$0.00') + '"}');
 
 		// rArr.push('{ "Daily Charge Time":"' + dailyDuration + '"}');
-		rArr.push('{ "item":"Daily Charge Time","value":"' + dailyDuration + '"}');
+		deetsArr.push('{ "item":"Daily Charge Time","value":"' + dailyDuration + '"}');
 
 		// rArr.push('{ "Monthly Charging Cost":"' + numeral(monthlyCost).format('$0,0.00') + '"}');
-		rArr.push('{ "item":"Monthly Charging Cost","value":"' + numeral(monthlyCost).format('$0,0.00') + '"}');
+		costsArr.push('{ "item":"Charging Cost","value":"' + numeral(monthlyCost).format('$0,0.00') + '"}');
 
 		// other
 		var totalMonthly = 0,
 				netPurchase = 0;
 
 		totalMonthly = +payment + +data.insurance + +monthlyCost;
-		console.log('payment ' + payment);
-		console.log('data.insurance ' + data.insurance);
-		console.log('monthlyCost ' + monthlyCost);
+		// console.log('payment ' + payment);
+		// console.log('data.insurance ' + data.insurance);
+		// console.log('monthlyCost ' + monthlyCost);
 
-		rArr.push('{ "item":"Total Monthly Cost","value":"' + numeral(totalMonthly).format('$0,0.00') + '"}');
 
+		// add insurance to costsArr
+		costsArr.push('{ "item":"Insurance","value":"' + numeral(+data.insurance).format('$0,0.00') + '"}');
+		costsArr.push('{ "item":"Total Monthly Cost","value":"' + numeral(totalMonthly).format('$0,0.00') + '"}');
+
+
+		//final costs table
+		finalCosts = getCarCost();
+		finalCostArr.push('{ "item":"Purchase Price","value":"' + numeral(finalCosts.Price).format('$0,0.00') + '"}');
+		finalCostArr.push('{ "item":"Taxes","value":"' + numeral(finalCosts.Taxes).format('$0,0.00') + '"}');
+		finalCostArr.push('{ "item":"Fees","value":"' + numeral(finalCosts.Fees).format('$0,0') + '"}');
+		finalCostArr.push('{ "item":"Incentives","value":"' + numeral(lessIncentives).format('$0,0') + '"}');
+		finalCostArr.push('{ "item":"Final Cost","value":"' + numeral((+finalCosts.Total - +lessIncentives)).format('$0,0.00') + '"}');
 
 		// prepare for display and output
-		results = "[" + rArr.join(",") + "]";
+		costTable = "[" + costsArr.join(",") + "]";
+		deetsTable = "[" + deetsArr.join(",") + "]";
+		finalCostTable = "[" + finalCostArr.join(",") + "]";
 
-		console.log(results);
+		// console.log(results);
 
 		// $("#results").append(results);
 
-		jsonToTable("#summaryTable",JSON.parse(results));
+		jsonToTable("#summaryTable",JSON.parse(costTable));
+		jsonToTable("#detailsTable",JSON.parse(deetsTable));
+		jsonToTable("#finalCostTable",JSON.parse(finalCostTable));
+		$("#totalCostHead").html("Your Model 3 Costs " + numeral(finalCosts.Total).format('$0,0'));
 
 		$("#results").fadeIn(500);
 
 	}
 
+	//load tax rate when first opened
+	$(function(){
+		//This part gets the location and updates viz with the location parameter
+		$.get("http://ipinfo.io", function (response) {
+
+			// $("#ip").html("IP: " + response.ip);
+			// $("#address").html("Location: " + response.city + ", " + response.region);
+			// $("#locationChoice").html("location choice: " + response[paramLevel]);
+			// $("#details").html(JSON.stringify(response, null, 4));
+
+			//this part gets the viz and updates the iframe
+			console.log(response.region);
+
+			$.getJSON( '/data/state_taxes_2017.json', function( data ) {
+
+				region = response.region;
+				rate = data[region].Combine_Rate
+				// rate = data.region.State_Tax_Rate;
+				console.log(data);
+				console.log(data.California.Combine_Rate);
+				// console.log(data.California);
+				taxRate = $("input[name=taxRate]").val((rate*100).toFixed(2));
+
+			});
+
+
+		}, "jsonp");
+	});
 
 		//do something on loadResults
 		$(function(){
@@ -717,13 +767,16 @@ published: true
 </form>
 
 <div id="results" style="display:none;">
+	<h2 id="totalCostHead" style="text-align: center"></h2>
 	<div id="previewImage2" class="preview">
-		<!-- <p class="choiceHeader">Your Car</p> -->
 		<img id="carImg2" src="/images/m3/black-aero.png"
 			style="width:95%; max-width:850px; margin:5px; background-color:#fff; padding:5px;"
 		/>
 	</div>
 	<h2>Monthly Cost Estimate</h2>
 	<table id="summaryTable"></table>
+	<h2>Charging Details</h2>
 	<table id="detailsTable"></table>
+	<h2>Net Cost</h2>
+	<table id="finalCostTable"></table>
 </div>
