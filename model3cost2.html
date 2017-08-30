@@ -171,7 +171,12 @@ published: true
 
 	table {
 		width: 100%;
+		margin:5px;
 	};
+	table td {
+		padding:2px;
+		text-align: left;
+	}
 
 </style>
 
@@ -218,6 +223,8 @@ published: true
 	}
 
 	function jsonToTable(container,data){
+
+		$(container).html("");
 
 		$.each(data, function(i, rw) {
 			$(container).append("<tr><td class='thead'>" + data[i].item + "</td><td>" + data[i].value + "</td></tr>");
