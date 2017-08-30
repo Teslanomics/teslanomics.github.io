@@ -4,6 +4,10 @@ title: Model 3 Cost Estimator - Full
 permalink: "/model3cost2"
 published: true
 ---
+
+<!-- number formatting -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+
 <style>
 
 	 :root {
@@ -165,6 +169,10 @@ published: true
 		}
 	}
 
+	table {
+		width: 100%;
+	};
+
 </style>
 
 <script>
@@ -202,9 +210,18 @@ published: true
 
 		//set car
 		document.getElementById('carImg').src="/images/m3/" + car.color + '-' + car.wheel +'.png';
+		document.getElementById('carImg2').src="/images/m3/" + car.color + '-' + car.wheel +'.png';
 
 		//update total
 		updateTotal();
+
+	}
+
+	function jsonToTable(container,data){
+
+		$.each(data, function(i, rw) {
+			$(container).append("<tr><td class='thead'>" + data[i].item + "</td><td>" + data[i].value + "</td></tr>");
+		});
 
 	}
 
@@ -224,57 +241,157 @@ published: true
 		premium = $("input[name=premium]:checked").val(),
 		paintCost = $("input[name=paintCost]").val(),
 		wheelCost = $("input[name=wheelCost]").val(),
-		subTotal = 0;
+
+		//fees
+		docFee = $("input[name=doc]").val(),
+		taxRate = $("input[name=taxRate]").val(),
+		subTotal = 0,
+		taxAmt = 0,
+		total = 0,
+		r = [],
+		o = [];
 
 		//calculate totals
-		subTotal += +battery + +autopilot + +premium + +wheelCost + +paintCost;
+		subTotal += (+battery + +autopilot + +premium + +wheelCost + +paintCost).toFixed(2);
+		taxAmt += (+subTotal * (+taxRate/100)).toFixed(2);
+		total += (+subTotal + +taxAmt + +docFee).toFixed(2);
 
+		r.push('"Price" : "' + numeral(subTotal).format('$0,0') + '"');
+		r.push('"Taxes" : "' + numeral(taxAmt).format('$0,0') + '"');
+		r.push('"Fees" : "' + numeral(docFee).format('$0,0') + '"');
+		r.push('"Total" : "' + numeral(total).format('$0,0') + '"');
 
-		// console.log('battery: '+battery);
-		// console.log('autopilot: '+autopilot);
-		// console.log('premium: '+premium);
-		// console.log('wheelCost: '+wheelCost);
-		// console.log('paintCost: '+paintCost);
-		//
-		// console.log('subTotal: '+subTotal);
+		o = "{" + r.join(",") + "}";
 
-		return subTotal;
+		// console.log(o);
+
+		return JSON.parse(o);
 	}
 
 	function updateTotal() {
 
-		$('#loanAmount').val(getCarCost());
+		c = getCarCost();
+
+		// console.log("Total: " + c.Total);
+
+
+		// $('#purchaseDetails').columns({
+    //   data:c
+    // });
+
+		$("#purchaseDetails").html("<tr><td>Price</td><td>" + c.Price + "</td></tr>");
+		$("#purchaseDetails").append("<tr><td>Taxes</td><td>" + c.Taxes + "</td></tr>");
+		$("#purchaseDetails").append("<tr><td>Fees</td><td>" + c.Fees + "</td></tr>");
+		$("#purchaseDetails").append("<tr><td>Total</td><td>" + c.Total + "</td></tr>");
+
+		// makeTable($("#purchaseDetails"),c);
+
+		$('#loanAmount').val(c.Total);
 
 	}
 
 	function loadResults(data) {
 
+		console.log(data);
+
 		var results = [],
 				rArr = [],
-				purchasePrice = 0;
+				purchasePrice = 0,
+				finalPrice = 0,
+				lessIncentives = numeral($("input[name=incentive]").val());
+
 		//purchase price
-		purchasePrice += +data.battery + +data.autopilot + +data.premium + +data.wheelCost + +data.paintCost;
-		rArr.push('{ "Total Cost":"' + purchasePrice + '"}');
+
+		purchasePrice = getCarCost();
+
+		// rArr.push('{ "Total Cost":"' + numeral(purchasePrice.Total).format('$0,0') + '"}');
+		rArr.push('{ "item":"Total Cost","value":"' + numeral(purchasePrice.Total).format('$0,0') + '"}');
 
 		// monthly payment
-		var monInt		=	+data.loanInterest/1200,
+		var monInt		=	numeral(data.loanInterest).format('0.00')/1200,
 				payment 	=	0,
-				amount		= +data.loanAmount,
-				down			= +data.loanDown,
-				months		= +data.loanMonths;
+				amount		= numeral(data.loanAmount).format('0.00'),
+				down			= numeral(data.loanDown).format('0.00'),
+				months		= numeral(data.loanMonths).format('0.00');
+
+
+		// console.log("amount: "+amount);
+		// console.log("monInt: "+monInt);
+		// console.log("down: "+down);
+		// console.log("months: "+months);
 
 		payment = ((monInt + (monInt / (Math.pow((1 + monInt), months) -1))) * (amount - (down || 0))).toFixed(2);
 
-		rArr.push('{ "Monthly Payment":"' + payment + '"}');
-		// charging
-		// other
+		// rArr.push('{ "Monthly Payment":"' + numeral(payment).format('$0,0.00') + '"}');
+		rArr.push('{ "item":"Monthly Payment","value":"' + numeral(payment).format('$0,0.00') + '"}');
 
-		results = rArr.join(",");
-		$("#result").append(results);
+		// charging
+		dailyCost = 0,
+		monthlyCost = 0,
+		dailyDuration = 0,
+		commute = +data.commute, //option
+		rate = +data.kwhRate, //option
+		style = +data.drivingStyle,
+		efficiency = 237, // 237 Wh per mi
+		chargeRate = 30;
+
+		//change battery to longer range if price matches
+		if(data.battery=="44000"){ chargeRate=37 };
+
+		//cost
+		dailyCost = ((commute * efficiency) / 1000 * +rate).toFixed(2);
+		// console.log("dailyCost: " + dailyCost);
+
+		//dailyDuration
+		d = (commute / chargeRate).toFixed(2);
+		dd = (d % 1).toFixed(2);
+		hr = (commute / chargeRate).toFixed(0);
+		min = (dd * 60).toFixed(0);
+		dailyDuration = hr + "hr " + min + "min";
+
+		console.log("dailyDuration: " + dailyDuration);
+
+		monthlyCost = (dailyCost*30).toFixed(2);
+
+		// rArr.push('{ "Daily Charging Cost":"' + numeral(dailyCost).format('$0.00') + '"}');
+		rArr.push('{ "item":"Daily Charging Cost","value":"' + numeral(dailyCost).format('$0.00') + '"}');
+
+		// rArr.push('{ "Daily Charge Time":"' + dailyDuration + '"}');
+		rArr.push('{ "item":"Daily Charge Time","value":"' + dailyDuration + '"}');
+
+		// rArr.push('{ "Monthly Charging Cost":"' + numeral(monthlyCost).format('$0,0.00') + '"}');
+		rArr.push('{ "item":"Monthly Charging Cost","value":"' + numeral(monthlyCost).format('$0,0.00') + '"}');
+
+		// other
+		var totalMonthly = 0,
+				netPurchase = 0;
+
+		totalMonthly = +payment + +data.insurance + +monthlyCost;
+		console.log('payment ' + payment);
+		console.log('data.insurance ' + data.insurance);
+		console.log('monthlyCost ' + monthlyCost);
+
+		rArr.push('{ "item":"Total Monthly Cost","value":"' + numeral(totalMonthly).format('$0,0.00') + '"}');
+
+
+		// prepare for display and output
+		results = "[" + rArr.join(",") + "]";
+
+		console.log(results);
+
+		// $("#results").append(results);
+
+		jsonToTable("#summaryTable",JSON.parse(results));
+
+		$("#results").fadeIn(500);
 
 	}
 
 
+		//do something on loadResults
+		$(function(){
+			updateTotal();
+		});
 		// do something when the form is submitted
 		$(function() {
 			$("form").submit(function( event ) {
@@ -300,7 +417,6 @@ published: true
 
 			});
 		});
-
 		$(function(){
 			var month = $(this).val(),
 		      doneTypingInterval = 500,
@@ -390,6 +506,20 @@ published: true
 
 				<input type="radio" id="premiumChoice2" name="premium" value="5000" onclick="updateTotal()">
 				<label for="premiumChoice2">Yes ($5K)</label>
+			</div>
+
+			<div id="fees" class="option-left">
+				<p class="choiceHeader">Fees</p>
+				<p>
+					<label for="doc" class="fa fa-pencil"></label>
+					<input type="text" id="doc" name="doc" value="1200" onchange="updateTotal()">
+					<label for="doc">Dest. & Doc Fees</label>
+				</p>
+				<p>
+					<label for="shipping" class="fa fa-percent"></label>
+					<input type="text" id="taxRate" name="taxRate" value="5.6" onchange="updateTotal()">
+					<label for="shipping">Tax Rate</label>
+				</p>
 			</div>
 
 			<div id="colorChoice" class="option-right">
@@ -496,29 +626,32 @@ published: true
 
 	<div id="step2" class="form" style="display:none;">
 		<h2>Step 2: Enter Loan Information</h2>
+
+		<table id="purchaseDetails"></table>
+
 		<p>
 			<label for="loanAmount" class="fa fa-usd"></label>
-			<input type="text" id="loanAmount" name="loanAmount" placeholder="Loan Amount" value="35000">
+			<input type="text" id="loanAmount" name="loanAmount" value="38160">
 			<label for="loanAmount">Loan Amount</label>
 		</p>
 		<p>
 			<label for="loanMonths" class="fa fa-calendar"></label>
-			<input type="text" id="loanMonths" placeholder="Months" value="60">
+			<input type="text" id="loanMonths" name="loanMonths" value="60">
 			<label for="loanMonths">Months</label>
 		</p>
 		<p>
 			<label for="loanYears" class="fa fa-calendar"></label>
-			<input type="text" id="loanYears" placeholder="Years" value="5">
+			<input type="text" id="loanYears" name="loanYears"  value="5">
 			<label for="loanYears" class="">Years</label>
 		</p>
 		<p>
 			<label for="loanInterest" class="fa fa-percent"></label>
-			<input type="text" id="loanInterest" placeholder="Interest Rate" value="4.5">
+			<input type="text" id="loanInterest" name="loanInterest" value="4.5">
 			<label for="loanInterest">Interest</label>
 		</p>
 		<p>
 			<label for="loanDown" class="fa fa-arrow-down"></label>
-			<input type="text" id="loanDown" placeholder="Down Payment" value="2500">
+			<input type="text" id="loanDown" name="loanDown" value="2500">
 			<label for="loanDown" class="">Down Payment</label>
 		</p>
 			<button class="form__button" onclick="nextStep(3)" type="button">Next Step: Charging</button>
@@ -562,22 +695,12 @@ published: true
 		<h2>Step 4: Enter Options</h2>
 		<p>
 			<label for="insurance" class="fa fa-car"></label>
-			<input type="text" id="insurance" name="insurance" placeholder="Insurance/mo" value="120">
+			<input type="text" id="insurance" name="insurance" value="120">
 			<label for="insurance">Insurance/mo</label>
 		</p>
 		<p>
-			<label for="doc" class="fa fa-pencil"></label>
-			<input type="text" id="doc" name="doc" placeholder="Dest. & Doc Fee" value="1200">
-			<label for="doc">Dest. & Doc Fees</label>
-		</p>
-		<p>
-			<label for="shipping" class="fa fa-truck"></label>
-			<input type="text" id="shipping" name="shipping" placeholder="Shipping Fee" value="0">
-			<label for="shipping">Shipping</label>
-		</p>
-		<p>
 			<label for="incentives" class="fa fa-minus-circle"></label>
-			<input type="text" id="incentives" name="incentives" placeholder="Incentives" value="0">
+			<input type="text" id="incentives" name="incentives" value="0" onchange="updateTotal()">
 			<label for="incentives">Incentives</label>
 		</p>
 		<p>
@@ -586,7 +709,13 @@ published: true
 	</div>
 </form>
 
-<div id="result">
+<div id="results" style="display:none;">
+	<div id="previewImage2" class="preview">
+		<!-- <p class="choiceHeader">Your Car</p> -->
+		<img id="carImg2" src="/images/m3/black-aero.png"
+			style="width:95%; max-width:850px; margin:5px; background-color:#fff; padding:5px;"
+		/>
+	</div>
 	<table id="summaryTable"></table>
 	<table id="detailsTable"></table>
 </div>
