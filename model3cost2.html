@@ -79,7 +79,9 @@ published: true
 		font-family: 'Source Sans Pro', sans-serif;
 		padding: 0 20px;
 		border-radius: 5px;
-		font-weight: 900;
+		font-weight: 500;
+		text-align: center;
+		line-height: 60px;
 		cursor: pointer;
 		margin: 20px 0;
 		transition: all .25s ease-in-out;
@@ -88,6 +90,7 @@ published: true
 			text-shadow: 1px 1px 1px rgba(0,0,0,.25);
 			outline: none;
 		}
+
 	}
 
 	li {
@@ -247,35 +250,21 @@ published: true
 	// pull in all the values and then pass them in a post to the estimate
 	function seeResults() {
 
-		    // var loanAmount = $('#loanAmount').val(),
-		    //     loanMonths = $('#loanMonths').val(),
-		    //     loanInterest = $('#loanInterest').val(),
-		    //     loanYears = $('#loanYears').val(),
-		    //     loanDown = $('#loanDown').val(),
-				//
-				// 		kwhRate = $('#kwhRate').val(),
-				// 		drivingStyle = $('#drivingStyle').val(),
-				// 		insurance = $('#insurance').val(),
-				// 		doc = $('#doc').val(),
-				// 		shipping = $('#shipping').val(),
-				// 		incentives = $('#incentives').val(),
-				//
-		    //     loanAmount = parseInt(loanAmount),
-		    //     loanMonths = parseInt(loanMonths),
-		    //     loanDown = parseInt(loanDown),
-		    //     loanInterest = parseFloat(loanInterest),
-		    //     monInt = loanInterest / 1200,
-				//
-				// 		monnthlyLoanPayment = ((monInt + (monInt / (Math.pow((1 + monInt), loanMonths) -1))) * (loanAmount - (loanDown || 0))).toFixed(2);
-				//
-				//
-
 				var data = $('#data').serializeArray();
 				console.log(data);
 				$('#results').html(data);
 				$('#results').fadeIn(500);
 
 		}
+
+		$(function() {
+			$("form").submit(function( event ) {
+			  console.log( $( this ).serializeArray() );
+			  event.preventDefault();
+				$("#result").html($( this ).serializeArray());
+			});
+		});
+
 		$(function(){
 			var month = $(this).val(),
 		      doneTypingInterval = 500,
@@ -330,40 +319,10 @@ published: true
 		})
 
 
-
-
 </script>
-<div id="data">
+<form id="data">
 	<div id="step1" class="form">
 		<h2>Step 1: Configure Your Model 3</h2>
-		<!-- <div id="regionSelectDiv" class="option-left">
-			<label class="choiceHeader" for="regionSelect">Choose Region</label>
-			<select id="regionSelect" name="region" form="model3Cost">
-				<option value="USA">USA</option>
-				<option value="Non-USA">Canada</option>
-				<option value="Non-USA">Mexico</option>
-				<option value="Non-USA">Latin America</option>
-				<option value="Non-USA">Europe</option>
-				<option value="Non-USA">UK</option>
-				<option value="Non-USA">Asia-Pacific</option>
-				<option value="Non-USA">Africa</option>
-			</select>
-		</div> -->
-
-		<!-- <div id="deliveryQtrDiv" class="option-right">
-			<label class="choiceHeader" for="deliverySelect">Choose Delivery Quarter</label>
-			<select id="deliverySelect" name="taxCredit" form="model3Cost">
-				<option value="-7500">2017Q4</option>
-				<option value="-7500">2018Q1</option>
-				<option value="-7500">2018Q2</option>
-				<option value="-3750">2018Q3</option>
-				<option value="-3750">2018Q4</option>
-				<option value="-1875">2019Q1</option>
-				<option value="-1875">2019Q2</option>
-				<option value="0">2019Q3</option>
-				<option value="0">2019Q4</option>
-			</select>
-		</div> -->
 
 		<div id="upgrades" class="full">
 
@@ -494,7 +453,7 @@ published: true
 		<input type="hidden" name="wheelCost" id="wheelCost" value="0">
 		<input type="hidden" name="paintCost" id="paintCost" value="0">
 
-		<button class="form__button" onclick="nextStep(2)">Next Step: Loan</button>
+		<button class="form__button" onclick="nextStep(2)" type="button">Next Step: Loan</button>
 
 
 	</form>
@@ -526,9 +485,7 @@ published: true
 			<input type="text" id="loanDown" placeholder="Down Payment" value="2500">
 			<label for="loanDown" class="">Down Payment</label>
 		</p>
-		<p>
-			<button class="form__button" onclick="nextStep(3)">Next Step: Energy Cost</button>
-		</p>
+			<button class="form__button" onclick="nextStep(3)" type="button">Next Step: Charging</button>
 	</div>
 
 	<div id="step3" class="form" style="display:none;">
@@ -560,7 +517,7 @@ published: true
 				<!-- efficiency ref - https://electrek.co/2017/07/28/tesla-accidentally-reveals-model-3-efficiency-hinting-at-impressive-range/-->
 
 
-			<button class="form__button" onclick="nextStep(4)">Last Step: Options</button>
+			<button class="form__button" onclick="nextStep(4)" type="button">Last Step: Options</button>
 
 
 	</div>
@@ -588,9 +545,9 @@ published: true
 			<label for="incentives">Incentives</label>
 		</p>
 		<p>
-			<button class="form__button" onclick="seeResults();">See Results</button>
+			<button class="form__button" type="submit">See Results</button>
 		</p>
 	</div>
-</div>
+</form>
 
-<div id="results" style="display:none;"></div>
+<div id="result" style="display:none;"></div>
