@@ -319,6 +319,11 @@ published: true
 
 	function loadResults(data) {
 
+		analytics.track('Viewed Model 3 Cost', {
+		  location: 'm3cost2',
+		  type: 'button'
+		});
+
 		// console.log(data);
 
 		var results = [],
