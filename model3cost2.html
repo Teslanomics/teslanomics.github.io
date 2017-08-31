@@ -425,7 +425,7 @@ published: true
 		jsonToTable("#summaryTable",JSON.parse(costTable));
 		jsonToTable("#detailsTable",JSON.parse(deetsTable));
 		jsonToTable("#finalCostTable",JSON.parse(finalCostTable));
-		$("#totalCostHead").html("Your Model 3 Costs " + numeral(finalCosts.Total).format('$0,0'));
+		$("#totalCostHead").html("Your Model 3 Costs " + numeral(totalMonthly).format('$0,0.00') + "/mo");
 
 		$("#results").fadeIn(500);
 
