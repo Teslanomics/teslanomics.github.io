@@ -441,34 +441,47 @@ published: true
 
 	}
 
-	//load tax rate when first opened
+	function updateTaxRate(region){
+
+		$.getJSON( '/data/state_taxes_2017.json', function( data ) {
+
+				rate = data[region].Combine_Rate;
+				taxRate = $("input[name=taxRate]").val((rate*100).toFixed(2));
+
+			});
+
+	}
+
+	function updateElectricityRate(region){
+		$.getJSON( '/data/electricity_rates.json', function( edata ) {
+
+			rate = edata[region].kwhRate;
+
+			// console.log("rate: " + rate);
+			taxRate = $("input[name=kwhRate]").val((rate).toFixed(2));
+
+		});
+	}
+
+	//load default tax rate and electricity rate when first opened
 	$(function(){
 		//This part gets the location and updates viz with the location parameter
 		$.get("https://ipinfo.io", function (response) {
 
-			// $("#ip").html("IP: " + response.ip);
-			// $("#address").html("Location: " + response.city + ", " + response.region);
-			// $("#locationChoice").html("location choice: " + response[paramLevel]);
-			// $("#details").html(JSON.stringify(response, null, 4));
+			if(response.country!='US' && response.country!='CA'){
+				// if it's not hte US get the country and use that
+				updateElectricityRate(response.country);
 
-			//this part gets the viz and updates the iframe
-			// console.log(response.region);
+			} else if(response.country!='US') {
 
-			$.getJSON( '/data/state_taxes_2017.json', function( data ) {
+				updateElectricityRate(response.region);
 
-				region = response.region;
-				rate = data[region].Combine_Rate
-				// rate = data.region.State_Tax_Rate;
-				// console.log(data);
-				// console.log(data.California.Combine_Rate);
-				// console.log(data.California);
-				taxRate = $("input[name=taxRate]").val((rate*100).toFixed(2));
-				updateTotal();
+			} else {
 
-			});
+				updateElectricityRate(response.region);
+				updateTaxRate(response.region);
 
-
-
+			}
 
 		}, "jsonp");
 	});

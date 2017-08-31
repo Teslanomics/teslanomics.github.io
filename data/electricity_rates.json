@@ -1,0 +1,251 @@
+{
+   "Alabama": {
+      "kwhRate": 0.1279
+   },
+   "Alaska": {
+      "kwhRate": 0.2213
+   },
+   "Arizona": {
+      "kwhRate": 0.1265
+   },
+   "Arkansas": {
+      "kwhRate": 0.1073
+   },
+   "California": {
+      "kwhRate": 0.1939
+   },
+   "Colorado": {
+      "kwhRate": 0.1275
+   },
+   "Connecticut": {
+      "kwhRate": 0.2047
+   },
+   "Delaware": {
+      "kwhRate": 0.134
+   },
+   "District of Columbia": {
+      "kwhRate": 0.1259
+   },
+   "Florida": {
+      "kwhRate": 0.1202
+   },
+   "Georgia": {
+      "kwhRate": 0.1253
+   },
+   "Hawaii": {
+      "kwhRate": 0.3045
+   },
+   "Idaho": {
+      "kwhRate": 0.1142
+   },
+   "Illinois": {
+      "kwhRate": 0.1295
+   },
+   "Indiana": {
+      "kwhRate": 0.1205
+   },
+   "Iowa": {
+      "kwhRate": 0.1392
+   },
+   "Kansas": {
+      "kwhRate": 0.1356
+   },
+   "Kentucky": {
+      "kwhRate": 0.1068
+   },
+   "Louisiana": {
+      "kwhRate": 0.1019
+   },
+   "Maine": {
+      "kwhRate": 0.1617
+   },
+   "Maryland": {
+      "kwhRate": 0.1422
+   },
+   "Massachusetts": {
+      "kwhRate": 0.1997
+   },
+   "Michigan": {
+      "kwhRate": 0.1586
+   },
+   "Minnesota": {
+      "kwhRate": 0.1396
+   },
+   "Mississippi": {
+      "kwhRate": 0.114
+   },
+   "Missouri": {
+      "kwhRate": 0.1325
+   },
+   "Montana": {
+      "kwhRate": 0.1173
+   },
+   "Nebraska": {
+      "kwhRate": 0.1206
+   },
+   "Nevada": {
+      "kwhRate": 0.1164
+   },
+   "New Hampshire": {
+      "kwhRate": 0.1936
+   },
+   "New Jersey": {
+      "kwhRate": 0.1596
+   },
+   "New Mexico": {
+      "kwhRate": 0.1341
+   },
+   "New York": {
+      "kwhRate": 0.1877
+   },
+   "North Carolina": {
+      "kwhRate": 0.1107
+   },
+   "North Dakota": {
+      "kwhRate": 0.1234
+   },
+   "Ohio": {
+      "kwhRate": 0.1267
+   },
+   "Oklahoma": {
+      "kwhRate": 0.1053
+   },
+   "Oregon": {
+      "kwhRate": 0.1097
+   },
+   "Pennsylvania": {
+      "kwhRate": 0.1452
+   },
+   "Rhode Island": {
+      "kwhRate": 0.1671
+   },
+   "South Carolina": {
+      "kwhRate": 0.1307
+   },
+   "South Dakota": {
+      "kwhRate": 0.1257
+   },
+   "Tennessee": {
+      "kwhRate": 0.1093
+   },
+   "Texas": {
+      "kwhRate": 0.1116
+   },
+   "Utah": {
+      "kwhRate": 0.1148
+   },
+   "Vermont": {
+      "kwhRate": 0.1802
+   },
+   "Virginia": {
+      "kwhRate": 0.1191
+   },
+   "Washington": {
+      "kwhRate": 0.0995
+   },
+   "West Virginia": {
+      "kwhRate": 0.1169
+   },
+   "Wisconsin": {
+      "kwhRate": 0.1505
+   },
+   "Wyoming": {
+      "kwhRate": 0.1221
+   },
+   "Quebec": {
+      "kwhRate": 0.06866
+   },
+   "Manitoba": {
+      "kwhRate": 0.07892
+   },
+   "British Columbia": {
+      "kwhRate": 0.08907
+   },
+   "New Brunswick": {
+      "kwhRate": 0.11194
+   },
+   "Alberta": {
+      "kwhRate": 0.12178
+   },
+   "New Foundland / Labrador": {
+      "kwhRate": 0.12548
+   },
+   "Saskatchewan": {
+      "kwhRate": 0.131505
+   },
+   "Ontario": {
+      "kwhRate": 0.14169
+   },
+   "Nova Scotia": {
+      "kwhRate": 0.15446
+   },
+   "AT": {
+      "kwhRate": 0.23
+   },
+   "BE": {
+      "kwhRate": 0.23
+   },
+   "HR": {
+      "kwhRate": 0.19
+   },
+   "CZ": {
+      "kwhRate": 0.185
+   },
+   "DK": {
+      "kwhRate": 0.32
+   },
+   "FI": {
+      "kwhRate": 0.2
+   },
+   "FR": {
+      "kwhRate": 0.2
+   },
+   "DE": {
+      "kwhRate": 0.17
+   },
+   "IT": {
+      "kwhRate": 0.25
+   },
+   "LU": {
+      "kwhRate": 0.2
+   },
+   "NL": {
+      "kwhRate": 0.2
+   },
+   "NO": {
+      "kwhRate": 0.15
+   },
+   "PL": {
+      "kwhRate": 0.11
+   },
+   "SK": {
+      "kwhRate": 0.2
+   },
+   "SI": {
+      "kwhRate": 0.21
+   },
+   "ES": {
+      "kwhRate": 0.24
+   },
+   "SE": {
+      "kwhRate": 0.2
+   },
+   "CH": {
+      "kwhRate": 0.23
+   },
+   "GB": {
+      "kwhRate": 0.23
+   },
+   "AU": {
+      "kwhRate": 0.35
+   },
+   "CN": {
+      "kwhRate": 1.8
+   },
+   "HK": {
+      "kwhRate": 1.5
+   },
+   "JP": {
+      "kwhRate": 16
+   }
+}
