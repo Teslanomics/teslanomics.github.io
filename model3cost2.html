@@ -319,11 +319,6 @@ published: true
 
 	function loadResults(data) {
 
-		analytics.track('Viewed Model 3 Cost', {
-		  location: 'm3cost2',
-		  type: 'button'
-		});
-
 		// console.log(data);
 
 		var results = [],
@@ -434,6 +429,14 @@ published: true
 		$("#totalCostHead").html("Your Model 3 Costs " + numeral(totalMonthly).format('$0,0.00') + "/mo");
 
 		$("#results").fadeIn(500);
+
+		analytics.track('Viewed Model 3 Cost', {
+			location: 'm3cost2',
+			type: 'button',
+			cost: JSON.parse(costTable),
+			details: JSON.parse(deetsTable),
+			finalCost: JSON.parse(finalCostTable)
+		});
 
 	}
 
