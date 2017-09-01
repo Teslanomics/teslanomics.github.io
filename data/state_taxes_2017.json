@@ -1,255 +1,255 @@
 {
-   "Alabama": {
+   "AL": {
       "State_Tax_Rate": 0.04,
       "Avg_Local_Tax_Rate": 0.0501,
       "Combine_Rate": 0.0901
    },
-   "Alaska": {
+   "AK": {
       "State_Tax_Rate": 0,
       "Avg_Local_Tax_Rate": 0.0176,
       "Combine_Rate": 0.0176
    },
-   "Arizona": {
+   "AZ": {
       "State_Tax_Rate": 0.056,
       "Avg_Local_Tax_Rate": 0.0265,
       "Combine_Rate": 0.0825
    },
-   "Arkansas": {
+   "AR": {
       "State_Tax_Rate": 0.065,
       "Avg_Local_Tax_Rate": 0.028,
       "Combine_Rate": 0.093
    },
-   "California": {
+   "CA": {
       "State_Tax_Rate": 0.0725,
       "Avg_Local_Tax_Rate": 0.01,
       "Combine_Rate": 0.0825
    },
-   "Colorado": {
+   "CO": {
       "State_Tax_Rate": 0.029,
       "Avg_Local_Tax_Rate": 0.046,
       "Combine_Rate": 0.075
    },
-   "Connecticut": {
+   "CT": {
       "State_Tax_Rate": 0.0635,
       "Avg_Local_Tax_Rate": 0,
       "Combine_Rate": 0.0635
    },
-   "Delaware": {
+   "DE": {
       "State_Tax_Rate": 0,
       "Avg_Local_Tax_Rate": 0,
       "Combine_Rate": 0
    },
-   "Florida": {
+   "FL": {
       "State_Tax_Rate": 0.06,
       "Avg_Local_Tax_Rate": 0.008,
       "Combine_Rate": 0.068
    },
-   "Georgia": {
+   "GA": {
       "State_Tax_Rate": 0.04,
       "Avg_Local_Tax_Rate": 0.03,
       "Combine_Rate": 0.07
    },
-   "Hawaii": {
+   "HI": {
       "State_Tax_Rate": 0.04,
       "Avg_Local_Tax_Rate": 0.0035,
       "Combine_Rate": 0.0435
    },
-   "Idaho": {
+   "ID": {
       "State_Tax_Rate": 0.06,
       "Avg_Local_Tax_Rate": 0.0003,
       "Combine_Rate": 0.0603
    },
-   "Illinois": {
+   "IL": {
       "State_Tax_Rate": 0.0625,
       "Avg_Local_Tax_Rate": 0.0239,
       "Combine_Rate": 0.0864
    },
-   "Indiana": {
+   "IN": {
       "State_Tax_Rate": 0.07,
       "Avg_Local_Tax_Rate": 0,
       "Combine_Rate": 0.07
    },
-   "Iowa": {
+   "IA": {
       "State_Tax_Rate": 0.06,
       "Avg_Local_Tax_Rate": 0.008,
       "Combine_Rate": 0.068
    },
-   "Kansas": {
+   "KS": {
       "State_Tax_Rate": 0.065,
       "Avg_Local_Tax_Rate": 0.0212,
       "Combine_Rate": 0.0862
    },
-   "Kentucky": {
+   "KY": {
       "State_Tax_Rate": 0.06,
       "Avg_Local_Tax_Rate": 0,
       "Combine_Rate": 0.06
    },
-   "Louisiana": {
+   "LA": {
       "State_Tax_Rate": 0.05,
       "Avg_Local_Tax_Rate": 0.0498,
       "Combine_Rate": 0.0998
    },
-   "Maine": {
+   "ME": {
       "State_Tax_Rate": 0.055,
       "Avg_Local_Tax_Rate": 0,
       "Combine_Rate": 0.055
    },
-   "Maryland": {
+   "MD": {
       "State_Tax_Rate": 0.06,
       "Avg_Local_Tax_Rate": 0,
       "Combine_Rate": 0.06
    },
-   "Massachusetts": {
+   "MA": {
       "State_Tax_Rate": 0.0625,
       "Avg_Local_Tax_Rate": 0,
       "Combine_Rate": 0.0625
    },
-   "Michigan": {
+   "MI": {
       "State_Tax_Rate": 0.06,
       "Avg_Local_Tax_Rate": 0,
       "Combine_Rate": 0.06
    },
-   "Minnesota": {
+   "MN": {
       "State_Tax_Rate": 0.06875,
       "Avg_Local_Tax_Rate": 0.0042,
       "Combine_Rate": 0.073
    },
-   "Mississippi": {
+   "MS": {
       "State_Tax_Rate": 0.07,
       "Avg_Local_Tax_Rate": 0.0007,
       "Combine_Rate": 0.0707
    },
-   "Missouri": {
+   "MO": {
       "State_Tax_Rate": 0.04225,
       "Avg_Local_Tax_Rate": 0.0366,
       "Combine_Rate": 0.0789
    },
-   "Montana": {
+   "MT": {
       "State_Tax_Rate": 0,
       "Avg_Local_Tax_Rate": 0,
       "Combine_Rate": 0
    },
-   "Nebraska": {
+   "NE": {
       "State_Tax_Rate": 0.055,
       "Avg_Local_Tax_Rate": 0.0139,
       "Combine_Rate": 0.0689
    },
-   "Nevada": {
+   "NV": {
       "State_Tax_Rate": 0.0685,
       "Avg_Local_Tax_Rate": 0.0113,
       "Combine_Rate": 0.0798
    },
-   "New Hampshire": {
+   "NH": {
       "State_Tax_Rate": 0,
       "Avg_Local_Tax_Rate": 0,
       "Combine_Rate": 0
    },
-   "New Jersey": {
+   "NJ": {
       "State_Tax_Rate": 0.06875,
       "Avg_Local_Tax_Rate": -0.0003,
       "Combine_Rate": 0.0685
    },
-   "New Mexico": {
+   "NM": {
       "State_Tax_Rate": 0.05125,
       "Avg_Local_Tax_Rate": 0.0243,
       "Combine_Rate": 0.0755
    },
-   "New York": {
+   "NY": {
       "State_Tax_Rate": 0.04,
       "Avg_Local_Tax_Rate": 0.0449,
       "Combine_Rate": 0.0849
    },
-   "North Carolina": {
+   "NC": {
       "State_Tax_Rate": 0.0475,
       "Avg_Local_Tax_Rate": 0.0215,
       "Combine_Rate": 0.069
    },
-   "North Dakota": {
+   "ND": {
       "State_Tax_Rate": 0.05,
       "Avg_Local_Tax_Rate": 0.0178,
       "Combine_Rate": 0.0678
    },
-   "Ohio": {
+   "OH": {
       "State_Tax_Rate": 0.0575,
       "Avg_Local_Tax_Rate": 0.0139,
       "Combine_Rate": 0.0714
    },
-   "Oklahoma": {
+   "OK": {
       "State_Tax_Rate": 0.045,
       "Avg_Local_Tax_Rate": 0.0436,
       "Combine_Rate": 0.0886
    },
-   "Oregon": {
+   "OR": {
       "State_Tax_Rate": 0,
       "Avg_Local_Tax_Rate": 0,
       "Combine_Rate": 0
    },
-   "Pennsylvania": {
+   "PA": {
       "State_Tax_Rate": 0.06,
       "Avg_Local_Tax_Rate": 0.0034,
       "Combine_Rate": 0.0634
    },
-   "Rhode Island": {
+   "RI": {
       "State_Tax_Rate": 0.07,
       "Avg_Local_Tax_Rate": 0,
       "Combine_Rate": 0.07
    },
-   "South Carolina": {
+   "SC": {
       "State_Tax_Rate": 0.06,
       "Avg_Local_Tax_Rate": 0.0122,
       "Combine_Rate": 0.0722
    },
-   "South Dakota": {
+   "SD": {
       "State_Tax_Rate": 0.045,
       "Avg_Local_Tax_Rate": 0.0189,
       "Combine_Rate": 0.0639
    },
-   "Tennessee": {
+   "TN": {
       "State_Tax_Rate": 0.07,
       "Avg_Local_Tax_Rate": 0.0246,
       "Combine_Rate": 0.0946
    },
-   "Texas": {
+   "TX": {
       "State_Tax_Rate": 0.0625,
       "Avg_Local_Tax_Rate": 0.0194,
       "Combine_Rate": 0.0819
    },
-   "Utah": {
+   "UT": {
       "State_Tax_Rate": 0.0595,
       "Avg_Local_Tax_Rate": 0.0081,
       "Combine_Rate": 0.0676
    },
-   "Vermont": {
+   "VT": {
       "State_Tax_Rate": 0.06,
       "Avg_Local_Tax_Rate": 0.0018,
       "Combine_Rate": 0.0618
    },
-   "Virginia": {
+   "VA": {
       "State_Tax_Rate": 0.053,
       "Avg_Local_Tax_Rate": 0.0033,
       "Combine_Rate": 0.0563
    },
-   "Washington": {
+   "WA": {
       "State_Tax_Rate": 0.065,
       "Avg_Local_Tax_Rate": 0.0242,
       "Combine_Rate": 0.0892
    },
-   "West Virginia": {
+   "WV": {
       "State_Tax_Rate": 0.06,
       "Avg_Local_Tax_Rate": 0.0029,
       "Combine_Rate": 0.0629
    },
-   "Wisconsin": {
+   "WI": {
       "State_Tax_Rate": 0.05,
       "Avg_Local_Tax_Rate": 0.0042,
       "Combine_Rate": 0.0542
    },
-   "Wyoming": {
+   "WY": {
       "State_Tax_Rate": 0.04,
       "Avg_Local_Tax_Rate": 0.014,
       "Combine_Rate": 0.054
    },
-   "D.C.": {
+   "DC": {
       "State_Tax_Rate": 0.0575,
       "Avg_Local_Tax_Rate": 0,
       "Combine_Rate": 0.0575

@@ -1,64 +1,64 @@
-State,kwhRate
-Alabama,0.1279
-Alaska,0.2213
-Arizona,0.1265
-Arkansas,0.1073
-California,0.1939
-Colorado,0.1275
-Connecticut,0.2047
-Delaware,0.134
-District of Columbia,0.1259
-Florida,0.1202
-Georgia,0.1253
-Hawaii,0.3045
-Idaho,0.1142
-Illinois,0.1295
-Indiana,0.1205
-Iowa,0.1392
-Kansas,0.1356
-Kentucky,0.1068
-Louisiana,0.1019
-Maine,0.1617
-Maryland,0.1422
-Massachusetts,0.1997
-Michigan,0.1586
-Minnesota,0.1396
-Mississippi,0.114
-Missouri,0.1325
-Montana,0.1173
-Nebraska,0.1206
-Nevada,0.1164
-New Hampshire,0.1936
-New Jersey,0.1596
-New Mexico,0.1341
-New York,0.1877
-North Carolina,0.1107
-North Dakota,0.1234
-Ohio,0.1267
-Oklahoma,0.1053
-Oregon,0.1097
-Pennsylvania,0.1452
-Rhode Island,0.1671
-South Carolina,0.1307
-South Dakota,0.1257
-Tennessee,0.1093
-Texas,0.1116
-Utah,0.1148
-Vermont,0.1802
-Virginia,0.1191
-Washington,0.0995
-West Virginia,0.1169
-Wisconsin,0.1505
-Wyoming,0.1221
-Quebec,0.06866
-Manitoba,0.07892
-British Columbia,0.08907
-New Brunswick,0.11194
-Alberta,0.12178
-New Foundland / Labrador,0.12548
-Saskatchewan,0.131505
-Ontario,0.14169
-Nova Scotia,0.15446
+Key,kwhRate
+US-AL,0.1279
+US-AK,0.2213
+US-AZ,0.1265
+US-AR,0.1073
+US-CA,0.1939
+US-CO,0.1275
+US-CT,0.2047
+US-DE,0.134
+US-DC,0.1259
+US-FL,0.1202
+US-GA,0.1253
+US-HI,0.3045
+US-ID,0.1142
+US-IL,0.1295
+US-IN,0.1205
+US-IA,0.1392
+US-KS,0.1356
+US-KY,0.1068
+US-LA,0.1019
+US-ME,0.1617
+US-MD,0.1422
+US-MA,0.1997
+US-MI,0.1586
+US-MN,0.1396
+US-MS,0.114
+US-MO,0.1325
+US-MT,0.1173
+US-NE,0.1206
+US-NV,0.1164
+US-NH,0.1936
+US-NJ,0.1596
+US-NM,0.1341
+US-NY,0.1877
+US-NC,0.1107
+US-ND,0.1234
+US-OH,0.1267
+US-OK,0.1053
+US-OR,0.1097
+US-PA,0.1452
+US-RI,0.1671
+US-SC,0.1307
+US-SD,0.1257
+US-TN,0.1093
+US-TX,0.1116
+US-UT,0.1148
+US-VT,0.1802
+US-VA,0.1191
+US-WA,0.0995
+US-WV,0.1169
+US-WI,0.1505
+US-WY,0.1221
+CA-QC,0.06866
+CA-MB,0.07892
+CA-BC,0.08907
+CA-NB,0.11194
+CA-AB,0.12178
+CA-NL,0.12548
+CA-SK,0.131505
+CA-ON,0.14169
+CA-NS,0.15446
 AT,0.23
 BE,0.23
 HR,0.19
