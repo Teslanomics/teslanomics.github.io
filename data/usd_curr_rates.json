@@ -1,0 +1,157 @@
+{
+   "AUD": {
+      "rate": 1.2602,
+      "symbol": "&#x24;",
+      "label": "AUD"
+   },
+   "BGN": {
+      "rate": 1.6408,
+      "symbol": "&#x43b;&#x432;",
+      "label": "BGN"
+   },
+   "BRL": {
+      "rate": 3.1395,
+      "symbol": "&#x52;&#x24;",
+      "label": "BRL"
+   },
+   "CAD": {
+      "rate": 1.2441,
+      "symbol": "&#x24;",
+      "label": "CAD"
+   },
+   "CHF": {
+      "rate": 0.95982,
+      "symbol": "&#x43;&#x48;&#x46;",
+      "label": "CHF"
+   },
+   "CNY": {
+      "rate": 6.5591,
+      "symbol": "&#xa5;",
+      "label": "CNY"
+   },
+   "CZK": {
+      "rate": 21.877,
+      "symbol": "&#x4b;&#x10d;",
+      "label": "CZK"
+   },
+   "DKK": {
+      "rate": 6.2398,
+      "symbol": "&#x6b;&#x72;",
+      "label": "DKK"
+   },
+   "EUR": {
+      "rate": 0.83893,
+      "symbol": "&#x20ac;",
+      "label": "EUR"
+   },
+   "GBP": {
+      "rate": 0.77244,
+      "symbol": "&#xa3;",
+      "label": "GBP"
+   },
+   "HKD": {
+      "rate": 7.8248,
+      "symbol": "&#x24;",
+      "label": "HKD"
+   },
+   "HRK": {
+      "rate": 6.2261,
+      "symbol": "&#x6b;&#x6e;",
+      "label": "HRK"
+   },
+   "HUF": {
+      "rate": 255.95,
+      "symbol": "&#x46;&#x74;",
+      "label": "HUF"
+   },
+   "IDR": {
+      "rate": 13318,
+      "symbol": "&#x52;&#x70;",
+      "label": "IDR"
+   },
+   "ILS": {
+      "rate": 3.5737,
+      "symbol": "&#x20aa;",
+      "label": "ILS"
+   },
+   "INR": {
+      "rate": 64.034,
+      "symbol": "&#x20B9;",
+      "label": "INR"
+   },
+   "JPY": {
+      "rate": 110.14,
+      "symbol": "&#xa5;",
+      "label": "JPY"
+   },
+   "KRW": {
+      "rate": 1120.3,
+      "symbol": "&#x20a9;",
+      "label": "KRW"
+   },
+   "MXN": {
+      "rate": 17.836,
+      "symbol": "&#x24;",
+      "label": "MXN"
+   },
+   "MYR": {
+      "rate": 4.2705,
+      "symbol": "&#x52;&#x4d;",
+      "label": "MYR"
+   },
+   "NOK": {
+      "rate": 7.7647,
+      "symbol": "&#x6b;&#x72;",
+      "label": "NOK"
+   },
+   "NZD": {
+      "rate": 1.3958,
+      "symbol": "&#x24;",
+      "label": "NZD"
+   },
+   "PHP": {
+      "rate": 51.091,
+      "symbol": "&#x20b1;",
+      "label": "PHP"
+   },
+   "PLN": {
+      "rate": 3.5576,
+      "symbol": "&#x7a;&#x142;",
+      "label": "PLN"
+   },
+   "RON": {
+      "rate": 3.856,
+      "symbol": "&#x6c;&#x65;&#x69;",
+      "label": "RON"
+   },
+   "RUB": {
+      "rate": 57.737,
+      "symbol": "&#x20bd;",
+      "label": "RUB"
+   },
+   "SEK": {
+      "rate": 7.9512,
+      "symbol": "&#x6b;&#x72;",
+      "label": "SEK"
+   },
+   "USD": {
+      "rate": 1,
+      "symbol": "&#x24;",
+      "label": "USD"
+   },
+   "SGD": {
+      "rate": 1.3545,
+      "symbol": "&#x24;",
+      "label": "SGD"
+   },
+   "THB": {
+      "rate": 33.17,
+      "symbol": "&#xe3f;",
+      "label": "THB"
+   },
+   "ZAR": {
+      "rate": 12.935,
+      "symbol": "&#x52;",
+      "label": "ZAR"
+   }
+}
