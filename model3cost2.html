@@ -6,8 +6,7 @@ published: true
 ---
 <!-- TODO:
 
-	#	fix ui with years months on loan, change to onupdate only
-	#	int’l currency conversion using fixer.io
+	#	add currency conversion
 
  -->
 
@@ -240,6 +239,21 @@ published: true
 
 <script>
 
+	var	clickNum=0,
+			car = {"color":"black","wheel":"aero"},
+			currency = '',
+			options = '';
+
+	function getCurr(){
+
+		currency = currencies[$('#currSelect').find(":selected").val()];
+
+		// console.log(currency);
+
+		return currency;
+
+	}
+
 	function updateCar(option,value) {
 
 		wheelCost = 0;
@@ -296,15 +310,7 @@ published: true
 			// $("#step"+(n-1)).fadeOut(50);
 			$("#step"+n).fadeIn(500);
 			// $("#step"+n).scroll();
-	}
-
-	function getCurr(choice){
-		// selects the currency
-
-		choice = choice || 'USD';
-
-		return currency[choice];
-
+			updateTotal();
 	}
 
 	function getCarCost(format){
@@ -314,12 +320,12 @@ published: true
 		premium = $("input[name=premium]:checked").val(),
 		paintCost = $("input[name=paintCost]").val(),
 		wheelCost = $("input[name=wheelCost]").val(),
-
 		//currency
-		currency = getCurr($("select[name=currency]").val() || 'USD'),
+		currency = getCurr(),
+		currRate = 1,
 
 		//fees
-		docFee = ($("input[name=doc]").val() * +currency.rate),
+		docFee = ($("input[name=doc]").val() * currRate).toFixed(2),
 		taxRate = $("input[name=taxRate]").val(),
 		subTotal = 0,
 		taxAmt = 0,
@@ -327,9 +333,13 @@ published: true
 		r = [],
 		o = [];
 
+		// console.log("currency: " + currency);
+
+		currRate = currency.rate || 1;
+
 		//calculate totals
-		subTotal += ((+battery + +autopilot + +premium + +wheelCost + +paintCost) * +currency.rate ).toFixed(2);
-		taxAmt += ((+subTotal * (+taxRate/100)) * +currency.rate).toFixed(2);
+		subTotal += ((+battery + +autopilot + +premium + +wheelCost + +paintCost) * currRate ).toFixed(2);
+		taxAmt += ((+subTotal * (+taxRate/100)) * currRate).toFixed(2);
 		total += (+subTotal + +taxAmt + +docFee).toFixed(2);
 
 
@@ -343,6 +353,8 @@ published: true
 		o = "{" + r.join(",") + "}";
 
 		// console.log(o);
+
+		$("#kwhRateLabel").html(currency.symbol + " per kWh");
 
 		return JSON.parse(o);
 	}
@@ -358,7 +370,7 @@ published: true
     //   data:c
     // });
 
-		$("#purchaseDetails").html("<tr><td>Price</td><td>" + numeral(c.Price).format('0,0') + "</td></tr>");
+		$("#purchaseDetails").html("<tr><td>Price (" + currency.symbol + ")</td><td>" + numeral(c.Price).format('0,0') + "</td></tr>");
 		$("#purchaseDetails").append("<tr><td>Taxes</td><td>" + numeral(c.Taxes).format('0,0.00') + "</td></tr>");
 		$("#purchaseDetails").append("<tr><td>Fees</td><td>" + numeral(c.Fees).format('0,0') + "</td></tr>");
 		$("#purchaseDetails").append("<tr><td>Total</td><td>" + numeral(c.Total).format('0,0.00') + "</td></tr>");
@@ -366,6 +378,9 @@ published: true
 		// makeTable($("#purchaseDetails"),c);
 
 		$('#loanAmount').val(numeral(c.Total).format('0,0.00'));
+
+		//set results to blank
+		$("#results").fadeOut();
 
 	}
 
@@ -486,7 +501,9 @@ published: true
 		jsonToTable("#summaryTable",JSON.parse(costTable));
 		jsonToTable("#detailsTable",JSON.parse(deetsTable));
 		jsonToTable("#finalCostTable",JSON.parse(finalCostTable));
-		$("#totalCostHead").html("Your Model 3 Costs " + numeral(totalMonthly).format('0,0.00') + "/mo");
+		$("#totalCostHead").html("Your Model 3 Costs " + currency.symbol + numeral(totalMonthly).format('0,0.00') + "/mo");
+
+		$("#currencyDisclaimer").html("**Amounts converted from USD $ to " + currency.label + " " + currency.symbol + " using exchange rates from 2017-09-01");
 
 		$("#results").fadeIn(500);
 
@@ -505,7 +522,7 @@ published: true
 
 	function updateTaxRate(region){
 
-		console.log("tax region: " + region);
+		// console.log("tax region: " + region);
 
 		$.getJSON( '/data/state_taxes_2017.json', function( data ) {
 
@@ -548,27 +565,26 @@ published: true
 	// init
 	$(function(){
 
-		var	clickNum=0,
-				car = {"color":"black","wheel":"aero"},
-				currency = '',
-				options = '';
-
 
 		//load currencies
 		$.getJSON('/data/usd_curr_rates.json',function(currObj){
 
-			console.log("obj: " + currObj);
-			currency = currObj.rates;
-			console.log(currency);
+			currencies = currObj.rates;
+			// console.log(currencies);
+
+			//add currency drop-down
+			$.each(currencies,function(i, item){
+
+				// console.log(item);
+
+				options = '<option value="' + i + '">' + item.label + ' (' + item.symbol + ')</option>';
+
+				$("#currSelect").append(options);
+
+			});
 
 		});
 
-		//add currency drop-down
-		$.each(currency,function(item){
-			options += '<option value="' + item.label + '">' + item.label + ' (' + item.symbol + ')</option>';
-		});
-
-		$("#currSelect").append(options);
 
 		// set default location
 		var onSuccess = function(location){
@@ -598,7 +614,6 @@ published: true
 		// call maxmind and update stuff
 		geoip2.city(onSuccess, onError);
 
-
 		//handle form submission
 		$("form").submit(function( event ) {
 
@@ -624,7 +639,7 @@ published: true
 		});
 
 		//setup defaults and calculate total from teh start
-		updateTotal();
+		// updateTotal();
 
 	});
 
@@ -641,37 +656,37 @@ published: true
 			<div id="batteryChoice" class="option-left">
 				<p class="choiceHeader">Choose Battery</p>
 				<input type="radio" id="batteryChoice1" name="battery" value="35000" onclick="updateTotal();" checked>
-				<label for="batteryChoice1">Standard ($35K)</label><br/>
+				<label for="batteryChoice1">Standard (35K)</label><br/>
 
 				<input type="radio" id="batteryChoice2" name="battery" value="44000" onclick="updateTotal();">
-				<label for="batteryChoice2">Long Range ($44K)</label>
+				<label for="batteryChoice2">Long Range (44K)</label>
 			</div>
 
 			<div id="autopilotChoice" class="option-right">
 				<p class="choiceHeader">Autopilot Option</p>
 				<input type="radio" id="autopilotChoice1" name="autopilot" value="0" onclick="updateTotal()" checked>
-				<label for="autopilotChoice1">None ($0)</label><br/>
+				<label for="autopilotChoice1">None (0)</label><br/>
 
 				<input type="radio" id="autopilotChoice2" name="autopilot" value="5000" onclick="updateTotal()">
-				<label for="autopilotChoice2">Enhanced Autopilot ($5K)</label><br/>
+				<label for="autopilotChoice2">Enhanced Autopilot (5K)</label><br/>
 
 				<input type="radio" id="autopilotChoice3" name="autopilot" value="8000" onclick="updateTotal()">
-				<label for="autopilotChoice3">Full Self-Driving ($8K)</label>
+				<label for="autopilotChoice3">Full Self-Driving (8K)</label>
 			</div>
 
 			<div id="premiumChoice" class="option-left">
 				<p class="choiceHeader">Premium Upgrade</p>
 				<input type="radio" id="premiumChoice1" name="premium" value="0" onclick="updateTotal()" checked>
-				<label for="premiumChoice1">No ($0)</label><br/>
+				<label for="premiumChoice1">No (0)</label><br/>
 
 				<input type="radio" id="premiumChoice2" name="premium" value="5000" onclick="updateTotal()">
-				<label for="premiumChoice2">Yes ($5K)</label>
+				<label for="premiumChoice2">Yes (5K)</label>
 			</div>
 
 			<div id="fees" class="option-left">
 				<p class="choiceHeader">Finances</p>
 				<p>
-					<label for="currSelect" class="fa fa-dollar"></label>
+					<label for="currSelect" class="fa fa-money"></label>
 						<select id="currSelect" name="currency" form="data" onchange="updateTotal()">
 							<option value="USD" selected>USD ($)</option>
 						</select>
@@ -798,7 +813,7 @@ published: true
 		</div>
 		<div class="option-right">
 			<p>
-				<label for="loanAmount" class="fa fa-usd"></label>
+				<label for="loanAmount" class="fa fa-money"></label>
 				<input type="text" id="loanAmount" name="loanAmount" value="38160">
 				<label for="loanAmount">Loan Amount</label>
 			</p>
@@ -838,7 +853,7 @@ published: true
 				<p>
 					<label for="kwhRate" class="fa fa-bolt"></label>
 					<input type="text" id="kwhRate" name="kwhRate" placeholder="$ per kWh" value="0.16">
-					<label for="kwhRate" class="">$ per kWh</label>
+					<label id="kwhRateLabel" for="kwhRate" class=""></label>
 				</p>
 			</div>
 			<div class="option-right">
@@ -891,7 +906,7 @@ published: true
 		/>
 	</div>
 	<div class="option-left">
-		<h2>Monthly Cost Estimate</h2>
+		<h2 id="resultsMonthly">Monthly Cost Estimate</h2>
 		<table id="summaryTable"></table>
 		<h2>Charging Details</h2>
 		<table id="detailsTable"></table>
@@ -901,5 +916,7 @@ published: true
 		<table id="finalCostTable"></table>
 	</div>
   <div class="clearfix"></div>
-	<small>*This estimate is for entertainment purposes only. Please contact Tesla with any questions about your Model 3.</small>
+	<small>*This estimate is for entertainment purposes only. Please contact Tesla with any questions about your Model 3.</small><br/>
+	<small id="currencyDisclaimer"></small>
+
 </div>
