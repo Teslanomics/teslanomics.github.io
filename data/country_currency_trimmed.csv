@@ -1,0 +1,90 @@
+iso_two,iso_three,currency,name
+AU,AUS,AUD,Australia
+CX,CXR,AUD,Christmas Island
+CC,CCK,AUD,Cocos (Keeling) Islands
+KI,KIR,AUD,Kiribati
+NR,NRU,AUD,Nauru
+TV,TUV,AUD,Tuvalu
+BG,BGR,BGN,Bulgaria
+BR,BRA,BRL,Brazil
+CA,CAN,CAD,Canada
+LI,LIE,CHF,Liechtenstein
+CH,CHE,CHF,Switzerland
+CN,CHN,CNY,China
+CZ,CZE,CZK,Czech Republic
+DK,DNK,DKK,Denmark
+FO,FRO,DKK,Faroe Islands
+GL,GRL,DKK,Greenland
+AX,ALA,EUR,Aland Islands
+AD,AND,EUR,Andorra
+AT,AUT,EUR,Austria
+BE,BEL,EUR,Belgium
+CY,CYP,EUR,Cyprus
+FI,FIN,EUR,Finland
+FR,FRA,EUR,France
+GF,GUF,EUR,French Guiana
+TF,ATF,EUR,French Southern Territories
+DE,DEU,EUR,Germany
+GR,GRC,EUR,Greece
+GP,GLP,EUR,Guadeloupe
+IE,IRL,EUR,Ireland
+IT,ITA,EUR,Italy
+LV,LVA,EUR,Latvia
+LU,LUX,EUR,Luxembourg
+MQ,MTQ,EUR,Martinique
+YT,MYT,EUR,Mayotte
+MC,MCO,EUR,Monaco
+ME,MNE,EUR,Montenegro
+NL,NLD,EUR,Netherlands
+PT,PRT,EUR,Portugal
+SM,SMR,EUR,San Marino
+SK,SVK,EUR,Slovakia
+SI,SVN,EUR,Slovenia
+ES,ESP,EUR,Spain
+GB,GBR,GBP,United Kingdom
+HK,HKG,HKD,Hong Kong
+HR,HRV,HRK,Croatia
+HU,HUN,HUF,Hungary
+ID,IDN,IDR,Indonesia
+IL,ISR,ILS,Israel
+IN,IND,INR,India
+JP,JPN,JPY,Japan
+MX,MEX,MXN,Mexico
+MY,MYS,MYR,Malaysia
+NO,NOR,NOK,Norway
+CK,COK,NZD,Cook Islands
+NZ,NZL,NZD,New Zealand
+NU,NIU,NZD,Niue
+TK,TKL,NZD,Tokelau
+PH,PHL,PHP,Philippines
+PL,POL,PLN,Poland
+SE,SWE,SEK,Sweden
+SG,SGP,SGD,Singapore
+TH,THA,THB,Thailand
+AS,ASM,USD,American Samoa
+VG,VGB,USD,British Virgin Islands
+EC,ECU,USD,Ecuador
+GU,GUM,USD,Guam
+MH,MHL,USD,Marshall Islands
+MP,MNP,USD,Northern Mariana Islands
+PW,PLW,USD,Palau
+PR,PRI,USD,Puerto Rico
+TC,TCA,USD,Turks and Caicos Islands
+US,USA,USD,United States of America
+UM,UMI,USD,US Minor Outlying Islands
+VI,VIR,USD,"Virgin Islands, US"
+NA,NAM,ZAR,Namibia
+ZA,ZAF,ZAR,South Africa
+BV,BVT,NOK,Bouvet Island
+IO,IOT,USD,British Indian Ocean Territory
+HM,HMD,AUD,Heard Island and McDonald Islands
+VA,VAT,EUR,Vatican
+IM,IMN,GBP,Isle of Man
+JE,JEY,GBP,Jersey
+KR,KOR,KRW,Korea (South)
+FM,FSM,USD,Micronesia
+NF,NFK,AUD,Norfolk Island
+PN,PCN,NZD,Pitcairn Island
+PM,SPM,EUR,Saint Pierre and Miquelon
+GS,SGS,GBP,South Georgia & South Sandwich Islands
+SJ,SJM,NOK,Svalbard and Jan Mayen Islands

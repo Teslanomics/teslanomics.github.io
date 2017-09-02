@@ -1,0 +1,447 @@
+{
+   "AU": {
+      "iso_three": "AUS",
+      "currency": "AUD",
+      "name": "Australia"
+   },
+   "CX": {
+      "iso_three": "CXR",
+      "currency": "AUD",
+      "name": "Christmas Island"
+   },
+   "CC": {
+      "iso_three": "CCK",
+      "currency": "AUD",
+      "name": "Cocos (Keeling) Islands"
+   },
+   "KI": {
+      "iso_three": "KIR",
+      "currency": "AUD",
+      "name": "Kiribati"
+   },
+   "NR": {
+      "iso_three": "NRU",
+      "currency": "AUD",
+      "name": "Nauru"
+   },
+   "TV": {
+      "iso_three": "TUV",
+      "currency": "AUD",
+      "name": "Tuvalu"
+   },
+   "BG": {
+      "iso_three": "BGR",
+      "currency": "BGN",
+      "name": "Bulgaria"
+   },
+   "BR": {
+      "iso_three": "BRA",
+      "currency": "BRL",
+      "name": "Brazil"
+   },
+   "CA": {
+      "iso_three": "CAN",
+      "currency": "CAD",
+      "name": "Canada"
+   },
+   "LI": {
+      "iso_three": "LIE",
+      "currency": "CHF",
+      "name": "Liechtenstein"
+   },
+   "CH": {
+      "iso_three": "CHE",
+      "currency": "CHF",
+      "name": "Switzerland"
+   },
+   "CN": {
+      "iso_three": "CHN",
+      "currency": "CNY",
+      "name": "China"
+   },
+   "CZ": {
+      "iso_three": "CZE",
+      "currency": "CZK",
+      "name": "Czech Republic"
+   },
+   "DK": {
+      "iso_three": "DNK",
+      "currency": "DKK",
+      "name": "Denmark"
+   },
+   "FO": {
+      "iso_three": "FRO",
+      "currency": "DKK",
+      "name": "Faroe Islands"
+   },
+   "GL": {
+      "iso_three": "GRL",
+      "currency": "DKK",
+      "name": "Greenland"
+   },
+   "AX": {
+      "iso_three": "ALA",
+      "currency": "EUR",
+      "name": "Aland Islands"
+   },
+   "AD": {
+      "iso_three": "AND",
+      "currency": "EUR",
+      "name": "Andorra"
+   },
+   "AT": {
+      "iso_three": "AUT",
+      "currency": "EUR",
+      "name": "Austria"
+   },
+   "BE": {
+      "iso_three": "BEL",
+      "currency": "EUR",
+      "name": "Belgium"
+   },
+   "CY": {
+      "iso_three": "CYP",
+      "currency": "EUR",
+      "name": "Cyprus"
+   },
+   "FI": {
+      "iso_three": "FIN",
+      "currency": "EUR",
+      "name": "Finland"
+   },
+   "FR": {
+      "iso_three": "FRA",
+      "currency": "EUR",
+      "name": "France"
+   },
+   "GF": {
+      "iso_three": "GUF",
+      "currency": "EUR",
+      "name": "French Guiana"
+   },
+   "TF": {
+      "iso_three": "ATF",
+      "currency": "EUR",
+      "name": "French Southern Territories"
+   },
+   "DE": {
+      "iso_three": "DEU",
+      "currency": "EUR",
+      "name": "Germany"
+   },
+   "GR": {
+      "iso_three": "GRC",
+      "currency": "EUR",
+      "name": "Greece"
+   },
+   "GP": {
+      "iso_three": "GLP",
+      "currency": "EUR",
+      "name": "Guadeloupe"
+   },
+   "IE": {
+      "iso_three": "IRL",
+      "currency": "EUR",
+      "name": "Ireland"
+   },
+   "IT": {
+      "iso_three": "ITA",
+      "currency": "EUR",
+      "name": "Italy"
+   },
+   "LV": {
+      "iso_three": "LVA",
+      "currency": "EUR",
+      "name": "Latvia"
+   },
+   "LU": {
+      "iso_three": "LUX",
+      "currency": "EUR",
+      "name": "Luxembourg"
+   },
+   "MQ": {
+      "iso_three": "MTQ",
+      "currency": "EUR",
+      "name": "Martinique"
+   },
+   "YT": {
+      "iso_three": "MYT",
+      "currency": "EUR",
+      "name": "Mayotte"
+   },
+   "MC": {
+      "iso_three": "MCO",
+      "currency": "EUR",
+      "name": "Monaco"
+   },
+   "ME": {
+      "iso_three": "MNE",
+      "currency": "EUR",
+      "name": "Montenegro"
+   },
+   "NL": {
+      "iso_three": "NLD",
+      "currency": "EUR",
+      "name": "Netherlands"
+   },
+   "PT": {
+      "iso_three": "PRT",
+      "currency": "EUR",
+      "name": "Portugal"
+   },
+   "SM": {
+      "iso_three": "SMR",
+      "currency": "EUR",
+      "name": "San Marino"
+   },
+   "SK": {
+      "iso_three": "SVK",
+      "currency": "EUR",
+      "name": "Slovakia"
+   },
+   "SI": {
+      "iso_three": "SVN",
+      "currency": "EUR",
+      "name": "Slovenia"
+   },
+   "ES": {
+      "iso_three": "ESP",
+      "currency": "EUR",
+      "name": "Spain"
+   },
+   "GB": {
+      "iso_three": "GBR",
+      "currency": "GBP",
+      "name": "United Kingdom"
+   },
+   "HK": {
+      "iso_three": "HKG",
+      "currency": "HKD",
+      "name": "Hong Kong"
+   },
+   "HR": {
+      "iso_three": "HRV",
+      "currency": "HRK",
+      "name": "Croatia"
+   },
+   "HU": {
+      "iso_three": "HUN",
+      "currency": "HUF",
+      "name": "Hungary"
+   },
+   "ID": {
+      "iso_three": "IDN",
+      "currency": "IDR",
+      "name": "Indonesia"
+   },
+   "IL": {
+      "iso_three": "ISR",
+      "currency": "ILS",
+      "name": "Israel"
+   },
+   "IN": {
+      "iso_three": "IND",
+      "currency": "INR",
+      "name": "India"
+   },
+   "JP": {
+      "iso_three": "JPN",
+      "currency": "JPY",
+      "name": "Japan"
+   },
+   "MX": {
+      "iso_three": "MEX",
+      "currency": "MXN",
+      "name": "Mexico"
+   },
+   "MY": {
+      "iso_three": "MYS",
+      "currency": "MYR",
+      "name": "Malaysia"
+   },
+   "NO": {
+      "iso_three": "NOR",
+      "currency": "NOK",
+      "name": "Norway"
+   },
+   "CK": {
+      "iso_three": "COK",
+      "currency": "NZD",
+      "name": "Cook Islands"
+   },
+   "NZ": {
+      "iso_three": "NZL",
+      "currency": "NZD",
+      "name": "New Zealand"
+   },
+   "NU": {
+      "iso_three": "NIU",
+      "currency": "NZD",
+      "name": "Niue"
+   },
+   "TK": {
+      "iso_three": "TKL",
+      "currency": "NZD",
+      "name": "Tokelau"
+   },
+   "PH": {
+      "iso_three": "PHL",
+      "currency": "PHP",
+      "name": "Philippines"
+   },
+   "PL": {
+      "iso_three": "POL",
+      "currency": "PLN",
+      "name": "Poland"
+   },
+   "SE": {
+      "iso_three": "SWE",
+      "currency": "SEK",
+      "name": "Sweden"
+   },
+   "SG": {
+      "iso_three": "SGP",
+      "currency": "SGD",
+      "name": "Singapore"
+   },
+   "TH": {
+      "iso_three": "THA",
+      "currency": "THB",
+      "name": "Thailand"
+   },
+   "AS": {
+      "iso_three": "ASM",
+      "currency": "USD",
+      "name": "American Samoa"
+   },
+   "VG": {
+      "iso_three": "VGB",
+      "currency": "USD",
+      "name": "British Virgin Islands"
+   },
+   "EC": {
+      "iso_three": "ECU",
+      "currency": "USD",
+      "name": "Ecuador"
+   },
+   "GU": {
+      "iso_three": "GUM",
+      "currency": "USD",
+      "name": "Guam"
+   },
+   "MH": {
+      "iso_three": "MHL",
+      "currency": "USD",
+      "name": "Marshall Islands"
+   },
+   "MP": {
+      "iso_three": "MNP",
+      "currency": "USD",
+      "name": "Northern Mariana Islands"
+   },
+   "PW": {
+      "iso_three": "PLW",
+      "currency": "USD",
+      "name": "Palau"
+   },
+   "PR": {
+      "iso_three": "PRI",
+      "currency": "USD",
+      "name": "Puerto Rico"
+   },
+   "TC": {
+      "iso_three": "TCA",
+      "currency": "USD",
+      "name": "Turks and Caicos Islands"
+   },
+   "US": {
+      "iso_three": "USA",
+      "currency": "USD",
+      "name": "United States of America"
+   },
+   "UM": {
+      "iso_three": "UMI",
+      "currency": "USD",
+      "name": "US Minor Outlying Islands"
+   },
+   "VI": {
+      "iso_three": "VIR",
+      "currency": "USD",
+      "name": "Virgin Islands, US"
+   },
+   "NA": {
+      "iso_three": "NAM",
+      "currency": "ZAR",
+      "name": "Namibia"
+   },
+   "ZA": {
+      "iso_three": "ZAF",
+      "currency": "ZAR",
+      "name": "South Africa"
+   },
+   "BV": {
+      "iso_three": "BVT",
+      "currency": "NOK",
+      "name": "Bouvet Island"
+   },
+   "IO": {
+      "iso_three": "IOT",
+      "currency": "USD",
+      "name": "British Indian Ocean Territory"
+   },
+   "HM": {
+      "iso_three": "HMD",
+      "currency": "AUD",
+      "name": "Heard Island and McDonald Islands"
+   },
+   "VA": {
+      "iso_three": "VAT",
+      "currency": "EUR",
+      "name": "Vatican"
+   },
+   "IM": {
+      "iso_three": "IMN",
+      "currency": "GBP",
+      "name": "Isle of Man"
+   },
+   "JE": {
+      "iso_three": "JEY",
+      "currency": "GBP",
+      "name": "Jersey"
+   },
+   "KR": {
+      "iso_three": "KOR",
+      "currency": "KRW",
+      "name": "Korea�(South)"
+   },
+   "FM": {
+      "iso_three": "FSM",
+      "currency": "USD",
+      "name": "Micronesia"
+   },
+   "NF": {
+      "iso_three": "NFK",
+      "currency": "AUD",
+      "name": "Norfolk Island"
+   },
+   "PN": {
+      "iso_three": "PCN",
+      "currency": "NZD",
+      "name": "Pitcairn Island"
+   },
+   "PM": {
+      "iso_three": "SPM",
+      "currency": "EUR",
+      "name": "Saint Pierre and Miquelon"
+   },
+   "GS": {
+      "iso_three": "SGS",
+      "currency": "GBP",
+      "name": "South Georgia & South Sandwich Islands"
+   },
+   "SJ": {
+      "iso_three": "SJM",
+      "currency": "NOK",
+      "name": "Svalbard and Jan Mayen Islands"
+   }
+}

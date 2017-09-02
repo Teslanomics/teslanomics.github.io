@@ -248,8 +248,6 @@ published: true
 
 		currency = currencies[$('#currSelect').find(":selected").val()];
 
-		// console.log(currency);
-
 		return currency;
 
 	}
@@ -307,9 +305,7 @@ published: true
 	}
 
 	function nextStep(n){
-			// $("#step"+(n-1)).fadeOut(50);
 			$("#step"+n).fadeIn(500);
-			// $("#step"+n).scroll();
 			updateTotal();
 	}
 
@@ -562,6 +558,20 @@ published: true
 
 	}
 
+	function setDefaultCurrency(region){
+
+		$.getJSON( '/data/country_currency_trimmed.json', function( data ) {
+
+			defCurr = data[region].currency || 'USD';
+
+			console.log("defCurr: " + defCurr);
+
+			$("#currSelect").val(defCurr);
+
+		});
+
+	}
+
 	// init
 	$(function(){
 
@@ -605,6 +615,8 @@ published: true
 					if(country=='US'){
 						updateTaxRate(state);
 					}
+
+					setDefaultCurrency(country);
 		};
 
 		var onError = function(error){
