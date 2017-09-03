@@ -180,72 +180,72 @@
       "kwhRate": 0.15446
    },
    "AT": {
-      "kwhRate": 0.19
+      "kwhRate": 0.23
    },
    "BE": {
-      "kwhRate": 0.19
+      "kwhRate": 0.23
    },
    "HR": {
-      "kwhRate": 1.18
+      "kwhRate": 0.19
    },
    "CZ": {
-      "kwhRate": 4.05
+      "kwhRate": 0.185
    },
    "DK": {
-      "kwhRate": 2
+      "kwhRate": 0.32
    },
    "FI": {
-      "kwhRate": 0.17
-   },
-   "FR": {
-      "kwhRate": 0.17
-   },
-   "DE": {
-      "kwhRate": 0.14
-   },
-   "IT": {
-      "kwhRate": 0.21
-   },
-   "LU": {
-      "kwhRate": 0.17
-   },
-   "NL": {
-      "kwhRate": 0.17
-   },
-   "NO": {
-      "kwhRate": 1.16
-   },
-   "PL": {
-      "kwhRate": 0.39
-   },
-   "SK": {
-      "kwhRate": 0.17
-   },
-   "SI": {
-      "kwhRate": 0.18
-   },
-   "ES": {
       "kwhRate": 0.2
    },
+   "FR": {
+      "kwhRate": 0.2
+   },
+   "DE": {
+      "kwhRate": 0.17
+   },
+   "IT": {
+      "kwhRate": 0.25
+   },
+   "LU": {
+      "kwhRate": 0.2
+   },
+   "NL": {
+      "kwhRate": 0.2
+   },
+   "NO": {
+      "kwhRate": 0.15
+   },
+   "PL": {
+      "kwhRate": 0.11
+   },
+   "SK": {
+      "kwhRate": 0.2
+   },
+   "SI": {
+      "kwhRate": 0.21
+   },
+   "ES": {
+      "kwhRate": 0.24
+   },
    "SE": {
-      "kwhRate": 1.59
+      "kwhRate": 0.2
    },
    "CH": {
-      "kwhRate": 0.22
+      "kwhRate": 0.23
    },
    "GB": {
-      "kwhRate": 0.18
+      "kwhRate": 0.23
    },
    "AU": {
-      "kwhRate": 0.44
+      "kwhRate": 0.35
    },
    "CN": {
-      "kwhRate": 11.81
+      "kwhRate": 1.8
    },
    "HK": {
-      "kwhRate": 11.74
+      "kwhRate": 1.5
    },
    "JP": {
-      "kwhRate": 1762.24
+      "kwhRate": 16
    }
 }
