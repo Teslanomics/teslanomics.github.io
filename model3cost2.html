@@ -453,7 +453,7 @@ published: true
 		finalCostArr.push('{ "item":"Purchase Price","value":"' + numeral(finalCosts.Price).format('0,0.00') + '"}');
 		finalCostArr.push('{ "item":"Taxes","value":"' + numeral(finalCosts.Taxes).format('0,0.00') + '"}');
 		finalCostArr.push('{ "item":"Fees","value":"' + numeral(finalCosts.Fees).format('0,0') + '"}');
-		finalCostArr.push('{ "item":"Incentives","value":"' + numeral(lessIncentives).format('0,0') + '"}');
+		finalCostArr.push('{ "item":"Incentives (-)","value":"' + numeral(lessIncentives).format('0,0') + '"}');
 		finalCostArr.push('{ "item":"Final Cost","value":"' + numeral((+finalCosts.Total - +lessIncentives)).format('0,0.00') + '"}');
 
 		// prepare for display and output
