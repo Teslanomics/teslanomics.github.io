@@ -594,8 +594,16 @@ published: true
 			console.log(error);
 		};
 
-		// call maxmind and update stuff
-		geoip2.city(onSuccess, onError);
+
+		try {
+			// call maxmind and update stuff
+			geoip2.city(onSuccess, onError);
+		}
+		catch(err) {
+		    console.log('geoip2: ' + err);
+		}
+
+
 
 		//handle form submission
 		$("form").submit(function( event ) {
@@ -903,7 +911,6 @@ published: true
 	<small id="currencyDisclaimer"></small>
 
 </div>
-
 <div id="yt">
 	<h1>How it Works</h1>
 	<div id="player"></div>
