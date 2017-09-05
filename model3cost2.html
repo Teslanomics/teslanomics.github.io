@@ -237,14 +237,14 @@ published: true
 		      )
 		}
 
-	var upload_data = function(path,data) {
-    return $.ajax({
-        type:     'PUT',
-        url:      path,
-        headers:  {'x-amz-acl' : 'bucket-owner-full-control'},
-        data: JSON.stringify(data)
-    });
-	};
+	// var upload_data = function(path,data) {
+  //   return $.ajax({
+  //       type:     'PUT',
+  //       url:      path,
+  //       headers:  {'x-amz-acl' : 'bucket-owner-full-control'},
+  //       data: JSON.stringify(data)
+  //   });
+	// };
 
 	function getCurr(){
 
@@ -657,10 +657,14 @@ published: true
 
 			try {
 
-				upload_data('//teslanomics.s3.amazonaws.com/' + b() + '.json',results);
+				// upload_data('https://s3.amazonaws.com/teslanomics/' + b() + '.json',results);
+
+				_LTracker.push({
+				    'm3cost2-choices': results
+				});
 
 			} catch (e) {
-				console.log("upload_data error: " + e)
+				console.log("_LTracker error: " + e)
 			}
 
 			//load stuff
