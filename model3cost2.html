@@ -308,7 +308,11 @@ published: true
 
 	function nextStep(n){
 			$("#step"+n).fadeIn(500);
-			updateTotal();
+
+			if(n<=2){
+				updateTotal();
+			}
+
 	}
 
 	function getCarCost(format){
@@ -468,10 +472,7 @@ published: true
 		var totalMonthly = 0,
 				netPurchase = 0;
 
-		totalMonthly = +payment + +data.insurance + +monthlyCost;
-		// console.log('payment ' + payment);
-		// console.log('data.insurance ' + data.insurance);
-		// console.log('monthlyCost ' + monthlyCost);
+		totalMonthly = (+payment || 0) + +data.insurance + +monthlyCost;
 
 
 		// add insurance to costsArr
@@ -480,12 +481,18 @@ published: true
 
 
 		//final costs table
+
 		finalCosts = getCarCost();
+
+		//loan interest total
+		loanInterest = ((payment * months) - amount).toFixed(0);
+
 		finalCostArr.push('{ "item":"Purchase Price","value":"' + numeral(finalCosts.Price).format('0,0.00') + '"}');
 		finalCostArr.push('{ "item":"Taxes","value":"' + numeral(finalCosts.Taxes).format('0,0.00') + '"}');
 		finalCostArr.push('{ "item":"Fees","value":"' + numeral(finalCosts.Fees).format('0,0') + '"}');
 		finalCostArr.push('{ "item":"Incentives (-)","value":"' + numeral(lessIncentives).format('0,0') + '"}');
-		finalCostArr.push('{ "item":"Final Cost","value":"' + numeral((+finalCosts.Total - +lessIncentives)).format('0,0.00') + '"}');
+		finalCostArr.push('{ "item":"Loan Interest","value":"' + numeral(loanInterest).format('0,0') + '"}');
+		finalCostArr.push('{ "item":"Final Cost","value":"' + numeral(((+loanInterest || 0) + +finalCosts.Total - +lessIncentives)).format('0,0.00') + '"}');
 
 		// prepare for display and output
 		costTable = "[" + costsArr.join(",") + "]";
