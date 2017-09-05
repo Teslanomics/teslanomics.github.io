@@ -11,7 +11,6 @@ published: true
 <!-- get user location using maxmind -->
 <!-- https://dev.maxmind.com/geoip/geoip2/javascript/ -->
 <script src="//js.maxmind.com/js/apis/geoip2/v2.1/geoip2.js" type="text/javascript"></script>
-<script src="/maxmind/js/apis/geoip2/v2.1/geoip2.js" type="text/javascript"></script>
 
 <!-- This site is converting visitors into subscribers and customers with OptinMonster - https://optinmonster.com --><script>var om58f7ad1712512,om58f7ad1712512_poll=function(){var r=0;return function(n,l){clearInterval(r),r=setInterval(n,l)}}();!function(e,t,n){if(e.getElementById(n)){om58f7ad1712512_poll(function(){if(window['om_loaded']){if(!om58f7ad1712512){om58f7ad1712512=new OptinMonsterApp();return om58f7ad1712512.init({"s":"31049.58f7ad1712512","staging":0,"dev":0,"beta":0});}}},25);return;}var d=false,o=e.createElement(t);o.id=n,o.src="https://a.optnmstr.com/app/js/api.min.js",o.async=true,o.onload=o.onreadystatechange=function(){if(!d){if(!this.readyState||this.readyState==="loaded"||this.readyState==="complete"){try{d=om_loaded=true;om58f7ad1712512=new OptinMonsterApp();om58f7ad1712512.init({"s":"31049.58f7ad1712512","staging":0,"dev":0,"beta":0});o.onload=o.onreadystatechange=null;}catch(t){}}}};(document.getElementsByTagName("head")[0]||document.documentElement).appendChild(o)}(document,"script","omapi-script");</script><!-- / OptinMonster -->
 
@@ -216,29 +215,29 @@ published: true
 			currency = '',
 			options = '';
 
-	function b(
-		  a                  // placeholder
-		){
-		  return a           // if the placeholder was passed, return
-		    ? (              // a random number from 0 to 15
-		      a ^            // unless b is 8,
-		      Math.random()  // in which case
-		      * 16           // a random number from
-		      >> a/4         // 8 to 11
-		      ).toString(16) // in hexadecimal
-		    : (              // or otherwise a concatenated string:
-		      [1e7] +        // 10000000 +
-		      -1e3 +         // -1000 +
-		      -4e3 +         // -4000 +
-		      -8e3 +         // -80000000 +
-		      -1e11          // -100000000000,
-		      ).replace(     // replacing
-		        /[018]/g,    // zeroes, ones, and eights with
-		        b            // random hex digits
-		      )
-		}
-
-	// var upload_data = function(path,data) {
+	// function b(
+	// 	  a                  // placeholder
+	// 	){
+	// 	  return a           // if the placeholder was passed, return
+	// 	    ? (              // a random number from 0 to 15
+	// 	      a ^            // unless b is 8,
+	// 	      Math.random()  // in which case
+	// 	      * 16           // a random number from
+	// 	      >> a/4         // 8 to 11
+	// 	      ).toString(16) // in hexadecimal
+	// 	    : (              // or otherwise a concatenated string:
+	// 	      [1e7] +        // 10000000 +
+	// 	      -1e3 +         // -1000 +
+	// 	      -4e3 +         // -4000 +
+	// 	      -8e3 +         // -80000000 +
+	// 	      -1e11          // -100000000000,
+	// 	      ).replace(     // replacing
+	// 	        /[018]/g,    // zeroes, ones, and eights with
+	// 	        b            // random hex digits
+	// 	      )
+	// 	}
+	//
+	// function upload_data(path,data) {
   //   return $.ajax({
   //       type:     'PUT',
   //       url:      path,
@@ -578,6 +577,29 @@ published: true
 	// init
 	$(function(){
 
+		// add user ip to form for logging
+		try {
+
+			$.getJSON('//freegeoip.net/json/?callback=?', function(data) {
+			  // console.log(JSON.stringify(data, null, 2));
+				$("#data").append('<input type="hidden" name="user_ip" value="' + data.ip + '">');
+				$("#data").append('<input type="hidden" name="user_country_code" value="' + data.country_code + '">');
+				$("#data").append('<input type="hidden" name="user_country_name" value="' + data.country_name + '">');
+				$("#data").append('<input type="hidden" name="user_city" value="' + data.city + '">');
+				$("#data").append('<input type="hidden" name="user_zip" value="' + data.zip_code + '">');
+				$("#data").append('<input type="hidden" name="user_time_zone" value="' + data.time_zone + '">');
+				$("#data").append('<input type="hidden" name="user_region_name" value="' + data.region_name + '">');
+				$("#data").append('<input type="hidden" name="user_region_code" value="' + data.region_code + '">');
+
+			});
+
+		} catch (e) {
+
+			console.log('geoip error: ' + e);
+
+		}
+
+
 
 		//load currencies
 		$.getJSON('/data/usd_curr_rates.json',function(currObj){
@@ -658,7 +680,7 @@ published: true
 
 			try {
 
-				// upload_data('https://s3.amazonaws.com/teslanomics/' + b() + '.json',results);
+				// upload_data('https://teslanomics.s3.amazonaws.com/' + b() + '.json',results);
 
 				_LTracker.push({
 				    'm3cost2-choices': results
