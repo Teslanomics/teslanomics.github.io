@@ -1,8 +1,12 @@
 <!-- loggly tracker -->
-<script type="text/javascript" src="//cloudfront.loggly.com/js/loggly.tracker-2.1.min.js" async></script>
+<!-- <script type="text/javascript" src="//cloudfront.loggly.com/js/loggly.tracker-2.1.min.js" async></script> -->
+<script type="text/javascript" src="/js/lt.js" async></script>
+
+<!-- <script type="text/javascript" src="//cloudfront.loggly.com/js/loggly.tracker-2.1.min.js" async></script> -->
 <script>
     var _LTracker = _LTracker || [];
     _LTracker.push({'logglyKey': '52c61ecc-afd4-4cf5-b420-93572450d6e1',
     'sendConsoleErrors' : true,
-    'tag' : 'loggly-jslogger'  });
+    'tag' : 'loggly-jslogger',
+  	'useDomainProxy' : true  });
 </script>
