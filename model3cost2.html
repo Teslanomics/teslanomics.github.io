@@ -541,7 +541,13 @@ published: true
 	function updateElectricityRate(region){
 		$.getJSON( '/data/electricity_rates.json', function( edata ) {
 
-			rate = edata[region].kwhRate;
+
+			try {
+				rate = edata[region].kwhRate;
+			} catch (e) {
+				rate = 0.16;
+				console.log('kwhRate error: ' + e);
+			}
 
 			// console.log("rate: " + rate);
 			taxRate = $("input[name=kwhRate]").val((rate).toFixed(2));
