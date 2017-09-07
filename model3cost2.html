@@ -493,7 +493,8 @@ published: true
 		finalCosts = getCarCost();
 
 		//loan interest total
-		loanInterest = ((payment * months) - amount).toFixed(0);
+		// 20170906 - bug - added the subtraction of the downpayment to the loan amount otherwise loanInterst could be negative
+		loanInterest = ((payment * months) - (amount-down)).toFixed(0);
 
 		finalCostArr.push('{ "item":"Purchase Price","value":"' + numeral(finalCosts.Price).format('0,0.00') + '"}');
 		finalCostArr.push('{ "item":"Taxes","value":"' + numeral(finalCosts.Taxes).format('0,0.00') + '"}');
