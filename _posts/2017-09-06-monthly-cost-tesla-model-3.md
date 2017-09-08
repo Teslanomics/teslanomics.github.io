@@ -3,7 +3,7 @@ title: "Tesla Model 3 Monthly Cost"
 author: Ben Sullins
 layout: post
 date: 2017-09-06 00:02:00 +0000
-image: "/images/featured/model_3_monthly_calculator_thumb_600px_V2.jpg"
+image: "/images/featured/m3cost2_thumb_600px.jpg"
 categories:
 - analysis
 tags:
