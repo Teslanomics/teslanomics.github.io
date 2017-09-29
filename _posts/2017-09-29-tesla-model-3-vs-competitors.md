@@ -39,45 +39,45 @@ The Tesla Model 3, released just this past July, is making major waves in the af
 The interior is completely free of buttons and controlled by a 15” center console that Tesla placed flawlessly for both driver and passenger use. Every Model 3 comes with the hardware to one day become fully self-driving and already offers Enhanced Auto-PIlot making those hours spent in traffic a little more bearable. Because Tesla mounted the motor underneath the rear seat, the Model 3 includes a sizable trunk as well as a small trunk for storing additional items.
 
 ##// Price Details
-Model 3 - 44K
-C-Class - 39.5K
-3-Series - 38.7K
-A4 - 37.3K
+- Model 3 - 44K
+- C-Class - 39.5K
+- 3-Series - 38.7K
+- A4 - 37.3K
 
 ##// MPG Details
-Model 3 - 126 (MPGe)
-C-Class - 29
-3-Series - 29.5
-A4 - 29
+- Model 3 - 126 (MPGe)
+- C-Class - 29
+- 3-Series - 29.5
+- A4 - 29
 
 ##// Horepower Details
-Model 3 - 258
-C-Class - 241
-3-Series - 248
-A4 - 252
+- Model 3 - 258
+- C-Class - 241
+- 3-Series - 248
+- A4 - 252
 
 ##// 0-60 times
-Model 3 - 258
-C-Class - 241
-3-Series - 248
-A4 - 252
+- Model 3 - 258
+- C-Class - 241
+- 3-Series - 248
+- A4 - 252
 
 ##// Seating
-Model 3 - 5 (most room)
-C-Class - 5
-3-Series - 5
-A4 - 5
+- Model 3 - 5 (most room)
+- C-Class - 5
+- 3-Series - 5
+- A4 - 5
 
 ##// Cargo
-Model 3 - 14
-C-Class - 12.6
-3-Series - 13
-A4 - 13
+- Model 3 - 14
+- C-Class - 12.6
+- 3-Series - 13
+- A4 - 13
 
 ##// Saftey
-Model 3 - 5 Star
-C-Class - 5 Star
-3-Series - 5 Star
-A4 - 5 Star
+- Model 3 - 5 Star
+- C-Class - 5 Star
+- 3-Series - 5 Star
+- A4 - 5 Star
 
 So there you have it, a comparison of the top features between the leaders in the affordable-luxury category. I’d love to know what you think? Are any of these cars in your future? If so which one and why?
