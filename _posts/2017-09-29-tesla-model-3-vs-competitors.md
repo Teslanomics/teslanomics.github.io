@@ -57,10 +57,10 @@ The interior is completely free of buttons and controlled by a 15” center cons
 - A4 - 252
 
 ##// 0-60 times
-- Model 3 - 258
-- C-Class - 241
-- 3-Series - 248
-- A4 - 252
+- Model 3 - 5.1sec
+- C-Class - 6sec
+- 3-Series - 7.1sec
+- A4 - 6.7sec
 
 ##// Seating
 - Model 3 - 5 (most room)
@@ -77,7 +77,7 @@ The interior is completely free of buttons and controlled by a 15” center cons
 ##// Saftey
 - Model 3 - 5 Star
 - C-Class - 5 Star
-- 3-Series - 5 Star
+-      vbvvvv3-Series - 5 Star
 - A4 - 5 Star
 
 So there you have it, a comparison of the top features between the leaders in the affordable-luxury category. I’d love to know what you think? Are any of these cars in your future? If so which one and why?
