@@ -77,7 +77,7 @@ The interior is completely free of buttons and controlled by a 15” center cons
 ##// Saftey
 - Model 3 - 5 Star
 - C-Class - 5 Star
--      vbvvvv3-Series - 5 Star
+- 3-Series - 5 Star
 - A4 - 5 Star
 
 So there you have it, a comparison of the top features between the leaders in the affordable-luxury category. I’d love to know what you think? Are any of these cars in your future? If so which one and why?
