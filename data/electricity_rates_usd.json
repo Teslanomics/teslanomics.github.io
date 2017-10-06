@@ -1,0 +1,251 @@
+{
+   "US-AL": {
+      "kwhRate": 0.1279
+   },
+   "US-AK": {
+      "kwhRate": 0.2213
+   },
+   "US-AZ": {
+      "kwhRate": 0.1265
+   },
+   "US-AR": {
+      "kwhRate": 0.1073
+   },
+   "US-CA": {
+      "kwhRate": 0.1939
+   },
+   "US-CO": {
+      "kwhRate": 0.1275
+   },
+   "US-CT": {
+      "kwhRate": 0.2047
+   },
+   "US-DE": {
+      "kwhRate": 0.134
+   },
+   "US-DC": {
+      "kwhRate": 0.1259
+   },
+   "US-FL": {
+      "kwhRate": 0.1202
+   },
+   "US-GA": {
+      "kwhRate": 0.1253
+   },
+   "US-HI": {
+      "kwhRate": 0.3045
+   },
+   "US-ID": {
+      "kwhRate": 0.1142
+   },
+   "US-IL": {
+      "kwhRate": 0.1295
+   },
+   "US-IN": {
+      "kwhRate": 0.1205
+   },
+   "US-IA": {
+      "kwhRate": 0.1392
+   },
+   "US-KS": {
+      "kwhRate": 0.1356
+   },
+   "US-KY": {
+      "kwhRate": 0.1068
+   },
+   "US-LA": {
+      "kwhRate": 0.1019
+   },
+   "US-ME": {
+      "kwhRate": 0.1617
+   },
+   "US-MD": {
+      "kwhRate": 0.1422
+   },
+   "US-MA": {
+      "kwhRate": 0.1997
+   },
+   "US-MI": {
+      "kwhRate": 0.1586
+   },
+   "US-MN": {
+      "kwhRate": 0.1396
+   },
+   "US-MS": {
+      "kwhRate": 0.114
+   },
+   "US-MO": {
+      "kwhRate": 0.1325
+   },
+   "US-MT": {
+      "kwhRate": 0.1173
+   },
+   "US-NE": {
+      "kwhRate": 0.1206
+   },
+   "US-NV": {
+      "kwhRate": 0.1164
+   },
+   "US-NH": {
+      "kwhRate": 0.1936
+   },
+   "US-NJ": {
+      "kwhRate": 0.1596
+   },
+   "US-NM": {
+      "kwhRate": 0.1341
+   },
+   "US-NY": {
+      "kwhRate": 0.1877
+   },
+   "US-NC": {
+      "kwhRate": 0.1107
+   },
+   "US-ND": {
+      "kwhRate": 0.1234
+   },
+   "US-OH": {
+      "kwhRate": 0.1267
+   },
+   "US-OK": {
+      "kwhRate": 0.1053
+   },
+   "US-OR": {
+      "kwhRate": 0.1097
+   },
+   "US-PA": {
+      "kwhRate": 0.1452
+   },
+   "US-RI": {
+      "kwhRate": 0.1671
+   },
+   "US-SC": {
+      "kwhRate": 0.1307
+   },
+   "US-SD": {
+      "kwhRate": 0.1257
+   },
+   "US-TN": {
+      "kwhRate": 0.1093
+   },
+   "US-TX": {
+      "kwhRate": 0.1116
+   },
+   "US-UT": {
+      "kwhRate": 0.1148
+   },
+   "US-VT": {
+      "kwhRate": 0.1802
+   },
+   "US-VA": {
+      "kwhRate": 0.1191
+   },
+   "US-WA": {
+      "kwhRate": 0.0995
+   },
+   "US-WV": {
+      "kwhRate": 0.1169
+   },
+   "US-WI": {
+      "kwhRate": 0.1505
+   },
+   "US-WY": {
+      "kwhRate": 0.1221
+   },
+   "CA-QC": {
+      "kwhRate": 0.06866
+   },
+   "CA-MB": {
+      "kwhRate": 0.07892
+   },
+   "CA-BC": {
+      "kwhRate": 0.08907
+   },
+   "CA-NB": {
+      "kwhRate": 0.11194
+   },
+   "CA-AB": {
+      "kwhRate": 0.12178
+   },
+   "CA-NL": {
+      "kwhRate": 0.12548
+   },
+   "CA-SK": {
+      "kwhRate": 0.131505
+   },
+   "CA-ON": {
+      "kwhRate": 0.14169
+   },
+   "CA-NS": {
+      "kwhRate": 0.15446
+   },
+   "AT": {
+      "kwhRate": 0.23
+   },
+   "BE": {
+      "kwhRate": 0.23
+   },
+   "HR": {
+      "kwhRate": 0.19
+   },
+   "CZ": {
+      "kwhRate": 0.185
+   },
+   "DK": {
+      "kwhRate": 0.32
+   },
+   "FI": {
+      "kwhRate": 0.2
+   },
+   "FR": {
+      "kwhRate": 0.2
+   },
+   "DE": {
+      "kwhRate": 0.17
+   },
+   "IT": {
+      "kwhRate": 0.25
+   },
+   "LU": {
+      "kwhRate": 0.2
+   },
+   "NL": {
+      "kwhRate": 0.2
+   },
+   "NO": {
+      "kwhRate": 0.15
+   },
+   "PL": {
+      "kwhRate": 0.11
+   },
+   "SK": {
+      "kwhRate": 0.2
+   },
+   "SI": {
+      "kwhRate": 0.21
+   },
+   "ES": {
+      "kwhRate": 0.24
+   },
+   "SE": {
+      "kwhRate": 0.2
+   },
+   "CH": {
+      "kwhRate": 0.23
+   },
+   "GB": {
+      "kwhRate": 0.23
+   },
+   "AU": {
+      "kwhRate": 0.35
+   },
+   "CN": {
+      "kwhRate": 1.8
+   },
+   "HK": {
+      "kwhRate": 1.5
+   },
+   "JP": {
+      "kwhRate": 16
+   }
+}

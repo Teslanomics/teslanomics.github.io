@@ -112,3 +112,6 @@ keep_files:
   - css/main.min.css
   - scripts/main.js
   - scripts/main.min.js
+
+# Include these files in _site
+include: _redirects
