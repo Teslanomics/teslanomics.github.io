@@ -23,7 +23,7 @@ layout: null
         <tag>{{ tag | xml_escape }}</tag>
         {% endfor %}
         {% for cat in post.categories %}
-				<tags>{{ post.tags | join: "," }}
+				<tags>{{ post.tags | join: "," }}</tags>
         <category>{{ cat | xml_escape }}</category>
         {% endfor %}
 				<youtube>{{ post.youtube }}</youtube>
