@@ -14,7 +14,7 @@ layout: null
     {% for post in site.posts %}
 			<item>
         <title>{{ post.title | xml_escape }}</title>
-        <content>{{ post.content | xml_escape | textilize }}</content>
+        <content>[embedyt]{{ post.youtube }}[/embedyt]{{ post.content | xml_escape | textilize }}</content>
 				<img>/wp-content/uploads/{{ post.image | replace: '/images/featured/', ''}}</img>
         <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
         <link>{{ post.url | replace: '/', '' | replace: '.html', ''}}</link>
