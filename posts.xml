@@ -1,0 +1,34 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ site.title | xml_escape }}</title>
+    <description>{{ site.description | xml_escape }}</description>
+    <link>{{ site.url }}{{ site.baseurl }}/</link>
+    <atom:link href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml"/>
+    <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
+    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+    <generator>Jekyll v{{ jekyll.version }}</generator>
+    {% for post in site.posts %}
+			<item>
+        <title>{{ post.title | xml_escape }}</title>
+        <content>{{ post.content | xml_escape | textilize }}</content>
+				<img>/wp-content/uploads/{{ post.image | replace: '/images/featured/', ''}}</img>
+        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+        <link>{{ post.url | replace: '/', '' | replace: '.html', ''}}</link>
+        <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
+        {% for tag in post.tags %}
+        <tag>{{ tag | xml_escape }}</tag>
+        {% endfor %}
+        {% for cat in post.categories %}
+				<tags>{{ post.tags | join: ", " }}</tags>
+        <category>{{ cat | xml_escape }}</category>
+        {% endfor %}
+				<youtube>https://www.youtube.com/watch?v={{ post.youtube }}</youtube>
+				<format>video</format>
+      </item>
+    {% endfor %}
+  </channel>
+</rss>
