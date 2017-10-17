@@ -27,6 +27,7 @@ layout: null
         <category>{{ cat | xml_escape }}</category>
         {% endfor %}
 				<youtube>{{ post.youtube }}</youtube>
+				<type>Video</type>
       </item>
     {% endfor %}
   </channel>
