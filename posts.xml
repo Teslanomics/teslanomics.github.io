@@ -26,7 +26,7 @@ layout: null
 				<tags>{{ post.tags | join: ", " }}</tags>
         <category>{{ cat | xml_escape }}</category>
         {% endfor %}
-				<youtube>{{ post.youtube }}</youtube>
+				<youtube>https://www.youtube.com/watch?v={{ post.youtube }}</youtube>
 				<format>video</format>
       </item>
     {% endfor %}
