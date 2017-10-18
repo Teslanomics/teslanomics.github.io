@@ -1,9 +1,9 @@
 ---
-title: "Tesla The Most American Car Company?"
+title: "Tesla the Most American Car Company? (Pretty Much)"
 author: Ben Sullins
 layout: post
 date: 2017-10-18 00:02:00 +0000
-image: "/images/featured/tesla_american_car_company-600px.jpg"
+image: "/images/featured/Tesla_thumb_2_600.jpg"
 categories:
 - analysis
 tags:
